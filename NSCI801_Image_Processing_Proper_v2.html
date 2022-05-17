@@ -1,0 +1,1164 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7. Image Processing &#8212; NSCI 801 - Quantitative Neuroscience book</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="8. Bayesian statistics and hypothesis testing" href="NSCI801_Bayesian-stats.html" />
+    <link rel="prev" title="6. Advanced Statistics" href="NSCI801_Advanced_stats.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">NSCI 801 - Quantitative Neuroscience book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="README.html">
+   NSCI 801 - Quantitative Neuroscience Syllabus
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Intro.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_intro_python.html">
+   2. Google COLAB and Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_advanced_python.html">
+   3. Advanced Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_acquisition_filters.html">
+   4. Data Collection and Signal Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Descriptive_Stats-NEW.html">
+   5. Descriptive Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Advanced_stats.html">
+   6. Advanced Statistics
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   7. Image Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Bayesian-stats.html">
+   8. Bayesian statistics and hypothesis testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_ModelFitting.html">
+   9. Models in Neuroscience
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_DataNeuroscience.html">
+   10. Data Neuroscience Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_CorrelationVsCausality.html">
+   11. Correlation vs. Causality
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Reproducibility.html">
+   12. Reproducibility, reliability, validity
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/NSCI801_Image_Processing_Proper_v2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FNSCI801_Image_Processing_Proper_v2.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/NSCI801_Image_Processing_Proper_v2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review">
+   7.1. Review
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   7.2. Image processing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#input-output-and-data-types">
+   7.3. Input/output and data types
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mathematics-on-images">
+   7.4. Mathematics on Images
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-of-filters-comparison-image-denoising">
+   7.5. Example of filters comparison: image denoising
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#image-segmentation">
+   7.6. Image segmentation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#binary-segmentation-foreground-background">
+     7.6.1. 3.3.4.1. Binary segmentation: foreground + background
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cell-counting">
+   7.7. Cell Counting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lets-figure-this-out">
+   7.8. Lets figure this out
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#second-task-segmentation-of-the-image">
+   7.9. Second Task: Segmentation of the image
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#finding-the-seeds">
+   7.10. Finding the seeds
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#watershed">
+   7.11. Watershed
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Image Processing</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review">
+   7.1. Review
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   7.2. Image processing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#input-output-and-data-types">
+   7.3. Input/output and data types
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mathematics-on-images">
+   7.4. Mathematics on Images
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-of-filters-comparison-image-denoising">
+   7.5. Example of filters comparison: image denoising
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#image-segmentation">
+   7.6. Image segmentation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#binary-segmentation-foreground-background">
+     7.6.1. 3.3.4.1. Binary segmentation: foreground + background
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cell-counting">
+   7.7. Cell Counting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lets-figure-this-out">
+   7.8. Lets figure this out
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#second-task-segmentation-of-the-image">
+   7.9. Second Task: Segmentation of the image
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#finding-the-seeds">
+   7.10. Finding the seeds
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#watershed">
+   7.11. Watershed
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="image-processing">
+<h1><span class="section-number">7. </span>Image Processing<a class="headerlink" href="#image-processing" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="review">
+<h2><span class="section-number">7.1. </span>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
+<p>Well, Class We’ve arrived:</p>
+<p><img alt="Screenshot%202020-02-23%2018.44.43.png" src="https://github.com/BlohmLab/NSCI801-QuantNeuro/blob/master/Figures/lastlec.png?raw=1" /></p>
+<p>So what are we going over today?</p>
+</div>
+<div class="section" id="id1">
+<h2><span class="section-number">7.2. </span>Image processing<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Scikit-image is a Python package dedicated to image processing, and using natively NumPy arrays as image objects. This lecture describes how to use scikit-image on various image processing tasks, and links it with other scientific Python modules such as NumPy and SciPy</p>
+<p>Digital image processing allows the use of much more complex algorithms, and hence, can offer both more sophisticated performance at simple tasks, and the implementation of methods which would be impossible by analog means.</p>
+<p>Why?</p>
+<p>In particular, digital image processing is the only practical technology for:</p>
+<p>Classification</p>
+<p>Feature extraction</p>
+<p>Multi-scale signal analysis</p>
+<p>Pattern recognition</p>
+<p>Projection</p>
+<p>But I digress, Image processing could be useful in reading radiology reports.</p>
+<p>Before we jump ahead we need to figure out how to display images:</p>
+<p>The package to use is Matplotlib, and displaying 2D images is done using imshow:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">check</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
+<span class="n">check</span><span class="p">[::</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">check</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">,</span> <span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">check</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">check</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">check</span><span class="p">[::</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;numpy&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>We did it:</p>
+<p><img alt="alt text" src="https://github.com/BlohmLab/NSCI801-QuantNeuro/blob/master/Figures/Boom.png?raw=1" /></p>
+<p>Creating a simple figure for plotting</p>
+</div>
+<div class="section" id="input-output-and-data-types">
+<h2><span class="section-number">7.3. </span>Input/output and data types<a class="headerlink" href="#input-output-and-data-types" title="Permalink to this headline">¶</a></h2>
+<p>Reading from files: skimage.io.imread()</p>
+<p>Works with all data formats supported by the Python Imaging Library (or any other I/O plugin provided to imread with the plugin keyword argument).</p>
+<p>Also works with URL image paths:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">io</span><span class="p">,</span> <span class="n">filters</span>
+<span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">data</span>
+<span class="kn">import</span> <span class="nn">skimage</span> <span class="k">as</span> <span class="nn">ski</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ski</span><span class="o">.</span><span class="n">data_dir</span><span class="p">,</span> <span class="s1">&#39;camera.png&#39;</span><span class="p">)</span>
+<span class="n">camera</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="c1"># logo = io.imread(&#39;http://scikit-image.org/_static/img/logo.png&#39;)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">camera</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_Image_Processing_Proper_v2_14_0.png" src="_images/NSCI801_Image_Processing_Proper_v2_14_0.png" />
+</div>
+</div>
+<p>Or we can do local files as well….. for example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filename2</span> <span class="o">=</span> <span class="s1">&#39;/Users/joe/Downloads/dixie.jpg&#39;</span>
+<span class="n">dixie</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">filename2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">dixie</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">5</span><span class="n">c070bd2b43e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">filename2</span> <span class="o">=</span> <span class="s1">&#39;/Users/joe/Downloads/dixie.jpg&#39;</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">dixie</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">filename2</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">dixie</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nn">~/opt/anaconda3/envs/fmri/lib/python3.7/site-packages/skimage/io/_io.py</span> in <span class="ni">imread</span><span class="nt">(fname, as_gray, plugin, **plugin_args)</span>
+<span class="g g-Whitespace">     </span><span class="mi">46</span> 
+<span class="g g-Whitespace">     </span><span class="mi">47</span>     <span class="k">with</span> <span class="n">file_or_url_context</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span> <span class="k">as</span> <span class="n">fname</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">48</span>         <span class="n">img</span> <span class="o">=</span> <span class="n">call_plugin</span><span class="p">(</span><span class="s1">&#39;imread&#39;</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">plugin</span><span class="o">=</span><span class="n">plugin</span><span class="p">,</span> <span class="o">**</span><span class="n">plugin_args</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span> 
+<span class="g g-Whitespace">     </span><span class="mi">50</span>     <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="s1">&#39;ndim&#39;</span><span class="p">):</span>
+
+<span class="nn">~/opt/anaconda3/envs/fmri/lib/python3.7/site-packages/skimage/io/manage_plugins.py</span> in <span class="ni">call_plugin</span><span class="nt">(kind, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">208</span>                                <span class="p">(</span><span class="n">plugin</span><span class="p">,</span> <span class="n">kind</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">209</span> 
+<span class="ne">--&gt; </span><span class="mi">210</span>     <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">211</span> 
+<span class="g g-Whitespace">    </span><span class="mi">212</span> 
+
+<span class="nn">~/opt/anaconda3/envs/fmri/lib/python3.7/site-packages/skimage/io/_plugins/imageio_plugin.py</span> in <span class="ni">imread</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="nd">@wraps</span><span class="p">(</span><span class="n">imageio_imread</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="k">def</span> <span class="nf">imread</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="ne">---&gt; </span><span class="mi">10</span>     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">imageio_imread</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">))</span>
+
+<span class="nn">~/opt/anaconda3/envs/fmri/lib/python3.7/site-packages/imageio/core/functions.py</span> in <span class="ni">imread</span><span class="nt">(uri, format, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">263</span> 
+<span class="g g-Whitespace">    </span><span class="mi">264</span>     <span class="c1"># Get reader and read first</span>
+<span class="ne">--&gt; </span><span class="mi">265</span>     <span class="n">reader</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="nb">format</span><span class="p">,</span> <span class="s2">&quot;i&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">266</span>     <span class="k">with</span> <span class="n">reader</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">267</span>         <span class="k">return</span> <span class="n">reader</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="nn">~/opt/anaconda3/envs/fmri/lib/python3.7/site-packages/imageio/core/functions.py</span> in <span class="ni">get_reader</span><span class="nt">(uri, format, mode, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">170</span> 
+<span class="g g-Whitespace">    </span><span class="mi">171</span>     <span class="c1"># Create request object</span>
+<span class="ne">--&gt; </span><span class="mi">172</span>     <span class="n">request</span> <span class="o">=</span> <span class="n">Request</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span> <span class="o">+</span> <span class="n">mode</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">173</span> 
+<span class="g g-Whitespace">    </span><span class="mi">174</span>     <span class="c1"># Get format</span>
+
+<span class="nn">~/opt/anaconda3/envs/fmri/lib/python3.7/site-packages/imageio/core/request.py</span> in <span class="ni">__init__</span><span class="nt">(self, uri, mode, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">119</span> 
+<span class="g g-Whitespace">    </span><span class="mi">120</span>         <span class="c1"># Parse what was given</span>
+<span class="ne">--&gt; </span><span class="mi">121</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_parse_uri</span><span class="p">(</span><span class="n">uri</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">122</span> 
+<span class="g g-Whitespace">    </span><span class="mi">123</span>         <span class="c1"># Set extension</span>
+
+<span class="nn">~/opt/anaconda3/envs/fmri/lib/python3.7/site-packages/imageio/core/request.py</span> in <span class="ni">_parse_uri</span><span class="nt">(self, uri)</span>
+<span class="g g-Whitespace">    </span><span class="mi">255</span>                 <span class="c1"># Reading: check that the file exists (but is allowed a dir)</span>
+<span class="g g-Whitespace">    </span><span class="mi">256</span>                 <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">257</span>                     <span class="k">raise</span> <span class="ne">FileNotFoundError</span><span class="p">(</span><span class="s2">&quot;No such file: &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="n">fn</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">258</span>             <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">259</span>                 <span class="c1"># Writing: check that the directory to write to does exist</span>
+
+<span class="ne">FileNotFoundError</span>: No such file: &#39;/Users/joe/Downloads/dixie.jpg&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Image ndarrays can be represented either by integers (signed or unsigned) or floats.</p>
+<p>Careful with overflows with integer data types</p>
+<p>Different integer sizes are possible: 8-, 16- or 32-bytes, signed or unsigned.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">camera</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">camera</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">filtered_camera</span> <span class="o">=</span> <span class="n">filters</span><span class="o">.</span><span class="n">gaussian</span><span class="p">(</span><span class="n">camera</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">filtered_camera</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">filtered_camera</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>uint8
+(512, 512)
+</pre></div>
+</div>
+<img alt="_images/NSCI801_Image_Processing_Proper_v2_18_1.png" src="_images/NSCI801_Image_Processing_Proper_v2_18_1.png" />
+</div>
+</div>
+<p>Some image processing routines need to work with float arrays, and may hence output an array with a different type and the data range from the input array</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">camera</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">camera</span><span class="p">()</span>
+<span class="n">camera</span><span class="o">.</span><span class="n">dtype</span>
+<span class="n">camera_multiply</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">camera</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">camera_multiply</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_Image_Processing_Proper_v2_20_0.png" src="_images/NSCI801_Image_Processing_Proper_v2_20_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">img_as_float</span>
+<span class="n">camera_float</span> <span class="o">=</span> <span class="n">img_as_float</span><span class="p">(</span><span class="n">camera</span><span class="p">)</span>
+<span class="n">camera</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">camera_float</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">camera_float</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_Image_Processing_Proper_v2_21_0.png" src="_images/NSCI801_Image_Processing_Proper_v2_21_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">filters</span>
+<span class="n">camera_sobel</span> <span class="o">=</span> <span class="n">filters</span><span class="o">.</span><span class="n">sobel</span><span class="p">(</span><span class="n">camera</span><span class="p">)</span>
+<span class="n">camera_sobel</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">camera_sobel</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_Image_Processing_Proper_v2_22_0.png" src="_images/NSCI801_Image_Processing_Proper_v2_22_0.png" />
+</div>
+</div>
+<p>Color images are of shape (N, M, 3) or (N, M, 4) (when an alpha channel encodes transparency)</p>
+<p>Routines converting between different colorspaces (RGB, HSV, LAB etc.) are available in skimage.color : color.rgb2hsv, color.lab2rgb, etc. Check the docstring for the expected dtype (and data range) of input images.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy</span>
+<span class="n">face</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">face</span><span class="p">()</span>
+<span class="n">face</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(768, 1024, 3)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Goals: denoising, feature (edges) extraction, …</p>
+<p>Local filters replace the value of pixels by a function of the values of neighboring pixels. The function can be linear or non-linear.
+Neighbourhood: square (choose size), disk, or more complicated structuring element.</p>
+<p><img alt="kernels1.png" src="https://github.com/BlohmLab/NSCI801-QuantNeuro/blob/master/Figures/kernels1.png?raw=1" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">text</span><span class="p">()</span>
+<span class="n">hsobel_text</span> <span class="o">=</span> <span class="n">filters</span><span class="o">.</span><span class="n">sobel_h</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Non-local filters use a large region of the image (or all the image) to transform the value of one pixel:</p>
+<p>Enhances contrast in large almost uniform regions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">exposure</span>
+<span class="n">camera</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">camera</span><span class="p">()</span>
+<span class="n">camera_equalized</span> <span class="o">=</span> <span class="n">exposure</span><span class="o">.</span><span class="n">equalize_hist</span><span class="p">(</span><span class="n">camera</span><span class="p">)</span>
+
+<span class="c1"># plt.imshow(camera, cmap=&#39;gray&#39;, interpolation=&#39;nearest&#39;) </span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">camera_equalized</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_Image_Processing_Proper_v2_30_0.png" src="_images/NSCI801_Image_Processing_Proper_v2_30_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="mathematics-on-images">
+<h2><span class="section-number">7.4. </span>Mathematics on Images<a class="headerlink" href="#mathematics-on-images" title="Permalink to this headline">¶</a></h2>
+<p>Probe an image with a simple shape (a structuring element), and modify this image according to how the shape locally fits or misses the image.</p>
+<p>Default structuring element: 4-connectivity of a pixel</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">morphology</span>
+<span class="n">morphology</span><span class="o">.</span><span class="n">diamond</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0, 1, 0],
+       [1, 1, 1],
+       [0, 1, 0]], dtype=uint8)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Erosion = minimum filter. Replace the value of a pixel by the minimal value covered by the structuring element.:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">a</span>
+
+<span class="n">morphology</span><span class="o">.</span><span class="n">binary_erosion</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">morphology</span><span class="o">.</span><span class="n">diamond</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+
+
+<span class="c1">#Erosion removes objects smaller than the structure</span>
+<span class="n">morphology</span><span class="o">.</span><span class="n">binary_erosion</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">morphology</span><span class="o">.</span><span class="n">diamond</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0, 0, 0, 0, 0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0],
+       [0, 0, 0, 0, 0, 0, 0]], dtype=uint8)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Dilation: maximum filter:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">a</span>
+
+
+
+
+
+<span class="n">morphology</span><span class="o">.</span><span class="n">binary_dilation</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">morphology</span><span class="o">.</span><span class="n">diamond</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0, 0, 0, 0, 0],
+       [0, 0, 1, 0, 0],
+       [0, 1, 1, 1, 0],
+       [0, 0, 1, 0, 0],
+       [0, 0, 0, 0, 0]], dtype=uint8)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Opening: erosion + dilation:</p>
+<p>Opening removes small objects and smoothes corners.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">)</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">a</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">a</span>
+
+<span class="n">morphology</span><span class="o">.</span><span class="n">binary_opening</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">morphology</span><span class="o">.</span><span class="n">diamond</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0, 0, 0, 0, 0],
+       [0, 0, 1, 0, 0],
+       [0, 1, 1, 1, 0],
+       [0, 0, 1, 0, 0],
+       [0, 0, 0, 0, 0]], dtype=uint8)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="example-of-filters-comparison-image-denoising">
+<h2><span class="section-number">7.5. </span>Example of filters comparison: image denoising<a class="headerlink" href="#example-of-filters-comparison-image-denoising" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">skimage.morphology</span> <span class="kn">import</span> <span class="n">disk</span>
+<span class="n">coins</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">coins</span><span class="p">()</span>
+<span class="n">coins_zoom</span> <span class="o">=</span> <span class="n">coins</span><span class="p">[</span><span class="mi">10</span><span class="p">:</span><span class="mi">80</span><span class="p">,</span> <span class="mi">300</span><span class="p">:</span><span class="mi">370</span><span class="p">]</span>
+<span class="n">median_coins</span> <span class="o">=</span> <span class="n">filters</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">coins_zoom</span><span class="p">,</span> <span class="n">disk</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">restoration</span>
+<span class="n">tv_coins</span> <span class="o">=</span> <span class="n">restoration</span><span class="o">.</span><span class="n">denoise_tv_chambolle</span><span class="p">(</span><span class="n">coins_zoom</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">gaussian_coins</span> <span class="o">=</span> <span class="n">filters</span><span class="o">.</span><span class="n">gaussian</span><span class="p">(</span><span class="n">coins</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">coins_zoom</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_Image_Processing_Proper_v2_41_0.png" src="_images/NSCI801_Image_Processing_Proper_v2_41_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="image-segmentation">
+<h2><span class="section-number">7.6. </span>Image segmentation<a class="headerlink" href="#image-segmentation" title="Permalink to this headline">¶</a></h2>
+<p>Image segmentation is the attribution of different labels to different regions of the image, for example in order to extract the pixels of an object of interest.</p>
+<div class="section" id="binary-segmentation-foreground-background">
+<h3><span class="section-number">7.6.1. </span>3.3.4.1. Binary segmentation: foreground + background<a class="headerlink" href="#binary-segmentation-foreground-background" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">data</span>
+<span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">filters</span>
+<span class="n">camera</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">camera</span><span class="p">()</span>
+<span class="n">val</span> <span class="o">=</span> <span class="n">filters</span><span class="o">.</span><span class="n">threshold_otsu</span><span class="p">(</span><span class="n">camera</span><span class="p">)</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="n">camera</span> <span class="o">&lt;</span> <span class="n">val</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">data</span>
+<span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">filters</span>
+<span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">exposure</span>
+
+<span class="n">camera</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">camera</span><span class="p">()</span>
+<span class="n">val</span> <span class="o">=</span> <span class="n">filters</span><span class="o">.</span><span class="n">threshold_otsu</span><span class="p">(</span><span class="n">camera</span><span class="p">)</span>
+
+<span class="n">hist</span><span class="p">,</span> <span class="n">bins_center</span> <span class="o">=</span> <span class="n">exposure</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">camera</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">131</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">camera</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">132</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">camera</span> <span class="o">&lt;</span> <span class="n">val</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">133</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">bins_center</span><span class="p">,</span> <span class="n">hist</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_Image_Processing_Proper_v2_44_0.png" src="_images/NSCI801_Image_Processing_Proper_v2_44_0.png" />
+</div>
+</div>
+<p>So The Question is why is this helpful??</p>
+</div>
+</div>
+<div class="section" id="cell-counting">
+<h2><span class="section-number">7.7. </span>Cell Counting<a class="headerlink" href="#cell-counting" title="Permalink to this headline">¶</a></h2>
+<p><img alt="dna" src="https://github.com/BlohmLab/NSCI801-QuantNeuro/blob/master/Figures/dna.jpeg?raw=true" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pylab</span>
+<span class="kn">import</span> <span class="nn">mahotas</span> <span class="k">as</span> <span class="nn">mh</span>
+
+<span class="c1">#read in data</span>
+<span class="n">dna</span> <span class="o">=</span> <span class="n">mh</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;Figures/dna.jpeg&#39;</span><span class="p">)</span>
+<span class="n">dna</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">dna_new</span> <span class="o">=</span> <span class="n">dna</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pylab</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">dna_new</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_Image_Processing_Proper_v2_49_0.png" src="_images/NSCI801_Image_Processing_Proper_v2_49_0.png" />
+</div>
+</div>
+<p>You might be surprised that the image does not look at all like the one above. It will probably look like:</p>
+<p>This is because, by default, pylab shows images as a heatmap. You can see the more traditional grey-scale image by switching the colormap used. Instead of the default jet colourmap, we can set it to the gray one, which is the traditional greyscale representation</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pylab</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">dna_new</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">gray</span><span class="p">()</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_Image_Processing_Proper_v2_51_0.png" src="_images/NSCI801_Image_Processing_Proper_v2_51_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">dna_new</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dna_new</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dna_new</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dna_new</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1024, 1344)
+uint8
+252
+0
+</pre></div>
+</div>
+</div>
+</div>
+<p>The shape is 1024 pixels high and 1344 pixels across (recall that the convention is the matrix convention: height x width). The type is uint8, i.e., unsigned 8-bit integer. The maximum value is 252 and the minimum value is 0 3.</p>
+</div>
+<div class="section" id="lets-figure-this-out">
+<h2><span class="section-number">7.8. </span>Lets figure this out<a class="headerlink" href="#lets-figure-this-out" title="Permalink to this headline">¶</a></h2>
+<p>Here’s the first idea for counting the nuclei. We are going to threshold the image and count the number of objects.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">T</span> <span class="o">=</span> <span class="n">mh</span><span class="o">.</span><span class="n">thresholding</span><span class="o">.</span><span class="n">otsu</span><span class="p">(</span><span class="n">dna_new</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">dna_new</span> <span class="o">&gt;</span> <span class="n">T</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_Image_Processing_Proper_v2_56_0.png" src="_images/NSCI801_Image_Processing_Proper_v2_56_0.png" />
+</div>
+</div>
+<p>Here, again, we are taking advantage of the fact that dna is a numpy array and using it in logical operations (dna &gt; T). The result is a numpy array of booleans, which pylab shows as a black and white image (or red and blue if you have not previously called pylab.gray()).</p>
+<p>This isn’t too good. The image contains many small objects. There are a couple of ways to solve this. A simple one is to smooth the image a bit using a Gaussian filter.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dnaf</span> <span class="o">=</span> <span class="n">mh</span><span class="o">.</span><span class="n">gaussian_filter</span><span class="p">(</span><span class="n">dna_new</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="n">dnaf1</span> <span class="o">=</span>  <span class="n">dnaf</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;uint8&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dnaf1</span><span class="p">)</span>
+<span class="n">T</span> <span class="o">=</span> <span class="n">mh</span><span class="o">.</span><span class="n">thresholding</span><span class="o">.</span><span class="n">otsu</span><span class="p">(</span><span class="n">dnaf1</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">dnaf1</span> <span class="o">&gt;</span> <span class="n">T</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 1 1 ... 9 9 9]
+ [1 1 1 ... 9 9 9]
+ [1 1 1 ... 9 9 9]
+ ...
+ [2 2 2 ... 1 1 1]
+ [2 2 2 ... 1 1 1]
+ [2 2 2 ... 1 1 1]]
+</pre></div>
+</div>
+<img alt="_images/NSCI801_Image_Processing_Proper_v2_59_1.png" src="_images/NSCI801_Image_Processing_Proper_v2_59_1.png" />
+</div>
+</div>
+<p>The function mh.gaussian_filter takes an image and the standard deviation of the filter (in pixel units) and returns the filtered image. We are jumping from one package to the next, calling mahotas to filter the image and to compute the threshold, using numpy operations to create a thresholded images, and pylab to display it, but everyone works with numpy arrays. The result is much better.</p>
+<p>We now have some merged nuclei (those that are touching), but overall the result looks much better. The final count is only one extra function call away:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labeled</span><span class="p">,</span><span class="n">nr_objects</span> <span class="o">=</span> <span class="n">mh</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="n">dnaf</span> <span class="o">&gt;</span> <span class="n">T</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nr_objects</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">labeled</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">jet</span><span class="p">()</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>18
+</pre></div>
+</div>
+<img alt="_images/NSCI801_Image_Processing_Proper_v2_61_1.png" src="_images/NSCI801_Image_Processing_Proper_v2_61_1.png" />
+</div>
+</div>
+<p>Is this alright?</p>
+<p><img alt="alt text" src="https://github.com/BlohmLab/NSCI801-QuantNeuro/blob/master/Figures/hardno.png?raw=1" /></p>
+<p><img alt="alt text" src="https://github.com/BlohmLab/NSCI801-QuantNeuro/blob/master/Figures/Icandobetter.png?raw=1" /></p>
+<p>We now have the number of objects in the image (18), and we also displayed the labeled image. The call to pylab.jet() just resets the colourmap to jet if you still had the greyscale map active.</p>
+<p>We can explore the labeled object. It is an integer array of exactly the same size as the image that was given to mh.label(). It’s value is the label of the object at that position, so that values range from 0 (the background) to nr_objects.</p>
+</div>
+<div class="section" id="second-task-segmentation-of-the-image">
+<h2><span class="section-number">7.9. </span>Second Task: Segmentation of the image<a class="headerlink" href="#second-task-segmentation-of-the-image" title="Permalink to this headline">¶</a></h2>
+<p>The previous result was acceptable for a first pass, but there were still nuclei glued together. Let’s try to do better.</p>
+<p>Here is a simple, traditional, idea:</p>
+<p>1 - smooth the image
+2 - find regional maxima
+3 - Use the regional maxima as seeds for watershed</p>
+</div>
+<div class="section" id="finding-the-seeds">
+<h2><span class="section-number">7.10. </span>Finding the seeds<a class="headerlink" href="#finding-the-seeds" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dnaf</span> <span class="o">=</span> <span class="n">mh</span><span class="o">.</span><span class="n">gaussian_filter</span><span class="p">(</span><span class="n">dna_new</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dnaf</span><span class="p">)</span>
+<span class="n">dnaf_8</span> <span class="o">=</span>  <span class="n">dnaf</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;uint8&#39;</span><span class="p">)</span>
+<span class="c1"># print(dna_new[dna_new&gt;T])</span>
+<span class="n">rmax</span> <span class="o">=</span> <span class="n">mh</span><span class="o">.</span><span class="n">regmax</span><span class="p">(</span><span class="n">dnaf_8</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mh</span><span class="o">.</span><span class="n">overlay</span><span class="p">(</span><span class="n">dna_new</span><span class="p">,</span> <span class="n">rmax</span><span class="p">))</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1.         1.         1.         ... 9.25339223 9.13803302 9.08012871]
+ [1.         1.         1.         ... 9.25078765 9.13518282 9.07715502]
+ [1.         1.         1.         ... 9.24549432 9.1294058  9.07113486]
+ ...
+ [2.         2.         2.         ... 1.         1.         1.        ]
+ [2.         2.         2.         ... 1.         1.         1.        ]
+ [2.         2.         2.         ... 1.         1.         1.        ]]
+</pre></div>
+</div>
+<img alt="_images/NSCI801_Image_Processing_Proper_v2_68_1.png" src="_images/NSCI801_Image_Processing_Proper_v2_68_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pylab</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">dnaf</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_Image_Processing_Proper_v2_69_0.png" src="_images/NSCI801_Image_Processing_Proper_v2_69_0.png" />
+</div>
+</div>
+<p>After a little fiddling around, we decide to try the same idea with a thresholded_image:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dnaf</span> <span class="o">=</span> <span class="n">mh</span><span class="o">.</span><span class="n">gaussian_filter</span><span class="p">(</span><span class="n">dna_new</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+<span class="n">dnaf_8</span> <span class="o">=</span>  <span class="n">dnaf</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;uint8&#39;</span><span class="p">)</span>
+<span class="n">rmax</span> <span class="o">=</span> <span class="n">mh</span><span class="o">.</span><span class="n">regmax</span><span class="p">(</span><span class="n">dnaf_8</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mh</span><span class="o">.</span><span class="n">overlay</span><span class="p">(</span><span class="n">dna_new</span><span class="p">,</span> <span class="n">rmax</span><span class="p">))</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_Image_Processing_Proper_v2_71_0.png" src="_images/NSCI801_Image_Processing_Proper_v2_71_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">seeds</span><span class="p">,</span><span class="n">nr_nuclei</span> <span class="o">=</span> <span class="n">mh</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="n">rmax</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nr_nuclei</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">seeds</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([   0,    0,    0, ..., 1023, 1023, 1023]),
+ array([ 493,  494,  495, ..., 1062, 1063, 1064]))
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now things look much better.</p>
+</div>
+<div class="section" id="watershed">
+<h2><span class="section-number">7.11. </span>Watershed<a class="headerlink" href="#watershed" title="Permalink to this headline">¶</a></h2>
+<p>We are going to apply watershed to the distance transform of the thresholded image:</p>
+<p>Watershedding treats images like a set of peaks and valleys - and tries to cut them down accordingly</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dnaf</span> <span class="o">=</span> <span class="n">mh</span><span class="o">.</span><span class="n">gaussian_filter</span><span class="p">(</span><span class="n">dna_new</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+<span class="c1"># dnaf2 =  dnaf.astype(&#39;uint8&#39;)</span>
+<span class="n">T1</span> <span class="o">=</span> <span class="n">mh</span><span class="o">.</span><span class="n">thresholding</span><span class="o">.</span><span class="n">otsu</span><span class="p">(</span><span class="n">dnaf2</span><span class="p">)</span>
+<span class="nb">print</span>
+<span class="n">dist</span> <span class="o">=</span> <span class="n">mh</span><span class="o">.</span><span class="n">distance</span><span class="p">(</span><span class="n">dnaf2</span> <span class="o">&gt;</span> <span class="n">T1</span><span class="p">)</span>
+<span class="n">dist</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">dist</span>
+<span class="n">dist</span> <span class="o">-=</span> <span class="n">dist</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">dist</span> <span class="o">=</span> <span class="n">dist</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="n">dist</span><span class="o">.</span><span class="n">ptp</span><span class="p">())</span> <span class="o">*</span> <span class="mi">255</span>
+<span class="n">dist</span> <span class="o">=</span> <span class="n">dist</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">dist</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_Image_Processing_Proper_v2_76_0.png" src="_images/NSCI801_Image_Processing_Proper_v2_76_0.png" />
+</div>
+</div>
+<p>After we contrast stretched the dist image, we can call mh.cwatershed to get the final result (the colours in the image come from it being displayed using the jet colourmap):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dnaf = mh.gaussian_filter(dna_new, 16)</span>
+<span class="c1"># # print(dnaf)</span>
+<span class="c1"># dnaf_8 =  dna_new.astype(&#39;uint8&#39;)</span>
+<span class="c1"># nuclei = mh.cwatershed(dnaf_8, seeds)</span>
+<span class="c1"># print(nuclei)</span>
+<span class="c1"># pylab.imshow(nuclei)</span>
+<span class="c1"># pylab.show()</span>
+
+<span class="n">nuclei</span> <span class="o">=</span> <span class="n">mh</span><span class="o">.</span><span class="n">cwatershed</span><span class="p">(</span><span class="n">dist</span><span class="p">,</span> <span class="n">seeds</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">nuclei</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_Image_Processing_Proper_v2_78_0.png" src="_images/NSCI801_Image_Processing_Proper_v2_78_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">whole</span> <span class="o">=</span> <span class="n">mh</span><span class="o">.</span><span class="n">segmentation</span><span class="o">.</span><span class="n">gvoronoi</span><span class="p">(</span><span class="n">nuclei</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">whole</span><span class="p">)</span>
+<span class="n">pylab</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_Image_Processing_Proper_v2_79_0.png" src="_images/NSCI801_Image_Processing_Proper_v2_79_0.png" />
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="NSCI801_Advanced_stats.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">6. </span>Advanced Statistics</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="NSCI801_Bayesian-stats.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Bayesian statistics and hypothesis testing</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Gunnar Blohm, Joe Nashed<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

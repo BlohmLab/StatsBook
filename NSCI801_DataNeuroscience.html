@@ -1,0 +1,2121 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10. Data Neuroscience Overview &#8212; NSCI 801 - Quantitative Neuroscience book</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="11. Correlation vs. Causality" href="NSCI801_CorrelationVsCausality.html" />
+    <link rel="prev" title="9. Models in Neuroscience" href="NSCI801_ModelFitting.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">NSCI 801 - Quantitative Neuroscience book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="README.html">
+   NSCI 801 - Quantitative Neuroscience Syllabus
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Intro.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_intro_python.html">
+   2. Google COLAB and Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_advanced_python.html">
+   3. Advanced Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_acquisition_filters.html">
+   4. Data Collection and Signal Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Descriptive_Stats-NEW.html">
+   5. Descriptive Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Advanced_stats.html">
+   6. Advanced Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Image_Processing_Proper_v2.html">
+   7. Image Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Bayesian-stats.html">
+   8. Bayesian statistics and hypothesis testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_ModelFitting.html">
+   9. Models in Neuroscience
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   10. Data Neuroscience Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_CorrelationVsCausality.html">
+   11. Correlation vs. Causality
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Reproducibility.html">
+   12. Reproducibility, reliability, validity
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/NSCI801_DataNeuroscience.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FNSCI801_DataNeuroscience.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/NSCI801_DataNeuroscience.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nsci-801-quantitative-neuroscience">
+   10.1. NSCI 801 - Quantitative Neuroscience
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#outline">
+     10.1.1. Outline
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#promises-and-limitations-of-data-neuroscience">
+     10.1.2. Promises and limitations of Data Neuroscience
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#so-what-can-data-neuroscience-do-for-us">
+     10.1.3. So what can data neuroscience do for us?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-organization">
+     10.1.4. Data organization
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intro-to-ml">
+     10.1.5. Intro to ML
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     10.1.6. Intro to ML
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classification-and-regularization">
+     10.1.7. Classification and regularization
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logistic-regression">
+     10.1.8. Logistic regression
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-neural-recordings-during-decision-making">
+     10.1.9. Data: neural recordings during decision making
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     10.1.10. Logistic regression
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cross-validating-our-classifier">
+     10.1.11. Cross-validating our classifier
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regularization">
+     10.1.12. Regularization
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#so-how-do-we-chose-the-best-hyperparameter">
+       10.1.12.1. So how do we chose the best hyperparameter?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dimensionality-reduction">
+     10.1.13. Dimensionality reduction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#let-s-perform-of-pca-on-mnist">
+     10.1.14. Let’s perform of PCA on MNIST
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#variance-explained">
+       10.1.14.1. Variance explained
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-reconstruction">
+       10.1.14.2. Data reconstruction
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#visualization-of-weights">
+       10.1.14.3. Visualization of weights
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#denoising-with-pca">
+       10.1.14.4. Denoising with PCA
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#decoding">
+     10.1.15. Decoding
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#deep-feed-forward-networks-in-pytorch">
+       10.1.15.1. Deep feed-forward networks in pytorch
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#activation-functions">
+       10.1.15.2. Activation functions
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#loss-function-and-gradient-descent">
+       10.1.15.3. Loss function and gradient descent
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#evaluate-model-performance">
+       10.1.15.4. Evaluate model performance
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#further-readings">
+     10.1.16. Further readings
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Data Neuroscience Overview</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nsci-801-quantitative-neuroscience">
+   10.1. NSCI 801 - Quantitative Neuroscience
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#outline">
+     10.1.1. Outline
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#promises-and-limitations-of-data-neuroscience">
+     10.1.2. Promises and limitations of Data Neuroscience
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#so-what-can-data-neuroscience-do-for-us">
+     10.1.3. So what can data neuroscience do for us?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-organization">
+     10.1.4. Data organization
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intro-to-ml">
+     10.1.5. Intro to ML
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     10.1.6. Intro to ML
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classification-and-regularization">
+     10.1.7. Classification and regularization
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logistic-regression">
+     10.1.8. Logistic regression
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-neural-recordings-during-decision-making">
+     10.1.9. Data: neural recordings during decision making
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     10.1.10. Logistic regression
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cross-validating-our-classifier">
+     10.1.11. Cross-validating our classifier
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regularization">
+     10.1.12. Regularization
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#so-how-do-we-chose-the-best-hyperparameter">
+       10.1.12.1. So how do we chose the best hyperparameter?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dimensionality-reduction">
+     10.1.13. Dimensionality reduction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#let-s-perform-of-pca-on-mnist">
+     10.1.14. Let’s perform of PCA on MNIST
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#variance-explained">
+       10.1.14.1. Variance explained
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-reconstruction">
+       10.1.14.2. Data reconstruction
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#visualization-of-weights">
+       10.1.14.3. Visualization of weights
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#denoising-with-pca">
+       10.1.14.4. Denoising with PCA
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#decoding">
+     10.1.15. Decoding
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#deep-feed-forward-networks-in-pytorch">
+       10.1.15.1. Deep feed-forward networks in pytorch
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#activation-functions">
+       10.1.15.2. Activation functions
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#loss-function-and-gradient-descent">
+       10.1.15.3. Loss function and gradient descent
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#evaluate-model-performance">
+       10.1.15.4. Evaluate model performance
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#further-readings">
+     10.1.16. Further readings
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="data-neuroscience-overview">
+<h1><span class="section-number">10. </span>Data Neuroscience Overview<a class="headerlink" href="#data-neuroscience-overview" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="nsci-801-quantitative-neuroscience">
+<h2><span class="section-number">10.1. </span>NSCI 801 - Quantitative Neuroscience<a class="headerlink" href="#nsci-801-quantitative-neuroscience" title="Permalink to this headline">¶</a></h2>
+<p>Gunnar Blohm</p>
+<div class="section" id="outline">
+<h3><span class="section-number">10.1.1. </span>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Promises and limitations of Data Neuroscience</p></li>
+<li><p>Data Organization</p>
+<ul>
+<li><p>formats</p></li>
+<li><p>data bases</p></li>
+</ul>
+</li>
+<li><p>intro to ML</p>
+<ul>
+<li><p>dimensionality reduction</p></li>
+<li><p>classification</p></li>
+<li><p>decoding</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="promises-and-limitations-of-data-neuroscience">
+<h3><span class="section-number">10.1.2. </span>Promises and limitations of Data Neuroscience<a class="headerlink" href="#promises-and-limitations-of-data-neuroscience" title="Permalink to this headline">¶</a></h3>
+<p>“[…] data are profoundly dumb. Data can tell you that the people who took a medicine recovered faster than people who did not take it, but they can’t tell you why.” (Pearl, in “the book of why”)</p>
+<p><strong>Data alone does not give you the answer!</strong> But data is important when you have the right question and hypothesis (= model)…</p>
+<img style="float: center; width:800px;" src="stuff/Pearl-flow.png"></div>
+<div class="section" id="so-what-can-data-neuroscience-do-for-us">
+<h3><span class="section-number">10.1.3. </span>So what can data neuroscience do for us?<a class="headerlink" href="#so-what-can-data-neuroscience-do-for-us" title="Permalink to this headline">¶</a></h3>
+<p>Here are some examples…</p>
+<ul class="simple">
+<li><p>look for structure in really complicated data (= pattern recognition)</p></li>
+<li><p>automatically extract information from the data (= data mining)</p></li>
+<li><p>simplify data with lots of redundancy (= dimensionality reduction)</p></li>
+<li><p>more data = possibility to apply larger statistical models (= curve fitting)</p>
+<ul>
+<li><p>e.g. high-dimensional correlations (= decoding)</p></li>
+<li><p>e.g. find differences in data (= classification)</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="data-organization">
+<h3><span class="section-number">10.1.4. </span>Data organization<a class="headerlink" href="#data-organization" title="Permalink to this headline">¶</a></h3>
+<p>In order to take advantage of big data in neuroscience, we need to organize our data well!</p>
+<ul class="simple">
+<li><p>is it scalable, flexible, future-proof?</p></li>
+<li><p>does it integrate with other data (e.g. repositories)?</p></li>
+<li><p>is it documented enough to be re-usable?</p></li>
+</ul>
+<p><a class="reference external" href="https://www.nature.com/articles/d41586-018-03071-1#:~:text=A%20data%2Dmanagement%20plan%20explains,%2C%20models%2C%20algorithms%20and%20software.">Data management made simple</a></p>
+<p><a class="reference external" href="https://www.nature.com/articles/sdata201618">The FAIR Guiding Principles for scientific data management and stewardship</a>: Findability, Accessibility, Interoperability, and Reusability</p>
+<p>Also check out the NSCI800 lectures on Open Science: <a class="reference external" href="http://www.compneurosci.com/NSCI800/OpenScienceI.pdf">Lecture 1</a> and <a class="reference external" href="http://www.compneurosci.com/NSCI800/OpenScienceII.pdf">Lecture 2</a></p>
+</div>
+<div class="section" id="intro-to-ml">
+<h3><span class="section-number">10.1.5. </span>Intro to ML<a class="headerlink" href="#intro-to-ml" title="Permalink to this headline">¶</a></h3>
+<p>Machine learning vs. statistics: how are they complementary?</p>
+<p>“Statistics is the study of making strong inferences on few variables from small amounts of noisy data. Machine learning is the study of discovering structured relationships between lots of variables with large amounts of data” (Jordan)</p>
+<ul class="simple">
+<li><p>statistics is typically concerned with inferences about parameters of given functional relationships</p>
+<ul>
+<li><p>inferences about variables, while taking uncertainty into account</p></li>
+<li><p>requires explicit knowledge about the data sampling process</p></li>
+</ul>
+</li>
+<li><p>machine learning is concerned with inferences about the functional relationships per se</p>
+<ul>
+<li><p>inference about higher-order interactions, functions, or mappings among variables</p></li>
+<li><p>makes only weak qualitative assumptions about the data generation process</p></li>
+</ul>
+</li>
+</ul>
+<p>In this way, one might argue that machine learning is qualitatively similar to human intuition, which likewise enables researchers to make reasonable hypotheses regarding functional relationships among variables, albeit simple ones.</p>
+</div>
+<div class="section" id="id1">
+<h3><span class="section-number">10.1.6. </span>Intro to ML<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>ML is wide field and we can only have a brief glimpse here… but check out further readings if you want to learn more!</p>
+<p><strong>Good news! You already know how to perform regressions using ML!</strong></p>
+<p>So here we will cover the following:</p>
+<ul class="simple">
+<li><p>classification &amp; regularization</p></li>
+<li><p>dimensionality reduction</p></li>
+<li><p>decoding</p></li>
+</ul>
+</div>
+<div class="section" id="classification-and-regularization">
+<h3><span class="section-number">10.1.7. </span>Classification and regularization<a class="headerlink" href="#classification-and-regularization" title="Permalink to this headline">¶</a></h3>
+<p>(adapted from <a class="reference external" href="https://colab.research.google.com/github/NeuromatchAcademy/course-content/blob/master/tutorials/W1D4_MachineLearning/student/W1D4_Tutorial2.ipynb">NMA W1D4 tutorial 2</a>)</p>
+<p>There are many ways to do classification:</p>
+<ul class="simple">
+<li><p>neural network</p></li>
+<li><p>Bayesian classifier</p></li>
+<li><p>logistic regression (special case of GLM)</p></li>
+<li><p>…</p></li>
+</ul>
+<p>Here we’ll use logistic regression.</p>
+</div>
+<div class="section" id="logistic-regression">
+<h3><span class="section-number">10.1.8. </span>Logistic regression<a class="headerlink" href="#logistic-regression" title="Permalink to this headline">¶</a></h3>
+<p>Logistic Regression is a binary classification model. It is a GLM with a logistic link function and a Bernoulli (i.e. coinflip) noise model.</p>
+<div class="math notranslate nohighlight">
+\[\color{grey}{\hat{y} = \sigma(\theta^Tx)}\]</div>
+<div class="math notranslate nohighlight">
+\[\color{grey}{\sigma(z) = \frac{1}{1+exp(-z)}}\]</div>
+<p>with parameter set <span class="math notranslate nohighlight">\(\theta\)</span></p>
+<p><strong>Goal</strong>: find paramter set <span class="math notranslate nohighlight">\(\theta\)</span> that best maps <span class="math notranslate nohighlight">\(x\)</span> onto <span class="math notranslate nohighlight">\(y\)</span>. We’ll use the popular ML library <a class="reference external" href="https://scikit-learn.org/stable/">scikit-learn</a>.</p>
+<p>Note: we need a training set for that…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
+
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = &#39;retina&#39;
+
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;dark_background&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;numpy&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Helper functions</span>
+
+<span class="k">def</span> <span class="nf">plot_weights</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;Draw a stem plot of weights for each model in models dict.&quot;&quot;&quot;</span>
+  <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">models</span><span class="p">)</span>
+  <span class="n">f</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mf">2.5</span> <span class="o">*</span> <span class="n">n</span><span class="p">))</span>
+  <span class="n">axs</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="n">sharey</span><span class="p">)</span>
+  <span class="n">axs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">axs</span><span class="p">)</span>
+
+  <span class="k">for</span> <span class="n">ax</span><span class="p">,</span> <span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">axs</span><span class="p">,</span> <span class="n">models</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">.02</span><span class="p">)</span>
+    <span class="n">stem</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(),</span> <span class="n">use_line_collection</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">stem</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_marker</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)</span>
+    <span class="n">stem</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s2">&quot;.5&quot;</span><span class="p">)</span>
+    <span class="n">stem</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_linewidths</span><span class="p">(</span><span class="mf">.5</span><span class="p">)</span>
+    <span class="n">stem</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s2">&quot;.5&quot;</span><span class="p">)</span>
+    <span class="n">stem</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;C3&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Weight&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">)</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;Neuron (a.k.a. feature)&quot;</span><span class="p">)</span>
+  <span class="n">f</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">plot_function</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">var</span><span class="p">,</span> <span class="n">points</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)):</span>
+    <span class="sd">&quot;&quot;&quot;Evaluate f() on linear space between points and plot.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">      f (callable): function that maps scalar -&gt; scalar</span>
+<span class="sd">      name (string): Function name for axis labels</span>
+<span class="sd">      var (string): Variable name for axis labels.</span>
+<span class="sd">      points (tuple): Args for np.linspace to create eval grid.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">*</span><span class="n">points</span><span class="p">)</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+      <span class="n">xlabel</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s1">$&#39;</span><span class="p">,</span>
+      <span class="n">ylabel</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;$</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1">(</span><span class="si">{</span><span class="n">var</span><span class="si">}</span><span class="s1">)$&#39;</span>
+    <span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">plot_model_selection</span><span class="p">(</span><span class="n">C_values</span><span class="p">,</span> <span class="n">accuracies</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;Plot the accuracy curve over log-spaced C values.&quot;&quot;&quot;</span>
+  <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">C_values</span><span class="p">,</span> <span class="n">accuracies</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">)</span>
+  <span class="n">best_C</span> <span class="o">=</span> <span class="n">C_values</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">accuracies</span><span class="p">)]</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+      <span class="n">xticks</span><span class="o">=</span><span class="n">C_values</span><span class="p">,</span>
+      <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;$C$&quot;</span><span class="p">,</span>
+      <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Cross-validated accuracy&quot;</span><span class="p">,</span>
+      <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Best C: </span><span class="si">{</span><span class="n">best_C</span><span class="si">:</span><span class="s2">1g</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">accuracies</span><span class="p">)</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span>
+  <span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">plot_non_zero_coefs</span><span class="p">(</span><span class="n">C_values</span><span class="p">,</span> <span class="n">non_zero_l1</span><span class="p">,</span> <span class="n">n_voxels</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;Plot the accuracy curve over log-spaced C values.&quot;&quot;&quot;</span>
+  <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s2">&quot;log&quot;</span><span class="p">)</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">C_values</span><span class="p">,</span> <span class="n">non_zero_l1</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">)</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+    <span class="n">xticks</span><span class="o">=</span><span class="n">C_values</span><span class="p">,</span>
+    <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;$C$&quot;</span><span class="p">,</span>
+    <span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Number of non-zero coefficients&quot;</span><span class="p">,</span>
+  <span class="p">)</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">n_voxels</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;.1&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">)</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;Total</span><span class="se">\n</span><span class="s2"># Neurons&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">C_values</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">n_voxels</span> <span class="o">*</span> <span class="mf">.98</span><span class="p">),</span> <span class="n">va</span><span class="o">=</span><span class="s2">&quot;top&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Data retrieval and loading</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">hashlib</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://osf.io/r9gh8/download&quot;</span>
+<span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;W1D4_steinmetz_data.npz&quot;</span>
+<span class="n">expected_md5</span> <span class="o">=</span> <span class="s2">&quot;d19716354fed0981267456b80db07ea8&quot;</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
+  <span class="k">try</span><span class="p">:</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+  <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">ConnectionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;!!! Failed to download data !!!&quot;</span><span class="p">)</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="n">requests</span><span class="o">.</span><span class="n">codes</span><span class="o">.</span><span class="n">ok</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;!!! Failed to download data !!!&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span> <span class="o">!=</span> <span class="n">expected_md5</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;!!! Data download appears corrupted !!!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fid</span><span class="p">:</span>
+        <span class="n">fid</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">load_steinmetz_data</span><span class="p">(</span><span class="n">data_fname</span><span class="o">=</span><span class="n">fname</span><span class="p">):</span>
+
+  <span class="k">with</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">data_fname</span><span class="p">)</span> <span class="k">as</span> <span class="n">dobj</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="o">**</span><span class="n">dobj</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sigmoid</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;Return the logistic transform of z.&quot;&quot;&quot;</span>
+  <span class="k">return</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">z</span><span class="p">))</span>
+
+<span class="n">plot_function</span><span class="p">(</span><span class="n">sigmoid</span><span class="p">,</span> <span class="s2">&quot;\sigma&quot;</span><span class="p">,</span> <span class="s2">&quot;z&quot;</span><span class="p">,</span> <span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_DataNeuroscience_12_0.png" src="_images/NSCI801_DataNeuroscience_12_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="data-neural-recordings-during-decision-making">
+<h3><span class="section-number">10.1.9. </span>Data: neural recordings during decision making<a class="headerlink" href="#data-neural-recordings-during-decision-making" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://www.nature.com/articles/s41586-019-1787-x">Steinmetz et al. (2019)</a> dataset. We will decode the mouse’s decision from the neural data using Logistic Regression.</p>
+<p>So let’s load the data and have a look…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">load_steinmetz_data</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">val</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>spikes (276, 691)
+choices (276,)
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">spikes</span></code>: an array of normalized spike rates with shape <code class="docutils literal notranslate"><span class="pre">(n_trials,</span> <span class="pre">n_neurons)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">choices</span></code>: a vector of 0s and 1s, indicating the animal’s behavioral response, with length <code class="docutils literal notranslate"><span class="pre">n_trials</span></code></p></li>
+</ul>
+<p>So let’s define our inputs and outputs for the training set:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;choices&quot;</span><span class="p">]</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;spikes&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we’re ready to perform the Logistic Regression!</p>
+</div>
+<div class="section" id="id2">
+<h3><span class="section-number">10.1.10. </span>Logistic regression<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Using a Logistic Regression model within <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> is very simple.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First define the model</span>
+<span class="n">log_reg</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">penalty</span><span class="o">=</span><span class="s2">&quot;none&quot;</span><span class="p">)</span>
+
+<span class="c1"># Then fit it to data</span>
+<span class="n">log_reg</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Now we can look at what the classifier predicts</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">log_reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next we want to know how well the classifier worked…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_accuracy</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;Compute accuracy of classifier predictions.</span>
+<span class="sd">  Args:</span>
+<span class="sd">    X (2D array): Data matrix</span>
+<span class="sd">    y (1D array): Label vector</span>
+<span class="sd">    model (sklearn estimator): Classifier with trained weights.</span>
+<span class="sd">  Returns:</span>
+<span class="sd">    accuracy (float): Proportion of correct predictions.</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+  <span class="n">accuracy</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span> <span class="o">==</span> <span class="n">y_pred</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+  <span class="k">return</span> <span class="n">accuracy</span>
+
+<span class="n">train_accuracy</span> <span class="o">=</span> <span class="n">compute_accuracy</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">log_reg</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Accuracy on the training data: </span><span class="si">{</span><span class="n">train_accuracy</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy on the training data: 100.00%
+</pre></div>
+</div>
+</div>
+</div>
+<p>Wow, this is perfect! We’re soooo good… or are we???</p>
+<p>What could have gone wrong?</p>
+</div>
+<div class="section" id="cross-validating-our-classifier">
+<h3><span class="section-number">10.1.11. </span>Cross-validating our classifier<a class="headerlink" href="#cross-validating-our-classifier" title="Permalink to this headline">¶</a></h3>
+<p>We’re worried about <em>over-fitting</em>! So let’s cross-validate…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">accuracies</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">LogisticRegression</span><span class="p">(</span><span class="n">penalty</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">),</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span> <span class="c1"># k=8 crossvalidation</span>
+
+<span class="c1"># plot out these `k=8` accuracy scores.</span>
+<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">accuracies</span><span class="p">,</span> <span class="n">vert</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">widths</span><span class="o">=</span><span class="mf">.7</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">accuracies</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+  <span class="n">xlabel</span><span class="o">=</span><span class="s2">&quot;Accuracy&quot;</span><span class="p">,</span>
+  <span class="n">yticks</span><span class="o">=</span><span class="p">[],</span>
+  <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Average test accuracy: </span><span class="si">{</span><span class="n">accuracies</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s2">&quot;left&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_DataNeuroscience_24_0.png" src="_images/NSCI801_DataNeuroscience_24_0.png" />
+</div>
+</div>
+<p>Well that’s sobering… what does this mean wrt the 100% accuracy we obtained before?</p>
+<p>How can we overcome over-fitting?</p>
+</div>
+<div class="section" id="regularization">
+<h3><span class="section-number">10.1.12. </span>Regularization<a class="headerlink" href="#regularization" title="Permalink to this headline">¶</a></h3>
+<p>Regularization is a central concept in ML.</p>
+<ul class="simple">
+<li><p>it forces a model to learn a set solutions you a priori believe to be more correct</p></li>
+<li><p>reduces overfitting (less flexibility to fit idiosyncracies in the training data)</p></li>
+<li><p>adds model bias, but it’s a good bias: typically it shrinks weights</p></li>
+</ul>
+<p>The 2 main types of regularization are:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(L_2\)</span> regularization (aka “ridge” penalty): typically produces “dense” weights but of smaller values
+$<span class="math notranslate nohighlight">\(\color{grey}{-\log\mathcal{L}'(\theta | X, y)=-\log\mathcal{L}(\theta | X, y) +\frac\beta2\sum_i\theta_i^2}\)</span>$</p></li>
+<li><p><span class="math notranslate nohighlight">\(L_1\)</span> regularization (aka “Lasso” penalty): tpically produces “sparse” weights (with mostly zero values)
+$<span class="math notranslate nohighlight">\(\color{grey}{-\log\mathcal{L}'(\theta | X, y)=-\log\mathcal{L}(\theta | X, y) +\frac\beta2\sum_i|\theta_i|}\)</span>$</p></li>
+</ul>
+<p>Let’s have a look…</p>
+<p>Note: regularization hyperparameter <span class="math notranslate nohighlight">\(\color{grey}{ C = \frac{1}{\beta}}\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">log_reg_l2</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">penalty</span><span class="o">=</span><span class="s2">&quot;l2&quot;</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># now show the two models</span>
+<span class="n">models</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;No regularization&quot;</span><span class="p">:</span> <span class="n">log_reg</span><span class="p">,</span>
+  <span class="s2">&quot;$L_2$ (C = 1)&quot;</span><span class="p">:</span> <span class="n">log_reg_l2</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">plot_weights</span><span class="p">(</span><span class="n">models</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">train_accuracy</span> <span class="o">=</span> <span class="n">compute_accuracy</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">log_reg_l2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Accuracy on the training data: </span><span class="si">{</span><span class="n">train_accuracy</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy on the training data: 97.83%
+</pre></div>
+</div>
+<img alt="_images/NSCI801_DataNeuroscience_30_1.png" src="_images/NSCI801_DataNeuroscience_30_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">log_reg_l1</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">penalty</span><span class="o">=</span><span class="s2">&quot;l1&quot;</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="s2">&quot;saga&quot;</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
+<span class="n">log_reg_l1</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">models</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;$L_2$ (C = 1)&quot;</span><span class="p">:</span> <span class="n">log_reg_l2</span><span class="p">,</span>
+  <span class="s2">&quot;$L_1$ (C = 1)&quot;</span><span class="p">:</span> <span class="n">log_reg_l1</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">plot_weights</span><span class="p">(</span><span class="n">models</span><span class="p">)</span>
+<span class="n">train_accuracy</span> <span class="o">=</span> <span class="n">compute_accuracy</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">log_reg_l1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Accuracy on the training data: </span><span class="si">{</span><span class="n">train_accuracy</span><span class="si">:</span><span class="s2">.2%</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Accuracy on the training data: 93.84%
+</pre></div>
+</div>
+<img alt="_images/NSCI801_DataNeuroscience_31_1.png" src="_images/NSCI801_DataNeuroscience_31_1.png" />
+</div>
+</div>
+<p>Note: we added two additional parameters: solver=”saga” and max_iter=5000. The LogisticRegression class can use several different optimization algorithms (“solvers”), and not all of them support the L1 penalty. At a certain point, the solver will give up if it hasn’t found a minimum value. The max_iter parameter tells it to make more attempts; otherwise, we’d see an ugly warning about “convergence”.</p>
+<div class="section" id="so-how-do-we-chose-the-best-hyperparameter">
+<h4><span class="section-number">10.1.12.1. </span>So how do we chose the best hyperparameter?<a class="headerlink" href="#so-how-do-we-chose-the-best-hyperparameter" title="Permalink to this headline">¶</a></h4>
+<p>We’ll look at the cross-validated classification accuracy…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">model_selection</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">C_values</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;Compute CV accuracy for each C value.</span>
+<span class="sd">  Args:</span>
+<span class="sd">    X (2D array): Data matrix</span>
+<span class="sd">    y (1D array): Label vector</span>
+<span class="sd">    C_values (1D array): Array of hyperparameter values.</span>
+<span class="sd">  Returns:</span>
+<span class="sd">    accuracies (1D array): CV accuracy with each value of C.</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">accuracies</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="k">for</span> <span class="n">C</span> <span class="ow">in</span> <span class="n">C_values</span><span class="p">:</span>
+
+    <span class="c1"># Initialize and fit the model</span>
+    <span class="c1"># (Hint, you may need to set max_iter)</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">penalty</span><span class="o">=</span><span class="s2">&quot;l2&quot;</span><span class="p">,</span> <span class="n">C</span><span class="o">=</span><span class="n">C</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
+    <span class="c1"># model = LogisticRegression(penalty=&quot;l1&quot;, C=C, solver=&quot;saga&quot;, max_iter=5000)</span>
+
+    <span class="c1"># Get the accuracy for each test split</span>
+    <span class="n">accs</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+
+    <span class="c1"># Store the average test accuracy for this value of C</span>
+    <span class="n">accuracies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">accs</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+
+  <span class="k">return</span> <span class="n">accuracies</span>
+
+<span class="c1"># Use log-spaced values for C</span>
+<span class="n">C_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+
+<span class="n">accuracies</span> <span class="o">=</span> <span class="n">model_selection</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">C_values</span><span class="p">)</span>
+<span class="n">plot_model_selection</span><span class="p">(</span><span class="n">C_values</span><span class="p">,</span> <span class="n">accuracies</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_DataNeuroscience_34_0.png" src="_images/NSCI801_DataNeuroscience_34_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dimensionality-reduction">
+<h3><span class="section-number">10.1.13. </span>Dimensionality reduction<a class="headerlink" href="#dimensionality-reduction" title="Permalink to this headline">¶</a></h3>
+<p>(adapted from <a class="reference external" href="https://colab.research.google.com/github/NeuromatchAcademy/course-content/blob/master/tutorials/W1D5_DimensionalityReduction/student/W1D5_Tutorial3.ipynb">Neuromatch Academy W1D5 Tutorial 3</a>)</p>
+<p>There are many forms of dimensionality reduction. The idea is that data is NOT uniformly distributed and thus there are some meaningful dimensions of data variability. Dimensionality reduction techniques focus on capturing the dominant dimensions of data variability.</p>
+<p>We’ll specifically be learning about <strong><a class="reference external" href="https://en.wikipedia.org/wiki/Principal_component_analysis">Principal Component Analysis (PCA)</a></strong>, a linear method producing orthogonal axes.</p>
+<img style="float: center; width:750px;" src="stuff/PCA3d.png"></div>
+<div class="section" id="let-s-perform-of-pca-on-mnist">
+<h3><span class="section-number">10.1.14. </span>Let’s perform of PCA on MNIST<a class="headerlink" href="#let-s-perform-of-pca-on-mnist" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/MNIST_database">MNIST</a> is a dataset of 70,000 images of handwritten digits.</p>
+<p>Each image is a 28x28 pixel grayscale image. For convenience, each 28x28 pixel image is often unravelled into a single 784 (=28*28) element vector, so that the whole dataset is represented as a 70,000 x 784 matrix. Each row represents a different image, and each column represents a different pixel.</p>
+<p>Let’s have a look…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Helper Functions</span>
+
+
+<span class="k">def</span> <span class="nf">plot_variance_explained</span><span class="p">(</span><span class="n">variance_explained</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  Plots eigenvalues.</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">    variance_explained (numpy array of floats) : Vector of variance explained</span>
+<span class="sd">                                                 for each PC</span>
+
+<span class="sd">  Returns:</span>
+<span class="sd">    Nothing.</span>
+
+<span class="sd">  &quot;&quot;&quot;</span>
+
+  <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">variance_explained</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">variance_explained</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Number of components&#39;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Variance explained&#39;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">plot_MNIST_reconstruction</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">X_reconstructed</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  Plots 9 images in the MNIST dataset side-by-side with the reconstructed</span>
+<span class="sd">  images.</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">    X (numpy array of floats)               : Data matrix each column</span>
+<span class="sd">                                              corresponds to a different</span>
+<span class="sd">                                              random variable</span>
+<span class="sd">    X_reconstructed (numpy array of floats) : Data matrix each column</span>
+<span class="sd">                                              corresponds to a different</span>
+<span class="sd">                                              random variable</span>
+
+<span class="sd">  Returns:</span>
+<span class="sd">    Nothing.</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+
+  <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+  <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>
+  <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">for</span> <span class="n">k1</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">k2</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+      <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
+      <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="p">:],</span> <span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">)),</span>
+                 <span class="n">extent</span><span class="o">=</span><span class="p">[(</span><span class="n">k1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">28</span><span class="p">,</span> <span class="n">k1</span> <span class="o">*</span> <span class="mi">28</span><span class="p">,</span> <span class="p">(</span><span class="n">k2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">28</span><span class="p">,</span> <span class="n">k2</span> <span class="o">*</span> <span class="mi">28</span><span class="p">],</span>
+                 <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">255</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">((</span><span class="mi">3</span> <span class="o">*</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">((</span><span class="mi">3</span> <span class="o">*</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                  <span class="n">labelbottom</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([])</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([])</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Data&#39;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">clim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">250</span><span class="p">])</span>
+  <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span>
+  <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">for</span> <span class="n">k1</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">k2</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+      <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
+      <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">X_reconstructed</span><span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="p">:]),</span> <span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">)),</span>
+                 <span class="n">extent</span><span class="o">=</span><span class="p">[(</span><span class="n">k1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">28</span><span class="p">,</span> <span class="n">k1</span> <span class="o">*</span> <span class="mi">28</span><span class="p">,</span> <span class="p">(</span><span class="n">k2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">28</span><span class="p">,</span> <span class="n">k2</span> <span class="o">*</span> <span class="mi">28</span><span class="p">],</span>
+                 <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">255</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">((</span><span class="mi">3</span> <span class="o">*</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">((</span><span class="mi">3</span> <span class="o">*</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                  <span class="n">labelbottom</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([])</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([])</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">clim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">250</span><span class="p">])</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Reconstructed&#39;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">plot_MNIST_sample</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  Plots 9 images in the MNIST dataset.</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">     X (numpy array of floats) : Data matrix each column corresponds to a</span>
+<span class="sd">                                 different random variable</span>
+
+<span class="sd">  Returns:</span>
+<span class="sd">    Nothing.</span>
+
+<span class="sd">  &quot;&quot;&quot;</span>
+
+  <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+  <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">for</span> <span class="n">k1</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">k2</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+      <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
+      <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">k</span><span class="p">,</span> <span class="p">:],</span> <span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">)),</span>
+                 <span class="n">extent</span><span class="o">=</span><span class="p">[(</span><span class="n">k1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">28</span><span class="p">,</span> <span class="n">k1</span> <span class="o">*</span> <span class="mi">28</span><span class="p">,</span> <span class="p">(</span><span class="n">k2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">28</span><span class="p">,</span> <span class="n">k2</span> <span class="o">*</span> <span class="mi">28</span><span class="p">],</span>
+                 <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">255</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">((</span><span class="mi">3</span> <span class="o">*</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">((</span><span class="mi">3</span> <span class="o">*</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                  <span class="n">labelbottom</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">clim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">250</span><span class="p">])</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([])</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([])</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">plot_MNIST_weights</span><span class="p">(</span><span class="n">weights</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  Visualize PCA basis vector weights for MNIST. Red = positive weights,</span>
+<span class="sd">  blue = negative weights, white = zero weight.</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">     weights (numpy array of floats) : PCA basis vector</span>
+
+<span class="sd">  Returns:</span>
+<span class="sd">     Nothing.</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+
+  <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+  <span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s1">&#39;seismic&#39;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="p">(</span><span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">))),</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                  <span class="n">labelbottom</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">clim</span><span class="p">(</span><span class="o">-</span><span class="mf">.15</span><span class="p">,</span> <span class="mf">.15</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">ticks</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">.15</span><span class="p">,</span> <span class="o">-</span><span class="mf">.1</span><span class="p">,</span> <span class="o">-</span><span class="mf">.05</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">.05</span><span class="p">,</span> <span class="mf">.1</span><span class="p">,</span> <span class="mf">.15</span><span class="p">])</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([])</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([])</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">add_noise</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">frac_noisy_pixels</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  Randomly corrupts a fraction of the pixels by setting them to random values.</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">     X (numpy array of floats)  : Data matrix</span>
+<span class="sd">     frac_noisy_pixels (scalar) : Fraction of noisy pixels</span>
+
+<span class="sd">  Returns:</span>
+<span class="sd">     (numpy array of floats)    : Data matrix + noise</span>
+
+<span class="sd">  &quot;&quot;&quot;</span>
+
+  <span class="n">X_noisy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+  <span class="n">N_noise_ixs</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">X_noisy</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">frac_noisy_pixels</span><span class="p">)</span>
+  <span class="n">noise_ixs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">X_noisy</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">size</span><span class="o">=</span><span class="n">N_noise_ixs</span><span class="p">,</span>
+                               <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+  <span class="n">X_noisy</span><span class="p">[</span><span class="n">noise_ixs</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="n">noise_ixs</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+  <span class="n">X_noisy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">X_noisy</span><span class="p">,</span> <span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
+
+  <span class="k">return</span> <span class="n">X_noisy</span>
+
+
+<span class="k">def</span> <span class="nf">change_of_basis</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">W</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  Projects data onto a new basis.</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">    X (numpy array of floats) : Data matrix each column corresponding to a</span>
+<span class="sd">                                different random variable</span>
+<span class="sd">    W (numpy array of floats) : new orthonormal basis columns correspond to</span>
+<span class="sd">                                basis vectors</span>
+
+<span class="sd">  Returns:</span>
+<span class="sd">    (numpy array of floats)   : Data matrix expressed in new basis</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+
+  <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">W</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">Y</span>
+
+
+<span class="k">def</span> <span class="nf">get_sample_cov_matrix</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  Returns the sample covariance matrix of data X.</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">    X (numpy array of floats) : Data matrix each column corresponds to a</span>
+<span class="sd">                                different random variable</span>
+
+<span class="sd">  Returns:</span>
+<span class="sd">    (numpy array of floats)   : Covariance matrix</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+  <span class="n">X</span> <span class="o">=</span> <span class="n">X</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="n">cov_matrix</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">cov_matrix</span>
+
+
+<span class="k">def</span> <span class="nf">sort_evals_descending</span><span class="p">(</span><span class="n">evals</span><span class="p">,</span> <span class="n">evectors</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  Sorts eigenvalues and eigenvectors in decreasing order. Also aligns first two</span>
+<span class="sd">  eigenvectors to be in first two quadrants (if 2D).</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">    evals (numpy array of floats)    :   Vector of eigenvalues</span>
+<span class="sd">    evectors (numpy array of floats) :   Corresponding matrix of eigenvectors</span>
+<span class="sd">                                         each column corresponds to a different</span>
+<span class="sd">                                         eigenvalue</span>
+
+<span class="sd">  Returns:</span>
+<span class="sd">    (numpy array of floats)          : Vector of eigenvalues after sorting</span>
+<span class="sd">    (numpy array of floats)          : Matrix of eigenvectors after sorting</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+
+  <span class="n">index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">evals</span><span class="p">))</span>
+  <span class="n">evals</span> <span class="o">=</span> <span class="n">evals</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+  <span class="n">evectors</span> <span class="o">=</span> <span class="n">evectors</span><span class="p">[:,</span> <span class="n">index</span><span class="p">]</span>
+  <span class="k">if</span> <span class="n">evals</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">evectors</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span>
+                           <span class="mi">1</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])))</span> <span class="o">&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">:</span>
+      <span class="n">evectors</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">evectors</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">arccos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">evectors</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span>
+                           <span class="mi">1</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])))</span> <span class="o">&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">:</span>
+      <span class="n">evectors</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">evectors</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+
+  <span class="k">return</span> <span class="n">evals</span><span class="p">,</span> <span class="n">evectors</span>
+
+
+<span class="k">def</span> <span class="nf">plot_eigenvalues</span><span class="p">(</span><span class="n">evals</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  Plots eigenvalues.</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">     (numpy array of floats) : Vector of eigenvalues</span>
+
+<span class="sd">  Returns:</span>
+<span class="sd">    Nothing.</span>
+
+<span class="sd">  &quot;&quot;&quot;</span>
+
+  <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">evals</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">evals</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Component&#39;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Eigenvalue&#39;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Scree plot&#39;</span><span class="p">)</span>
+  <span class="k">if</span> <span class="n">limit</span><span class="p">:</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">fetch_openml</span>
+<span class="n">mnist</span> <span class="o">=</span> <span class="n">fetch_openml</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;mnist_784&#39;</span><span class="p">,</span> <span class="n">as_frame</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">mnist</span><span class="o">.</span><span class="n">data</span>
+<span class="n">plot_MNIST_sample</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_DataNeuroscience_38_0.png" src="_images/NSCI801_DataNeuroscience_38_0.png" />
+</div>
+</div>
+<img style="float: right; width:250px;" src="stuff/scree.jpg">
+So the MNIST dataset has an extrinsic dimensionality of 784. To make sense of this data, we'll use dimensionality reduction. But first, we need to determine the intrinsic dimensionality K of the data. One way to do this is to look for an "elbow" in the scree plot, to determine which eigenvalues are signficant.
+<p>(“Scree”: collection of broken rock fragments at the base of mountain cliffs)</p>
+<p>A scree plot is a line plot of the eigenvalues (= amplitude of variability) of factors or principal components in an analysis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pca</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  Performs PCA on multivariate data. Eigenvalues are sorted in decreasing order</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">     X (numpy array of floats) :   Data matrix each column corresponds to a</span>
+<span class="sd">                                   different random variable</span>
+
+<span class="sd">  Returns:</span>
+<span class="sd">    (numpy array of floats)    : Data projected onto the new basis</span>
+<span class="sd">    (numpy array of floats)    : Vector of eigenvalues</span>
+<span class="sd">    (numpy array of floats)    : Corresponding matrix of eigenvectors</span>
+
+<span class="sd">  &quot;&quot;&quot;</span>
+
+  <span class="n">X</span> <span class="o">=</span> <span class="n">X</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="n">cov_matrix</span> <span class="o">=</span> <span class="n">get_sample_cov_matrix</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+  <span class="n">evals</span><span class="p">,</span> <span class="n">evectors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">cov_matrix</span><span class="p">)</span>
+  <span class="n">evals</span><span class="p">,</span> <span class="n">evectors</span> <span class="o">=</span> <span class="n">sort_evals_descending</span><span class="p">(</span><span class="n">evals</span><span class="p">,</span> <span class="n">evectors</span><span class="p">)</span>
+  <span class="n">score</span> <span class="o">=</span> <span class="n">change_of_basis</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">evectors</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">score</span><span class="p">,</span> <span class="n">evectors</span><span class="p">,</span> <span class="n">evals</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># perform PCA</span>
+<span class="n">score</span><span class="p">,</span> <span class="n">evectors</span><span class="p">,</span> <span class="n">evals</span> <span class="o">=</span> <span class="n">pca</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="c1"># plot the eigenvalues</span>
+<span class="n">plot_eigenvalues</span><span class="p">(</span><span class="n">evals</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">])</span>  <span class="c1"># limit x-axis up to 100 for zooming</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.0, 100.0)
+</pre></div>
+</div>
+<img alt="_images/NSCI801_DataNeuroscience_41_1.png" src="_images/NSCI801_DataNeuroscience_41_1.png" />
+</div>
+</div>
+<div class="section" id="variance-explained">
+<h4><span class="section-number">10.1.14.1. </span>Variance explained<a class="headerlink" href="#variance-explained" title="Permalink to this headline">¶</a></h4>
+<p>Note that in the scree plot most values are close to 0. So we can look at the intrinsic dimensionality of the data by analyzing the variance explained.</p>
+<p>This can be examined with a cumulative plot of the fraction of the total variance explained by the top <span class="math notranslate nohighlight">\(K\)</span> components, i.e.,
+$<span class="math notranslate nohighlight">\(\color{grey}{\text{var explained} = \frac{\sum_{i=1}^K \lambda_i}{\sum_{i=1}^N \lambda_i}}\)</span>$</p>
+<p>The intrinsic dimensionality is often quantified by the <span class="math notranslate nohighlight">\(K\)</span> necessary to explain a large proportion of the total variance of the data (often a defined threshold, e.g., 90%).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_variance_explained</span><span class="p">(</span><span class="n">evals</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  Plots eigenvalues.</span>
+<span class="sd">  Args:</span>
+<span class="sd">    (numpy array of floats) : Vector of eigenvalues</span>
+<span class="sd">  Returns:</span>
+<span class="sd">    Nothing.</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+
+  <span class="c1"># cumulatively sum the eigenvalues</span>
+  <span class="n">csum</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">evals</span><span class="p">)</span>
+  <span class="c1"># normalize by the sum of eigenvalues</span>
+  <span class="n">variance_explained</span> <span class="o">=</span> <span class="n">csum</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">evals</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">variance_explained</span>
+
+
+<span class="c1"># calculate the variance explained</span>
+<span class="n">variance_explained</span> <span class="o">=</span> <span class="n">get_variance_explained</span><span class="p">(</span><span class="n">evals</span><span class="p">)</span>
+<span class="n">plot_variance_explained</span><span class="p">(</span><span class="n">variance_explained</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_DataNeuroscience_43_0.png" src="_images/NSCI801_DataNeuroscience_43_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="data-reconstruction">
+<h4><span class="section-number">10.1.14.2. </span>Data reconstruction<a class="headerlink" href="#data-reconstruction" title="Permalink to this headline">¶</a></h4>
+<p>Now we have seen that the top 100 or so principal components of the data can explain most of the variance. We can use this fact to perform dimensionality reduction, i.e., by storing the data using only 100 components rather than the samples of all 784 pixels. Remarkably, we will be able to reconstruct much of the structure of the data using only the top 100 components.</p>
+<p>Idea: only use the meaningful dimensions to recreate the data…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">reconstruct_data</span><span class="p">(</span><span class="n">score</span><span class="p">,</span> <span class="n">evectors</span><span class="p">,</span> <span class="n">X_mean</span><span class="p">,</span> <span class="n">K</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  Reconstruct the data based on the top K components.</span>
+<span class="sd">  Args:</span>
+<span class="sd">    score (numpy array of floats)    : Score matrix</span>
+<span class="sd">    evectors (numpy array of floats) : Matrix of eigenvectors</span>
+<span class="sd">    X_mean (numpy array of floats)   : Vector corresponding to data mean</span>
+<span class="sd">    K (scalar)                       : Number of components to include</span>
+<span class="sd">  Returns:</span>
+<span class="sd">    (numpy array of floats)          : Matrix of reconstructed data</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+
+  <span class="c1"># Reconstruct the data from the score and eigenvectors</span>
+  <span class="c1"># Don&#39;t forget to add the mean!!</span>
+  <span class="n">X_reconstructed</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">score</span><span class="p">[:,</span> <span class="p">:</span><span class="n">K</span><span class="p">],</span> <span class="n">evectors</span><span class="p">[:,</span> <span class="p">:</span><span class="n">K</span><span class="p">]</span><span class="o">.</span><span class="n">T</span><span class="p">)</span> <span class="o">+</span> <span class="n">X_mean</span>
+
+  <span class="k">return</span> <span class="n">X_reconstructed</span>
+
+<span class="n">K</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="c1"># Reconstruct the data based on all components</span>
+<span class="n">X_mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">X_reconstructed</span> <span class="o">=</span> <span class="n">reconstruct_data</span><span class="p">(</span><span class="n">score</span><span class="p">,</span> <span class="n">evectors</span><span class="p">,</span> <span class="n">X_mean</span><span class="p">,</span> <span class="n">K</span><span class="p">)</span>
+
+<span class="c1"># Plot the data and reconstruction</span>
+<span class="n">plot_MNIST_reconstruction</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">X_reconstructed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_DataNeuroscience_45_0.png" src="_images/NSCI801_DataNeuroscience_45_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="visualization-of-weights">
+<h4><span class="section-number">10.1.14.3. </span>Visualization of weights<a class="headerlink" href="#visualization-of-weights" title="Permalink to this headline">¶</a></h4>
+<p>One of the cool things we can do now is examine the PCA weights!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot the weights of the first principal component</span>
+<span class="n">plot_MNIST_weights</span><span class="p">(</span><span class="n">evectors</span><span class="p">[:,</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_DataNeuroscience_47_0.png" src="_images/NSCI801_DataNeuroscience_47_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="denoising-with-pca">
+<h4><span class="section-number">10.1.14.4. </span>Denoising with PCA<a class="headerlink" href="#denoising-with-pca" title="Permalink to this headline">¶</a></h4>
+<p>Noise is not meaningful variability. I.e., noise will not have a strong Eigenvalue. We can thus use PCA to denoise noisy data!</p>
+<p>So let’s do this: add noise to data first:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">2020</span><span class="p">)</span>  <span class="c1"># set random seed</span>
+<span class="n">X_noisy</span> <span class="o">=</span> <span class="n">add_noise</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="mf">.2</span><span class="p">)</span>
+<span class="n">score_noisy</span><span class="p">,</span> <span class="n">evectors_noisy</span><span class="p">,</span> <span class="n">evals_noisy</span> <span class="o">=</span> <span class="n">pca</span><span class="p">(</span><span class="n">X_noisy</span><span class="p">)</span>
+<span class="n">variance_explained_noisy</span> <span class="o">=</span> <span class="n">get_variance_explained</span><span class="p">(</span><span class="n">evals_noisy</span><span class="p">)</span>
+
+<span class="n">plot_MNIST_sample</span><span class="p">(</span><span class="n">X_noisy</span><span class="p">)</span>
+<span class="n">plot_variance_explained</span><span class="p">(</span><span class="n">variance_explained_noisy</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_DataNeuroscience_49_0.png" src="_images/NSCI801_DataNeuroscience_49_0.png" />
+<img alt="_images/NSCI801_DataNeuroscience_49_1.png" src="_images/NSCI801_DataNeuroscience_49_1.png" />
+</div>
+</div>
+<p>Now we can use PCA to denoise our data by only retaining the top <span class="math notranslate nohighlight">\(K\)</span> principal components that are meaningful. To do so, we’ll project data onto the principal components found in the original dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X_noisy_mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">X_noisy</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">projX_noisy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">X_noisy</span> <span class="o">-</span> <span class="n">X_noisy_mean</span><span class="p">,</span> <span class="n">evectors</span><span class="p">)</span>
+<span class="n">X_reconstructed</span> <span class="o">=</span> <span class="n">reconstruct_data</span><span class="p">(</span><span class="n">projX_noisy</span><span class="p">,</span> <span class="n">evectors</span><span class="p">,</span> <span class="n">X_noisy_mean</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="c1"># use first 50 PCs</span>
+
+<span class="n">plot_MNIST_reconstruction</span><span class="p">(</span><span class="n">X_noisy</span><span class="p">,</span> <span class="n">X_reconstructed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_DataNeuroscience_51_0.png" src="_images/NSCI801_DataNeuroscience_51_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="decoding">
+<h3><span class="section-number">10.1.15. </span>Decoding<a class="headerlink" href="#decoding" title="Permalink to this headline">¶</a></h3>
+<p>(adapted from <a class="reference external" href="https://colab.research.google.com/github/NeuromatchAcademy/course-content/blob/master/tutorials/W3D4_DeepLearning1/student/W3D4_Tutorial1.ipynb">Neuromatch Academy W3D4 Tutorial 1</a>)</p>
+<p><strong>Typical question in neuroscience</strong>: how much information does brain area X have about external correlate Y?</p>
+<p>We’ll use the <a class="reference external" href="https://www.biorxiv.org/content/10.1101/679324v2.abstract">Stringer et al. (2019)</a> dataset of ~20,000 simultaneously recorded neurons from mouse V1.</p>
+<p><strong>Goal</strong>: decode the orientation of the stimulus from the population</p>
+<p>(the mouse made a decision on stimulus orientation)</p>
+<p><strong>Approach</strong>: use deep learning (DL) because</p>
+<ul class="simple">
+<li><p>DL thrives with high-dimensional data</p></li>
+<li><p>DL is great with nonlinear patterns: neurons respond quite differently</p></li>
+<li><p>DL architectures are very flexible - you can adapt it to maximize decoding</p></li>
+</ul>
+<p>We’ll use <a class="reference external" href="https://pytorch.org/"><code class="docutils literal notranslate"><span class="pre">pytorch</span></code></a> for decoding…</p>
+<p>But before getting started, let’s load and look at the data!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">nn</span>
+<span class="kn">from</span> <span class="nn">torch</span> <span class="kn">import</span> <span class="n">optim</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Data retrieval and loading</span>
+<span class="kn">import</span> <span class="nn">hashlib</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">fname</span> <span class="o">=</span> <span class="s2">&quot;W3D4_stringer_oribinned1.npz&quot;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://osf.io/683xc/download&quot;</span>
+<span class="n">expected_md5</span> <span class="o">=</span> <span class="s2">&quot;436599dfd8ebe6019f066c38aed20580&quot;</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
+  <span class="k">try</span><span class="p">:</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+  <span class="k">except</span> <span class="n">requests</span><span class="o">.</span><span class="n">ConnectionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;!!! Failed to download data !!!&quot;</span><span class="p">)</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">r</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="n">requests</span><span class="o">.</span><span class="n">codes</span><span class="o">.</span><span class="n">ok</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;!!! Failed to download data !!!&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span> <span class="o">!=</span> <span class="n">expected_md5</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;!!! Data download appears corrupted !!!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fid</span><span class="p">:</span>
+        <span class="n">fid</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Helper Functions</span>
+
+<span class="k">def</span> <span class="nf">load_data</span><span class="p">(</span><span class="n">data_name</span><span class="o">=</span><span class="n">fname</span><span class="p">,</span> <span class="n">bin_width</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;Load mouse V1 data from Stringer et al. (2019)</span>
+
+<span class="sd">  Data from study reported in this preprint:</span>
+<span class="sd">  https://www.biorxiv.org/content/10.1101/679324v2.abstract</span>
+
+<span class="sd">  These data comprise time-averaged responses of ~20,000 neurons</span>
+<span class="sd">  to ~4,000 stimulus gratings of different orientations, recorded</span>
+<span class="sd">  through Calcium imaginge. The responses have been normalized by</span>
+<span class="sd">  spontanous levels of activity and then z-scored over stimuli, so</span>
+<span class="sd">  expect negative numbers. They have also been binned and averaged</span>
+<span class="sd">  to each degree of orientation.</span>
+
+<span class="sd">  This function returns the relevant data (neural responses and</span>
+<span class="sd">  stimulus orientations) in a torch.Tensor of data type torch.float32</span>
+<span class="sd">  in order to match the default data type for nn.Parameters in</span>
+<span class="sd">  Google Colab.</span>
+
+<span class="sd">  This function will actually average responses to stimuli with orientations</span>
+<span class="sd">  falling within bins specified by the bin_width argument. This helps</span>
+<span class="sd">  produce individual neural &quot;responses&quot; with smoother and more</span>
+<span class="sd">  interpretable tuning curves.</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">    bin_width (float): size of stimulus bins over which to average neural</span>
+<span class="sd">      responses</span>
+
+<span class="sd">  Returns:</span>
+<span class="sd">    resp (torch.Tensor): n_stimuli x n_neurons matrix of neural responses,</span>
+<span class="sd">        each row contains the responses of each neuron to a given stimulus.</span>
+<span class="sd">        As mentioned above, neural &quot;response&quot; is actually an average over</span>
+<span class="sd">        responses to stimuli with similar angles falling within specified bins.</span>
+<span class="sd">    stimuli: (torch.Tensor): n_stimuli x 1 column vector with orientation</span>
+<span class="sd">        of each stimulus, in degrees. This is actually the mean orientation</span>
+<span class="sd">        of all stimuli in each bin.</span>
+
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="k">with</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">data_name</span><span class="p">)</span> <span class="k">as</span> <span class="n">dobj</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="o">**</span><span class="n">dobj</span><span class="p">)</span>
+  <span class="n">resp</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;resp&#39;</span><span class="p">]</span>
+  <span class="n">stimuli</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;stimuli&#39;</span><span class="p">]</span>
+
+  <span class="k">if</span> <span class="n">bin_width</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="c1"># Bin neural responses and stimuli</span>
+    <span class="n">bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">digitize</span><span class="p">(</span><span class="n">stimuli</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">360</span> <span class="o">+</span> <span class="n">bin_width</span><span class="p">,</span> <span class="n">bin_width</span><span class="p">))</span>
+    <span class="n">stimuli_binned</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">stimuli</span><span class="p">[</span><span class="n">bins</span> <span class="o">==</span> <span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">bins</span><span class="p">)])</span>
+    <span class="n">resp_binned</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">resp</span><span class="p">[</span><span class="n">bins</span> <span class="o">==</span> <span class="n">i</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">bins</span><span class="p">)])</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">resp_binned</span> <span class="o">=</span> <span class="n">resp</span>
+    <span class="n">stimuli_binned</span> <span class="o">=</span> <span class="n">stimuli</span>
+
+  <span class="c1"># Return as torch.Tensor</span>
+  <span class="n">resp_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">resp_binned</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+  <span class="n">stimuli_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">stimuli_binned</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># add singleton dimension to make a column vector</span>
+
+  <span class="k">return</span> <span class="n">resp_tensor</span><span class="p">,</span> <span class="n">stimuli_tensor</span>
+
+
+<span class="k">def</span> <span class="nf">plot_data_matrix</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">ax</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;Visualize data matrix of neural responses using a heatmap</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">    X (torch.Tensor or np.ndarray): matrix of neural responses to visualize</span>
+<span class="sd">        with a heatmap</span>
+<span class="sd">    ax (matplotlib axes): where to plot</span>
+
+<span class="sd">  &quot;&quot;&quot;</span>
+
+  <span class="n">cax</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">mpl</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">pink</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">vmax</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="mi">99</span><span class="p">))</span>
+  <span class="n">cbar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">cax</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;normalized neural response&#39;</span><span class="p">)</span>
+
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;auto&#39;</span><span class="p">)</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([])</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([])</span>
+
+
+<span class="k">def</span> <span class="nf">identityLine</span><span class="p">():</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  Plot the identity line y=x</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
+  <span class="n">lims</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">ax</span><span class="o">.</span><span class="n">get_xlim</span><span class="p">(),</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_ylim</span><span class="p">()])</span>
+  <span class="n">minval</span> <span class="o">=</span> <span class="n">lims</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+  <span class="n">maxval</span> <span class="o">=</span> <span class="n">lims</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+  <span class="n">equal_lims</span> <span class="o">=</span> <span class="p">[</span><span class="n">minval</span><span class="p">,</span> <span class="n">maxval</span><span class="p">]</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">equal_lims</span><span class="p">)</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">equal_lims</span><span class="p">)</span>
+  <span class="n">line</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">minval</span><span class="p">,</span> <span class="n">maxval</span><span class="p">],</span> <span class="p">[</span><span class="n">minval</span><span class="p">,</span> <span class="n">maxval</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;0.7&quot;</span><span class="p">)</span>
+  <span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_zorder</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span><span class="n">n_stim</span><span class="p">,</span> <span class="n">train_data</span><span class="p">,</span> <span class="n">train_labels</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot; Return n_stim randomly drawn stimuli/resp pairs</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">    n_stim (scalar): number of stimuli to draw</span>
+<span class="sd">    resp (torch.Tensor):</span>
+<span class="sd">    train_data (torch.Tensor): n_train x n_neurons tensor with neural</span>
+<span class="sd">      responses to train on</span>
+<span class="sd">    train_labels (torch.Tensor): n_train x 1 tensor with orientations of the</span>
+<span class="sd">      stimuli corresponding to each row of train_data, in radians</span>
+
+<span class="sd">  Returns:</span>
+<span class="sd">    (torch.Tensor, torch.Tensor): n_stim x n_neurons tensor of neural responses and n_stim x 1 of orientations respectively</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">n_stimuli</span> <span class="o">=</span> <span class="n">train_labels</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+  <span class="n">istim</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">n_stimuli</span><span class="p">,</span> <span class="n">n_stim</span><span class="p">)</span>
+  <span class="n">r</span> <span class="o">=</span> <span class="n">train_data</span><span class="p">[</span><span class="n">istim</span><span class="p">]</span>  <span class="c1"># neural responses to this stimulus</span>
+  <span class="n">ori</span> <span class="o">=</span> <span class="n">train_labels</span><span class="p">[</span><span class="n">istim</span><span class="p">]</span>  <span class="c1"># true stimulus orientation</span>
+
+  <span class="k">return</span> <span class="n">r</span><span class="p">,</span> <span class="n">ori</span>
+
+<span class="k">def</span> <span class="nf">stimulus_class</span><span class="p">(</span><span class="n">ori</span><span class="p">,</span> <span class="n">n_classes</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;Get stimulus class from stimulus orientation</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">    ori (torch.Tensor): orientations of stimuli to return classes for</span>
+<span class="sd">    n_classes (int): total number of classes</span>
+
+<span class="sd">  Returns:</span>
+<span class="sd">    torch.Tensor: 1D tensor with the classes for each stimulus</span>
+
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">360</span><span class="p">,</span> <span class="n">n_classes</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">digitize</span><span class="p">(</span><span class="n">ori</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(),</span> <span class="n">bins</span><span class="p">))</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># minus 1 to accomodate Python indexing</span>
+
+<span class="k">def</span> <span class="nf">plot_decoded_results</span><span class="p">(</span><span class="n">train_loss</span><span class="p">,</span> <span class="n">test_labels</span><span class="p">,</span> <span class="n">predicted_test_labels</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot; Plot decoding results in the form of network training loss and test predictions</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">    train_loss (list): training error over iterations</span>
+<span class="sd">    test_labels (torch.Tensor): n_test x 1 tensor with orientations of the</span>
+<span class="sd">      stimuli corresponding to each row of train_data, in radians</span>
+<span class="sd">    predicted_test_labels (torch.Tensor): n_test x 1 tensor with predicted orientations of the</span>
+<span class="sd">      stimuli from decoding neural network</span>
+
+<span class="sd">  &quot;&quot;&quot;</span>
+
+  <span class="c1"># Plot results</span>
+  <span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+  <span class="c1"># Plot the training loss over iterations of GD</span>
+  <span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">train_loss</span><span class="p">)</span>
+
+  <span class="c1"># Plot true stimulus orientation vs. predicted class</span>
+  <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">stimuli_test</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(),</span> <span class="n">predicted_test_labels</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span>
+
+  <span class="n">ax1</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">])</span>
+  <span class="n">ax1</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">])</span>
+  <span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;iterations of gradient descent&#39;</span><span class="p">)</span>
+  <span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;negative log likelihood&#39;</span><span class="p">)</span>
+  <span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;true stimulus orientation ($^o$)&#39;</span><span class="p">)</span>
+  <span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;decoded orientation bin&#39;</span><span class="p">)</span>
+  <span class="n">ax2</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">360</span><span class="p">,</span> <span class="n">n_classes</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+  <span class="n">ax2</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n_classes</span><span class="p">))</span>
+  <span class="n">class_bins</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">i</span> <span class="o">*</span> <span class="mi">360</span> <span class="o">/</span> <span class="n">n_classes</span><span class="si">:</span><span class="s1"> .0f</span><span class="si">}</span><span class="s1">$^o$ - </span><span class="si">{</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">360</span> <span class="o">/</span> <span class="n">n_classes</span><span class="si">:</span><span class="s1"> .0f</span><span class="si">}</span><span class="s1">$^o$&#39;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_classes</span><span class="p">)]</span>
+  <span class="n">ax2</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">class_bins</span><span class="p">);</span>
+
+  <span class="c1"># Draw bin edges as vertical lines</span>
+  <span class="n">ax2</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">ax2</span><span class="o">.</span><span class="n">get_ylim</span><span class="p">())</span>  <span class="c1"># fix y-axis limits</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_classes</span><span class="p">):</span>
+    <span class="n">lower</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">360</span> <span class="o">/</span> <span class="n">n_classes</span>
+    <span class="n">upper</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">360</span> <span class="o">/</span> <span class="n">n_classes</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">lower</span><span class="p">,</span> <span class="n">lower</span><span class="p">],</span> <span class="n">ax2</span><span class="o">.</span><span class="n">get_ylim</span><span class="p">(),</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;0.7&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">upper</span><span class="p">,</span> <span class="n">upper</span><span class="p">],</span> <span class="n">ax2</span><span class="o">.</span><span class="n">get_ylim</span><span class="p">(),</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;0.7&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+
+  <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load data</span>
+<span class="n">resp_all</span><span class="p">,</span> <span class="n">stimuli_all</span> <span class="o">=</span> <span class="n">load_data</span><span class="p">()</span>  <span class="c1"># argument to this function specifies bin width</span>
+<span class="n">n_stimuli</span><span class="p">,</span> <span class="n">n_neurons</span> <span class="o">=</span> <span class="n">resp_all</span><span class="o">.</span><span class="n">shape</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">n_neurons</span><span class="si">}</span><span class="s1"> neurons in response to </span><span class="si">{</span><span class="n">n_stimuli</span><span class="si">}</span><span class="s1"> stimuli&#39;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="c1"># Visualize data matrix</span>
+<span class="n">plot_data_matrix</span><span class="p">(</span><span class="n">resp_all</span><span class="p">[:</span><span class="mi">100</span><span class="p">,</span> <span class="p">:]</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">ax1</span><span class="p">)</span>  <span class="c1"># plot responses of first 100 neurons</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;stimulus&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;neuron&#39;</span><span class="p">)</span>
+
+<span class="c1"># Plot tuning curves of three random neurons</span>
+<span class="n">ineurons</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">n_neurons</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># pick three random neurons</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">stimuli_all</span><span class="p">,</span> <span class="n">resp_all</span><span class="p">[:,</span> <span class="n">ineurons</span><span class="p">])</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;stimulus orientation ($^o$)&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;neural response&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">360</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>23589 neurons in response to 360 stimuli
+</pre></div>
+</div>
+<img alt="_images/NSCI801_DataNeuroscience_57_1.png" src="_images/NSCI801_DataNeuroscience_57_1.png" />
+</div>
+</div>
+<p>Now let’s split our dataset into <em>training set</em> and <em>test set</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set random seeds for reproducibility</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="c1"># Split data into training set and testing set</span>
+<span class="n">n_train</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mf">0.6</span> <span class="o">*</span> <span class="n">n_stimuli</span><span class="p">)</span>  <span class="c1"># use 60% of all data for training set</span>
+<span class="n">ishuffle</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randperm</span><span class="p">(</span><span class="n">n_stimuli</span><span class="p">)</span>
+<span class="n">itrain</span> <span class="o">=</span> <span class="n">ishuffle</span><span class="p">[:</span><span class="n">n_train</span><span class="p">]</span>  <span class="c1"># indices of data samples to include in training set</span>
+<span class="n">itest</span> <span class="o">=</span> <span class="n">ishuffle</span><span class="p">[</span><span class="n">n_train</span><span class="p">:]</span>  <span class="c1"># indices of data samples to include in testing set</span>
+<span class="n">stimuli_test</span> <span class="o">=</span> <span class="n">stimuli_all</span><span class="p">[</span><span class="n">itest</span><span class="p">]</span>
+<span class="n">resp_test</span> <span class="o">=</span> <span class="n">resp_all</span><span class="p">[</span><span class="n">itest</span><span class="p">]</span>
+<span class="n">stimuli_train</span> <span class="o">=</span> <span class="n">stimuli_all</span><span class="p">[</span><span class="n">itrain</span><span class="p">]</span>
+<span class="n">resp_train</span> <span class="o">=</span> <span class="n">resp_all</span><span class="p">[</span><span class="n">itrain</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="deep-feed-forward-networks-in-pytorch">
+<h4><span class="section-number">10.1.15.1. </span>Deep feed-forward networks in pytorch<a class="headerlink" href="#deep-feed-forward-networks-in-pytorch" title="Permalink to this headline">¶</a></h4>
+<p>We will build a very simple 3-layer network, aka a universal function approximator.</p>
+<img style="float: center; width:500px;" src="stuff/one-layer-network.png">
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">DeepNet</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;Deep Network with one hidden layer</span>
+
+<span class="sd">  Args:</span>
+<span class="sd">    n_inputs (int): number of input units</span>
+<span class="sd">    n_hidden (int): number of units in hidden layer</span>
+
+<span class="sd">  Attributes:</span>
+<span class="sd">    in_layer (nn.Linear): weights and biases of input layer</span>
+<span class="sd">    out_layer (nn.Linear): weights and biases of output layer</span>
+
+<span class="sd">  &quot;&quot;&quot;</span>
+
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_inputs</span><span class="p">,</span> <span class="n">n_hidden</span><span class="p">):</span>
+    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>  <span class="c1"># needed to invoke the properties of the parent class nn.Module</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">in_layer</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">n_inputs</span><span class="p">,</span> <span class="n">n_hidden</span><span class="p">)</span> <span class="c1"># neural activity --&gt; hidden units</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">out_layer</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">n_hidden</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># hidden units --&gt; output</span>
+
+  <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Decode stimulus orientation from neural responses</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">      r (torch.Tensor): vector of neural responses to decode, must be of</span>
+<span class="sd">        length n_inputs. Can also be a tensor of shape n_stimuli x n_inputs,</span>
+<span class="sd">        containing n_stimuli vectors of neural responses</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">      torch.Tensor: network outputs for each input provided in r. If</span>
+<span class="sd">        r is a vector, then y is a 1D tensor of length 1. If r is a 2D</span>
+<span class="sd">        tensor then y is a 2D tensor of shape n_stimuli x 1.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_layer</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>  <span class="c1"># hidden representation</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_layer</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s see if this works?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set random seeds for reproducibility</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Initialize a deep network with M=200 hidden units</span>
+<span class="n">net</span> <span class="o">=</span> <span class="n">DeepNet</span><span class="p">(</span><span class="n">n_neurons</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+
+<span class="c1"># Get neural responses (r) to and orientation (ori) to one stimulus in dataset</span>
+<span class="n">r</span><span class="p">,</span> <span class="n">ori</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">resp_train</span><span class="p">,</span> <span class="n">stimuli_train</span><span class="p">)</span>  <span class="c1"># using helper function get_data</span>
+
+<span class="c1"># Decode orientation from these neural responses using initialized network</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">net</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>  <span class="c1"># compute output from network, equivalent to net.forward(r)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;decoded orientation: </span><span class="si">%.2f</span><span class="s1"> degrees&#39;</span> <span class="o">%</span> <span class="n">out</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;true orientation: </span><span class="si">%.2f</span><span class="s1"> degrees&#39;</span> <span class="o">%</span> <span class="n">ori</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>decoded orientation: 0.08 degrees
+true orientation: 139.00 degrees
+</pre></div>
+</div>
+</div>
+</div>
+<p>It works, but the output is nonsense because we have not trained the network yet!</p>
+</div>
+<div class="section" id="activation-functions">
+<h4><span class="section-number">10.1.15.2. </span>Activation functions<a class="headerlink" href="#activation-functions" title="Permalink to this headline">¶</a></h4>
+<p>Our network has purely linear layers so far, i.e. sum of weighted inputs. But to be come a universal function approximator, we need nonlinear activation functions, e.g.</p>
+<ul class="simple">
+<li><p>sigmoid</p></li>
+<li><p>ReLU (Rectivied Linear Units) - we’ll be using this here</p></li>
+</ul>
+<img style="float: center; width:500px;" src="stuff/ReLU.png"><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">DeepNetReLU</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+
+  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_inputs</span><span class="p">,</span> <span class="n">n_hidden</span><span class="p">):</span>
+    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>  <span class="c1"># needed to invoke the properties of the parent class nn.Module</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">in_layer</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">n_inputs</span><span class="p">,</span> <span class="n">n_hidden</span><span class="p">)</span> <span class="c1"># neural activity --&gt; hidden units</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">out_layer</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">n_hidden</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># hidden units --&gt; output</span>
+
+  <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+
+    <span class="n">h</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">in_layer</span><span class="p">(</span><span class="n">r</span><span class="p">))</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">out_layer</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">y</span>
+
+
+<span class="c1"># Set random seeds for reproducibility</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Get neural responses (r) to and orientation (ori) to one stimulus in dataset</span>
+<span class="n">r</span><span class="p">,</span> <span class="n">ori</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">resp_train</span><span class="p">,</span> <span class="n">stimuli_train</span><span class="p">)</span>
+
+
+<span class="c1"># Initialize deep network with M=20 hidden units and uncomment lines below</span>
+<span class="n">net</span> <span class="o">=</span> <span class="n">DeepNetReLU</span><span class="p">(</span><span class="n">n_neurons</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="c1"># Decode orientation from these neural responses using initialized network</span>
+<span class="c1"># net(r) is equivalent to net.forward(r)</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">net</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;decoded orientation: </span><span class="si">%.2f</span><span class="s1"> degrees&#39;</span> <span class="o">%</span> <span class="n">out</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;true orientation: </span><span class="si">%.2f</span><span class="s1"> degrees&#39;</span> <span class="o">%</span> <span class="n">ori</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>decoded orientation: 0.13 degrees
+true orientation: 139.00 degrees
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is of course still nonsense. So let’s look at training the network decoder…</p>
+</div>
+<div class="section" id="loss-function-and-gradient-descent">
+<h4><span class="section-number">10.1.15.3. </span>Loss function and gradient descent<a class="headerlink" href="#loss-function-and-gradient-descent" title="Permalink to this headline">¶</a></h4>
+<p>In the same way that we had a loss function (cost function) for model fitting, we need one for our neural network model too. We’ll simply be using the mean squared error (MSE) again.
+$<span class="math notranslate nohighlight">\(\color{grey}{L = \frac{1}{P}\sum_{n=1}^P \left(y^{(n)} - \tilde{y}^{(n)}\right)^2}\)</span>$
+Let’s evaluate the loss for our (untrained network)…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set random seeds for reproducibility</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Initialize a deep network with M=20 hidden units</span>
+<span class="n">net</span> <span class="o">=</span> <span class="n">DeepNetReLU</span><span class="p">(</span><span class="n">n_neurons</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="c1"># Get neural responses to first 20 stimuli in the data set</span>
+<span class="n">r</span><span class="p">,</span> <span class="n">ori</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="n">resp_train</span><span class="p">,</span> <span class="n">stimuli_train</span><span class="p">)</span>
+
+<span class="c1"># Decode orientation from these neural responses</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">net</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+
+<span class="c1"># Initialize PyTorch mean squared error loss function (Hint: look at nn.MSELoss)</span>
+<span class="n">loss_fn</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">MSELoss</span><span class="p">()</span>
+
+<span class="c1"># Evaluate mean squared error</span>
+<span class="n">loss</span> <span class="o">=</span> <span class="n">loss_fn</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">ori</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;mean squared error: </span><span class="si">%.2f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">loss</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mean squared error: 42943.74
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can now do gradient descent.
+<img style="float: center; width:500px;" src="stuff/ball.png"></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">train</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">loss_fn</span><span class="p">,</span> <span class="n">train_data</span><span class="p">,</span> <span class="n">train_labels</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;Run gradient descent to opimize parameters of a given network</span>
+<span class="sd">  Args:</span>
+<span class="sd">    net (nn.Module): PyTorch network whose parameters to optimize</span>
+<span class="sd">    loss_fn: built-in PyTorch loss function to minimize</span>
+<span class="sd">    train_data (torch.Tensor): n_train x n_neurons tensor with neural</span>
+<span class="sd">      responses to train on</span>
+<span class="sd">    train_labels (torch.Tensor): n_train x 1 tensor with orientations of the</span>
+<span class="sd">      stimuli corresponding to each row of train_data, in radians</span>
+<span class="sd">    n_iter (int): number of iterations of gradient descent to run</span>
+<span class="sd">    learning_rate (float): learning rate to use for gradient descent</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+
+  <span class="c1"># Initialize PyTorch Stochastic Gradient Descent (SGD) optimizer</span>
+  <span class="n">optimizer</span> <span class="o">=</span> <span class="n">optim</span><span class="o">.</span><span class="n">SGD</span><span class="p">(</span><span class="n">net</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="n">learning_rate</span><span class="p">)</span>
+
+  <span class="c1"># Placeholder to save the loss at each iteration</span>
+  <span class="n">track_loss</span> <span class="o">=</span> <span class="p">[]</span>
+
+  <span class="c1"># Loop over epochs (cf. appendix)</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_iter</span><span class="p">):</span>
+
+    <span class="c1"># Evaluate loss using loss_fn</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">net</span><span class="p">(</span><span class="n">train_data</span><span class="p">)</span>  <span class="c1"># compute network output from inputs in train_data</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="n">loss_fn</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">train_labels</span><span class="p">)</span>  <span class="c1"># evaluate loss function</span>
+
+    <span class="c1"># Compute gradients</span>
+    <span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+    <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+
+    <span class="c1"># Update weights</span>
+    <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span> 
+
+    <span class="c1"># Store current value of loss</span>
+    <span class="n">track_loss</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">loss</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>  <span class="c1"># .item() needed to transform the tensor output of loss_fn to a scalar</span>
+
+    <span class="c1"># Track progress</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="p">(</span><span class="n">n_iter</span> <span class="o">//</span> <span class="mi">5</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;iteration </span><span class="si">{</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">n_iter</span><span class="si">}</span><span class="s1"> | loss: </span><span class="si">{</span><span class="n">loss</span><span class="o">.</span><span class="n">item</span><span class="p">()</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">track_loss</span>
+
+<span class="c1"># Set random seeds for reproducibility</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Initialize network</span>
+<span class="n">net</span> <span class="o">=</span> <span class="n">DeepNetReLU</span><span class="p">(</span><span class="n">n_neurons</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="c1"># Initialize built-in PyTorch MSE loss function</span>
+<span class="n">loss_fn</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">MSELoss</span><span class="p">()</span>
+
+<span class="c1"># Run GD on data</span>
+<span class="n">train_loss</span> <span class="o">=</span> <span class="n">train</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">loss_fn</span><span class="p">,</span> <span class="n">resp_train</span><span class="p">,</span> <span class="n">stimuli_train</span><span class="p">)</span>
+
+<span class="c1"># Plot the training loss over iterations of GD</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">train_loss</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;iterations of gradient descent&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;mean squared error&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>iteration 40/200 | loss: 285.460
+iteration 80/200 | loss: 58.562
+iteration 120/200 | loss: 16.741
+iteration 160/200 | loss: 6.620
+iteration 200/200 | loss: 3.193
+</pre></div>
+</div>
+<img alt="_images/NSCI801_DataNeuroscience_71_1.png" src="_images/NSCI801_DataNeuroscience_71_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="evaluate-model-performance">
+<h4><span class="section-number">10.1.15.4. </span>Evaluate model performance<a class="headerlink" href="#evaluate-model-performance" title="Permalink to this headline">¶</a></h4>
+<p>Using the testset, we can now plot the model’s prediction (decoded orientation) over the true orientation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># evaluate and plot test error</span>
+
+<span class="n">out</span> <span class="o">=</span> <span class="n">net</span><span class="p">(</span><span class="n">resp_test</span><span class="p">)</span>  <span class="c1"># decode stimulus orientation for neural responses in testing set</span>
+<span class="n">ori</span> <span class="o">=</span> <span class="n">stimuli_test</span>  <span class="c1"># true stimulus orientations</span>
+<span class="n">test_loss</span> <span class="o">=</span> <span class="n">loss_fn</span><span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">ori</span><span class="p">)</span>  <span class="c1"># MSE on testing set (Hint: use loss_fn initialized in previous exercise)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ori</span><span class="p">,</span> <span class="n">out</span><span class="o">.</span><span class="n">detach</span><span class="p">(),</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span>  <span class="c1"># N.B. need to use .detach() to pass network output into plt.plot()</span>
+<span class="n">identityLine</span><span class="p">()</span>  <span class="c1"># draw the identity line y=x; deviations from this indicate bad decoding!</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;MSE on testing set: </span><span class="si">%.2f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">test_loss</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>  <span class="c1"># N.B. need to use .item() to turn test_loss into a scalar</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;true stimulus orientation ($^o$)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;decoded stimulus orientation ($^o$)&#39;</span><span class="p">)</span>
+<span class="n">axticks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">360</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">axticks</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">axticks</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_DataNeuroscience_73_0.png" src="_images/NSCI801_DataNeuroscience_73_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="further-readings">
+<h3><span class="section-number">10.1.16. </span>Further readings<a class="headerlink" href="#further-readings" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf">Bishop’s pattern recognition and ML book</a></p></li>
+<li><p><a class="reference external" href="http://d2l.ai/">Zhang et al. book with Python tutorials</a></p></li>
+<li><p><a class="reference external" href="http://www.deeplearningbook.org/">Goodfellow, Belgio and Courville book</a></p></li>
+<li><p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content">check out W1D4-5 and W3D4-5 of NMA</a></p></li>
+<li><p><a class="reference external" href="https://deeplearning.neuromatch.io">Deep Learning NMA</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="NSCI801_ModelFitting.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">9. </span>Models in Neuroscience</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="NSCI801_CorrelationVsCausality.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Correlation vs. Causality</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Gunnar Blohm, Joe Nashed<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

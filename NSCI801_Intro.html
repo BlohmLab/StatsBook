@@ -1,0 +1,1046 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Introduction &#8212; NSCI 801 - Quantitative Neuroscience book</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2. Google COLAB and Python" href="NSCI801_intro_python.html" />
+    <link rel="prev" title="NSCI 801 - Quantitative Neuroscience Syllabus" href="README.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">NSCI 801 - Quantitative Neuroscience book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="README.html">
+   NSCI 801 - Quantitative Neuroscience Syllabus
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_intro_python.html">
+   2. Google COLAB and Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_advanced_python.html">
+   7. Advanced Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_acquisition_filters.html">
+   14. Data Collection and Signal Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Descriptive_Stats-NEW.html">
+   22. Descriptive Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Advanced_stats.html">
+   38. Advanced Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Image_Processing_Proper_v2.html">
+   41. Image Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Bayesian-stats.html">
+   46. Bayesian statistics and hypothesis testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_ModelFitting.html">
+   47. Models in Neuroscience
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_DataNeuroscience.html">
+   48. Data Neuroscience Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_CorrelationVsCausality.html">
+   49. Correlation vs. Causality
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Reproducibility.html">
+   50. Reproducibility, reliability, validity
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/NSCI801_Intro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FNSCI801_Intro.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/NSCI801_Intro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nsci-801-quantitative-neuroscience">
+   1.1. NSCI 801 - Quantitative Neuroscience
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#outline">
+     1.1.1. Outline
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-quantitative-neuroscience">
+     1.1.2. Why Quantitative Neuroscience?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     1.1.3. Why Quantitative Neuroscience?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     1.1.4. Why Quantitative Neuroscience?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     1.1.5. Why Quantitative Neuroscience?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#course-overview-materials">
+     1.1.6. Course overview &amp; materials
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#for-those-interested">
+     1.1.7. for those interested…
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     1.1.8. Course overview &amp; materials
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#goals-of-the-course">
+       1.1.8.1. Goals of the course:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     1.1.9. Course overview &amp; materials
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#specific-topics">
+       1.1.9.1. Specific topics:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-research-process">
+     1.1.10. The research process
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     1.1.11. The research process
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#research-design">
+       1.1.11.1. Research design:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     1.1.12. The research process
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id8">
+       1.1.12.1. Research design:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     1.1.13. The research process
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id10">
+       1.1.13.1. Research design:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     1.1.14. The research process
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#let-s-play-effect-size">
+       1.1.14.1. Let’s play - effect size
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id12">
+     1.1.15. The research process
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#let-s-play-random-samples">
+       1.1.15.1. Let’s play - random samples
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id13">
+     1.1.16. The research process
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id14">
+       1.1.16.1. Research design:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     1.1.17. The research process
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#research-design-let-s-compute-sample-size">
+       1.1.17.1. Research design - let’s compute sample size
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id16">
+     1.1.18. The research process
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id17">
+     1.1.19. The research process
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#hypothesis-testing">
+       1.1.19.1. Hypothesis testing:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id18">
+     1.1.20. The research process
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pearl-s-research-flow">
+       1.1.20.1. Pearl’s research flow
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#further-readings">
+     1.1.21. Further readings
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Introduction</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nsci-801-quantitative-neuroscience">
+   1.1. NSCI 801 - Quantitative Neuroscience
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#outline">
+     1.1.1. Outline
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-quantitative-neuroscience">
+     1.1.2. Why Quantitative Neuroscience?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     1.1.3. Why Quantitative Neuroscience?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     1.1.4. Why Quantitative Neuroscience?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     1.1.5. Why Quantitative Neuroscience?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#course-overview-materials">
+     1.1.6. Course overview &amp; materials
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#for-those-interested">
+     1.1.7. for those interested…
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     1.1.8. Course overview &amp; materials
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#goals-of-the-course">
+       1.1.8.1. Goals of the course:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     1.1.9. Course overview &amp; materials
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#specific-topics">
+       1.1.9.1. Specific topics:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-research-process">
+     1.1.10. The research process
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     1.1.11. The research process
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#research-design">
+       1.1.11.1. Research design:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     1.1.12. The research process
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id8">
+       1.1.12.1. Research design:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     1.1.13. The research process
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id10">
+       1.1.13.1. Research design:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     1.1.14. The research process
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#let-s-play-effect-size">
+       1.1.14.1. Let’s play - effect size
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id12">
+     1.1.15. The research process
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#let-s-play-random-samples">
+       1.1.15.1. Let’s play - random samples
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id13">
+     1.1.16. The research process
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id14">
+       1.1.16.1. Research design:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     1.1.17. The research process
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#research-design-let-s-compute-sample-size">
+       1.1.17.1. Research design - let’s compute sample size
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id16">
+     1.1.18. The research process
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id17">
+     1.1.19. The research process
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#hypothesis-testing">
+       1.1.19.1. Hypothesis testing:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id18">
+     1.1.20. The research process
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pearl-s-research-flow">
+       1.1.20.1. Pearl’s research flow
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#further-readings">
+     1.1.21. Further readings
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduction">
+<h1><span class="section-number">1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="nsci-801-quantitative-neuroscience">
+<h2><span class="section-number">1.1. </span>NSCI 801 - Quantitative Neuroscience<a class="headerlink" href="#nsci-801-quantitative-neuroscience" title="Permalink to this headline">¶</a></h2>
+<p>Gunnar Blohm</p>
+<div class="section" id="outline">
+<h3><span class="section-number">1.1.1. </span>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Why quantitative Neuroscience?</p></li>
+<li><p>Course overview &amp; materials</p></li>
+<li><p>The research process</p></li>
+<li><p>Study design</p></li>
+</ul>
+</div>
+<div class="section" id="why-quantitative-neuroscience">
+<h3><span class="section-number">1.1.2. </span>Why Quantitative Neuroscience?<a class="headerlink" href="#why-quantitative-neuroscience" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>We want to quantify observations</p></li>
+<li><p>But data is corrupted by noise</p></li>
+<li><p>Certain things are not directly observable (latent)</p>
+<ul>
+<li><p>we need models!</p></li>
+</ul>
+</li>
+<li><p>Ultimately we want to identify <strong><em>causal</em></strong> relationships</p></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h3><span class="section-number">1.1.3. </span>Why Quantitative Neuroscience?<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>We want to quantify observations</p>
+<ul>
+<li><p>questionnaires</p></li>
+<li><p>measurements</p></li>
+</ul>
+</li>
+</ul>
+<p>But: such observations are variable…</p>
+</div>
+<div class="section" id="id2">
+<h3><span class="section-number">1.1.4. </span>Why Quantitative Neuroscience?<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>We want to quantify observations</p></li>
+<li><p>But data is corrupted by noise</p>
+<ul>
+<li><p>noise in the process / system</p></li>
+<li><p>noise due to the measurement</p></li>
+<li><p>noise due to A/D conversion</p></li>
+<li><p>noise due to post-processing</p></li>
+</ul>
+</li>
+</ul>
+<p>Thus: we need ways to infer reality from noisy data</p>
+</div>
+<div class="section" id="id3">
+<h3><span class="section-number">1.1.5. </span>Why Quantitative Neuroscience?<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>We want to quantify observations</p></li>
+<li><p>But data is corrupted by noise</p></li>
+<li><p>Certain things are not directly observable (latent)</p>
+<ul>
+<li><p>e.g. we cannot measure your thought process (yet), only the outcome!</p></li>
+<li><p>e.g. we cannot measure inflammation, only the body’s reaction</p></li>
+<li><p>we often want good “measures” of latent variables</p></li>
+</ul>
+</li>
+<li><p>Ultimately we want to identify <strong><em>causal</em></strong> relationships</p></li>
+</ul>
+<p>Solution: we need models that causally link latent variables to measurable quantities</p>
+</div>
+<div class="section" id="course-overview-materials">
+<h3><span class="section-number">1.1.6. </span>Course overview &amp; materials<a class="headerlink" href="#course-overview-materials" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.compneurosci.com/NSCI801.html">course web site</a></p></li>
+<li><p>we will use Google Colab - you need a Google account!</p></li>
+<li><p>all lecture materials will be in Python &amp; Markdown</p></li>
+<li><p>slides / tutorials will be shared on <a class="reference external" href="https://github.com/BlohmLab/NSCI801-QuantNeuro">GitHub</a>…</p></li>
+<li><p>download code from Github into Colab: File&gt;&gt;Open Notebook&gt;&gt;Github…</p></li>
+</ul>
+</div>
+<div class="section" id="for-those-interested">
+<h3><span class="section-number">1.1.7. </span>for those interested…<a class="headerlink" href="#for-those-interested" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Jupyter Notebook has a “slide” option that produces HTML5 slides</p>
+<ul>
+<li><p><a class="reference external" href="https://medium.com/&#64;mjspeck/presenting-code-using-jupyter-notebook-slides-a8a3c3b59d67">read more about it</a></p></li>
+</ul>
+</li>
+<li><p>install Reveal.js - Jupyter/IPython Slideshow Extension (RISE)</p>
+<ul>
+<li><p><a class="reference external" href="https://rise.readthedocs.io/en/maint-5.5/index.html">install and use</a></p></li>
+</ul>
+</li>
+</ul>
+<p>But you <strong>don’t</strong> need any of this!</p>
+</div>
+<div class="section" id="id4">
+<h3><span class="section-number">1.1.8. </span>Course overview &amp; materials<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="goals-of-the-course">
+<h4><span class="section-number">1.1.8.1. </span>Goals of the course:<a class="headerlink" href="#goals-of-the-course" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>hands-on skills in signal processing, basic and advanced statistics, data neuroscience (machine learning) and model fitting methods</p></li>
+<li><p>gain intuitive understanding of these topics</p></li>
+<li><p>introduction to scientific programming in Python</p></li>
+<li><p>familiarization with open science framework approaches</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id5">
+<h3><span class="section-number">1.1.9. </span>Course overview &amp; materials<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="specific-topics">
+<h4><span class="section-number">1.1.9.1. </span><a class="reference external" href="http://www.compneurosci.com/NSCI801.html">Specific topics</a>:<a class="headerlink" href="#specific-topics" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>intro to Python &amp; Colab</p></li>
+<li><p>signal processing</p></li>
+<li><p>statistics and hypothesis testing</p></li>
+<li><p>models &amp; data neuroscience</p></li>
+<li><p>causality, reproducibility, Open Science</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="the-research-process">
+<h3><span class="section-number">1.1.10. </span>The research process<a class="headerlink" href="#the-research-process" title="Permalink to this headline">¶</a></h3>
+<p><img alt="process" src="_images/research-process.png" /></p>
+</div>
+<div class="section" id="id6">
+<h3><span class="section-number">1.1.11. </span>The research process<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="research-design">
+<h4><span class="section-number">1.1.11.1. </span>Research design:<a class="headerlink" href="#research-design" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>what is power?</p></li>
+<li><p>what is effect size?</p></li>
+<li><p>how to determine sample size?</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id7">
+<h3><span class="section-number">1.1.12. </span>The research process<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id8">
+<h4><span class="section-number">1.1.12.1. </span>Research design:<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p>what is power?</p>
+<p>Power calculations tell us how many samples are required in order to avoid a type I (false positive) or a type II (false negative) error</p>
+<p>Typically in hypothesis testing, only type II errors are considered: For a type II error probability of <span class="math notranslate nohighlight">\(\beta\)</span>, the corresponding statistical power is <span class="math notranslate nohighlight">\(1 − \beta\)</span></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id9">
+<h3><span class="section-number">1.1.13. </span>The research process<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id10">
+<h4><span class="section-number">1.1.13.1. </span>Research design:<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p>what is effect size?</p>
+<p>Quantification of the difference between two groups</p>
+<p>E.g. Cohen <span class="math notranslate nohighlight">\(\color{grey}{d=\frac{\mu_1-\mu_2}{\sigma}}\)</span></p>
+</li>
+</ul>
+<p><img alt="effect-size" src="_images/effect-size.png" /></p>
+</div>
+</div>
+<div class="section" id="id11">
+<h3><span class="section-number">1.1.14. </span>The research process<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="let-s-play-effect-size">
+<h4><span class="section-number">1.1.14.1. </span>Let’s play - effect size<a class="headerlink" href="#let-s-play-effect-size" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;dark_background&#39;</span><span class="p">)</span> 
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">mu1</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="mf">.2</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mu1</span><span class="p">,</span> <span class="n">sigma</span><span class="p">))</span>
+<span class="n">mu2</span> <span class="o">=</span> <span class="mf">.5</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="mf">.2</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mu2</span><span class="p">,</span> <span class="n">sigma</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Effect size d =&quot;</span><span class="p">,</span> <span class="nb">abs</span><span class="p">((</span><span class="n">mu1</span><span class="o">-</span><span class="n">mu2</span><span class="p">)</span><span class="o">/</span><span class="n">sigma</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id12">
+<h3><span class="section-number">1.1.15. </span>The research process<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="let-s-play-random-samples">
+<h4><span class="section-number">1.1.15.1. </span>Let’s play - random samples<a class="headerlink" href="#let-s-play-random-samples" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mu1</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="n">mu2</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># number samples</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu1</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu2</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">s2</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_Intro_17_0.png" src="_images/NSCI801_Intro_17_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id13">
+<h3><span class="section-number">1.1.16. </span>The research process<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id14">
+<h4><span class="section-number">1.1.16.1. </span>Research design:<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>how to determine sample size? (aka power calculations)</p>
+<ul>
+<li><p>you essentially simulate your statistical analysis</p></li>
+<li><p>you need to make meaningful assumptions, e.g. group difference, variability, power</p></li>
+<li><p>you want to know how many samples you need so that you can reliably identify the hypothesized effect</p></li>
+</ul>
+</li>
+<li><p>many tools available, e.g. <a class="reference external" href="http://www.gpower.hhu.de/">G*Power</a>, <a class="reference external" href="https://webpower.psychstat.org/wiki/">WebPower online</a>, <span class="xref myst">powerandsamplesize.com</span>, …</p></li>
+<li><p>for Python: <a class="reference external" href="http://www.statsmodels.org/stable/index.html">StatsModels package</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id15">
+<h3><span class="section-number">1.1.17. </span>The research process<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="research-design-let-s-compute-sample-size">
+<h4><span class="section-number">1.1.17.1. </span>Research design - let’s compute sample size<a class="headerlink" href="#research-design-let-s-compute-sample-size" title="Permalink to this headline">¶</a></h4>
+<p>This is for a repeated measures t-test…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">array</span>
+<span class="kn">from</span> <span class="nn">statsmodels.stats.power</span> <span class="kn">import</span> <span class="n">TTestIndPower</span>
+<span class="c1"># from statsmodels.stats.power import TTestIndPower</span>
+
+<span class="c1"># parameters for power analysis</span>
+<span class="n">effect_sizes</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">])</span>
+<span class="n">sample_sizes</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
+<span class="c1"># calculate power curves from multiple power analyses</span>
+<span class="n">analysis</span> <span class="o">=</span> <span class="n">TTestIndPower</span><span class="p">()</span> <span class="c1"># or TTestIndPower for independent samples</span>
+<span class="n">analysis</span><span class="o">.</span><span class="n">plot_power</span><span class="p">(</span><span class="n">dep_var</span><span class="o">=</span><span class="s1">&#39;nobs&#39;</span><span class="p">,</span> <span class="n">nobs</span><span class="o">=</span><span class="n">sample_sizes</span><span class="p">,</span> <span class="n">effect_size</span><span class="o">=</span><span class="n">effect_sizes</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_Intro_20_0.png" src="_images/NSCI801_Intro_20_0.png" />
+</div>
+</div>
+<p><strong>What does this mean?</strong></p>
+<ul class="simple">
+<li><p>Power is the probability of rejecting the null hypothesis when, in fact, it is false.</p></li>
+<li><p>Power is the probability of making a correct decision (to reject the null hypothesis) when the null hypothesis is false.</p></li>
+<li><p>Power is the probability that a test of significance will pick up on an effect that is present.</p></li>
+<li><p>Power is the probability that a test of significance will detect a deviation from the null hypothesis, should such a deviation exist.</p></li>
+<li><p>Power is the probability of avoiding a Type II error.</p></li>
+<li><p>Simply put, power is the probability of not making a Type II error</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id16">
+<h3><span class="section-number">1.1.18. </span>The research process<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<p><img alt="science progress" src="_images/higgins-science-creationism.png" /></p>
+</div>
+<div class="section" id="id17">
+<h3><span class="section-number">1.1.19. </span>The research process<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="hypothesis-testing">
+<h4><span class="section-number">1.1.19.1. </span>Hypothesis testing:<a class="headerlink" href="#hypothesis-testing" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>parametric</p></li>
+<li><p>non-parametric</p></li>
+<li><p>Bayesian</p></li>
+<li><p>model-based</p></li>
+<li><p>…</p></li>
+</ul>
+<p>More later!</p>
+</div>
+</div>
+<div class="section" id="id18">
+<h3><span class="section-number">1.1.20. </span>The research process<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="pearl-s-research-flow">
+<h4><span class="section-number">1.1.20.1. </span>Pearl’s research flow<a class="headerlink" href="#pearl-s-research-flow" title="Permalink to this headline">¶</a></h4>
+<p><img alt="Pearl" src="_images/Pearl-flow.png" /></p>
+<p>Pearl &amp; Mackenzie, “The book of why”, 2018</p>
+</div>
+</div>
+<div class="section" id="further-readings">
+<h3><span class="section-number">1.1.21. </span>Further readings<a class="headerlink" href="#further-readings" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.sagepub.com/upm-data/49259_ch_1.pdf">A review of statistical concepts</a></p></li>
+<li><p><a class="reference external" href="http://www.rctn.org/bruno/npb163/probability.pdf">Bruno Olshausen’s probability primer</a></p></li>
+<li><p><a class="reference external" href="http://www.biostathandbook.com/power.html">Handbook of Biological Statistics - Power analysis</a></p></li>
+<li><p><a class="reference external" href="https://towardsdatascience.com/introduction-to-power-analysis-in-python-e7b748dfa26">Introduction to Power analysis in Python</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="README.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">NSCI 801 - Quantitative Neuroscience Syllabus</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="NSCI801_intro_python.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Google COLAB and Python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Gunnar Blohm, Joe Nashed<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
