@@ -1,0 +1,1154 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9. Models in Neuroscience &#8212; NSCI 801 - Quantitative Neuroscience book</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="10. Data Neuroscience Overview" href="NSCI801_DataNeuroscience.html" />
+    <link rel="prev" title="8. Bayesian statistics and hypothesis testing" href="NSCI801_Bayesian-stats.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">NSCI 801 - Quantitative Neuroscience book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="README.html">
+   NSCI 801 - Quantitative Neuroscience Syllabus
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Intro.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_intro_python.html">
+   2. Google COLAB and Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_advanced_python.html">
+   3. Advanced Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_acquisition_filters.html">
+   4. Data Collection and Signal Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Descriptive_Stats-NEW.html">
+   5. Descriptive Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Advanced_stats.html">
+   6. Advanced Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Image_Processing_Proper_v2.html">
+   7. Image Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Bayesian-stats.html">
+   8. Bayesian statistics and hypothesis testing
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   9. Models in Neuroscience
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_DataNeuroscience.html">
+   10. Data Neuroscience Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_CorrelationVsCausality.html">
+   11. Correlation vs. Causality
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Reproducibility.html">
+   12. Reproducibility, reliability, validity
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/NSCI801_ModelFitting.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FNSCI801_ModelFitting.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/NSCI801_ModelFitting.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nsci-801-quantitative-neuroscience">
+   9.1. NSCI 801 - Quantitative Neuroscience
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#outline">
+     9.1.1. Outline
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#models-in-scientific-discovery">
+     9.1.2. Models in scientific discovery
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     9.1.3. Models in scientific discovery
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     9.1.4. Models in scientific discovery
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#usefulness-of-models">
+     9.1.5. Usefulness of models
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-fitting-1-mse">
+     9.1.6. Model fitting 1 - MSE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     9.1.7. Model fitting 1 - MSE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     9.1.8. Model fitting 1 - MSE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-fitting-2-mle">
+     9.1.9. Model fitting 2 - MLE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     9.1.10. Model fitting 2 - MLE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     9.1.11. Model fitting 2 - MLE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     9.1.12. Model fitting 2 - MLE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     9.1.13. Model fitting 2 - MLE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     9.1.14. Model fitting 2 - MLE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-fitting-bootstrap">
+     9.1.15. Model fitting - bootstrap
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     9.1.16. Model fitting - bootstrap
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     9.1.17. Model fitting - bootstrap
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-comparison-how-to-chose-the-best-model">
+     9.1.18. Model comparison: how to chose the best model?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#k-fold-cross-validation">
+     9.1.19. k-fold cross-validation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#akaike-information-criterion-aic">
+     9.1.20. Akaike Information Criterion (AIC)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#further-readings">
+     9.1.21. Further readings
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Models in Neuroscience</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nsci-801-quantitative-neuroscience">
+   9.1. NSCI 801 - Quantitative Neuroscience
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#outline">
+     9.1.1. Outline
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#models-in-scientific-discovery">
+     9.1.2. Models in scientific discovery
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     9.1.3. Models in scientific discovery
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     9.1.4. Models in scientific discovery
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#usefulness-of-models">
+     9.1.5. Usefulness of models
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-fitting-1-mse">
+     9.1.6. Model fitting 1 - MSE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     9.1.7. Model fitting 1 - MSE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     9.1.8. Model fitting 1 - MSE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-fitting-2-mle">
+     9.1.9. Model fitting 2 - MLE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     9.1.10. Model fitting 2 - MLE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     9.1.11. Model fitting 2 - MLE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     9.1.12. Model fitting 2 - MLE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     9.1.13. Model fitting 2 - MLE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     9.1.14. Model fitting 2 - MLE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-fitting-bootstrap">
+     9.1.15. Model fitting - bootstrap
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     9.1.16. Model fitting - bootstrap
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     9.1.17. Model fitting - bootstrap
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#model-comparison-how-to-chose-the-best-model">
+     9.1.18. Model comparison: how to chose the best model?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#k-fold-cross-validation">
+     9.1.19. k-fold cross-validation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#akaike-information-criterion-aic">
+     9.1.20. Akaike Information Criterion (AIC)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#further-readings">
+     9.1.21. Further readings
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="models-in-neuroscience">
+<h1><span class="section-number">9. </span>Models in Neuroscience<a class="headerlink" href="#models-in-neuroscience" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="nsci-801-quantitative-neuroscience">
+<h2><span class="section-number">9.1. </span>NSCI 801 - Quantitative Neuroscience<a class="headerlink" href="#nsci-801-quantitative-neuroscience" title="Permalink to this headline">¶</a></h2>
+<p>Gunnar Blohm</p>
+<div class="section" id="outline">
+<h3><span class="section-number">9.1.1. </span>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Models in scientific discovery</p></li>
+<li><p>Usefulness of models</p></li>
+<li><p>Model fitting</p></li>
+</ul>
+</div>
+<div class="section" id="models-in-scientific-discovery">
+<h3><span class="section-number">9.1.2. </span>Models in scientific discovery<a class="headerlink" href="#models-in-scientific-discovery" title="Permalink to this headline">¶</a></h3>
+<p>Models help answering three potential types of questions about the brain (Dayan &amp; Abbott, 2001)</p>
+<ul class="simple">
+<li><p>Descriptive = What? – Compact summary of large amounts of data</p></li>
+<li><p>Mechanistic = How? – Show how neural circuits perform complex function</p></li>
+<li><p>Interpretive = Why? – Computations in the brain are usually performed in an optimal or nearly optimal way / Understanding optimal algorithms and their implementation to explain why the brain is designed the way it is</p></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h3><span class="section-number">9.1.3. </span>Models in scientific discovery<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>There are different levels of models (Marr)</p>
+<ul class="simple">
+<li><p>Computational level - 1: what does the system do and why does it do these things</p></li>
+<li><p>Algorithmic level - 2: how does the system do what it does, specifically, what representations does it use and what processes does it employ to build and manipulate the representations</p></li>
+<li><p>Implementation level - 3: how is the system physically realised</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3><span class="section-number">9.1.4. </span>Models in scientific discovery<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Judea Pearl (in “Book of WHY”): <em>“the model should depict, however qualitatively, the process that generates the data: in other words, the cause-effect forces that operate in the environment and shape the data generated.”</em>
+<img style="float: center; width:800px;" src="stuff/Pearl-flow.png"></p>
+</div>
+<div class="section" id="usefulness-of-models">
+<h3><span class="section-number">9.1.5. </span>Usefulness of models<a class="headerlink" href="#usefulness-of-models" title="Permalink to this headline">¶</a></h3>
+<img style="float: right; width:500px;" src="stuff/models-in-science.png">
+<ul class="simple">
+<li><p>Gain understanding</p></li>
+<li><p>Identify hypotheses, assumptions, unknowns</p></li>
+<li><p>Make quantitative predictions</p></li>
+<li><p>Build brain model (stroke lesions etc)</p></li>
+<li><p>Inspire new technologies</p></li>
+<li><p>Design useful experiments (i.e. animal research)</p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.eneuro.org/content/7/1/ENEURO.0352-19.2019">A How-to-Model Guide for Neuroscience</a></p></li>
+<li><p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/blob/master/tutorials/README.md#w1d1---model-types">Neuromatch Academy W1D1 - model types</a></p></li>
+<li><p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/blob/master/tutorials/README.md#w1d2---modeling-practice">Neuromatch Academy W1D2 - how to model</a></p></li>
+<li><p>see also the <a class="reference external" href="https://compneuro.neuromatch.io/tutorials/W1D2_ModelingPractice/W1D2_Intro.html">updated how-to-model guidance from Neuromatch Academy</a></p></li>
+</ul>
+</div>
+<div class="section" id="model-fitting-1-mse">
+<h3><span class="section-number">9.1.6. </span>Model fitting 1 - MSE<a class="headerlink" href="#model-fitting-1-mse" title="Permalink to this headline">¶</a></h3>
+<p>A common method is to compute the average (mean) squared error (MSE) of the model predictions <span class="math notranslate nohighlight">\(\hat{y_i}\)</span> for the <span class="math notranslate nohighlight">\(m\)</span> true values <span class="math notranslate nohighlight">\(y_i\)</span> in the data set: $<span class="math notranslate nohighlight">\( \textrm{MSE}_{\textrm{test}} = \frac{1}{m}\sum_i(\hat{y_i}-y_i)^2\)</span>$</p>
+<p>Let’s try this…</p>
+</div>
+<div class="section" id="id3">
+<h3><span class="section-number">9.1.7. </span>Model fitting 1 - MSE<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">minimize</span>
+
+<span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d</span> <span class="kn">import</span> <span class="n">Axes3D</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cm</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">44</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;dark_background&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;scipy&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># (adapted from Ben Cuthbert&#39;s tutorial)</span>
+<span class="c1"># generate some noisy data</span>
+<span class="n">n_samples</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">w_true</span> <span class="o">=</span> <span class="mf">1.2</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">n_samples</span><span class="p">)</span><span class="o">*</span><span class="mi">10</span>
+<span class="n">noise</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1"># the original code used uniform noise</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">w_true</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">noise</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> 
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+
+<span class="c1"># linear regression model (just for show)</span>
+<span class="n">x_axis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">w</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># our guess for the value of w</span>
+<span class="n">y_hat</span> <span class="o">=</span> <span class="n">w</span><span class="o">*</span><span class="n">x_axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_axis</span><span class="p">,</span> <span class="n">y_hat</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_ModelFitting_10_0.png" src="_images/NSCI801_ModelFitting_10_0.png" />
+</div>
+</div>
+<p>In order to fit a model, we first need to define our error function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_mse</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;function that computes mean squared error&quot;&quot;&quot;</span>
+    <span class="n">y_hat</span> <span class="o">=</span> <span class="n">w</span><span class="o">*</span><span class="n">x</span>
+    <span class="n">mse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">y</span> <span class="o">-</span> <span class="n">y_hat</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">mse</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s evaluate the MSE of three different models (values of <span class="math notranslate nohighlight">\(w\)</span>)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">w_true</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">18</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_axis</span><span class="p">,</span> <span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">x_axis</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">12</span><span class="p">)</span>
+    <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;MSE = </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">compute_mse</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">w</span><span class="p">[</span> <span class="n">i</span><span class="p">]));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_ModelFitting_14_0.png" src="_images/NSCI801_ModelFitting_14_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3><span class="section-number">9.1.8. </span>Model fitting 1 - MSE<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>We still haven’t answered our question: <strong>How do we choose <span class="math notranslate nohighlight">\(w\)</span>?</strong></p>
+<p>The key is to think of MSE as a <strong>cost function</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_points</span> <span class="o">=</span> <span class="mi">50</span>
+<span class="n">all_w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="n">n_points</span><span class="p">)</span>
+<span class="n">mse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_points</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_points</span><span class="p">):</span>
+    <span class="n">mse</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">compute_mse</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">all_w</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">all_w</span><span class="p">,</span><span class="n">mse</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;MSE&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">w_true</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;cost&#39;</span><span class="p">,</span><span class="s1">&#39;w_true&#39;</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_ModelFitting_16_0.png" src="_images/NSCI801_ModelFitting_16_0.png" />
+</div>
+</div>
+<p>How do we choose <span class="math notranslate nohighlight">\(w\)</span>? Minimize the cost function!</p>
+<p>To minimize MSE, we solve for where its gradient is 0:</p>
+<div class="math notranslate nohighlight">
+\[\nabla_w\textrm{MSE} = 0\]</div>
+<div class="math notranslate nohighlight">
+\[\nabla_w\frac{1}{m}\sum_i(\hat{y_i}-y_i)^2 = 0\]</div>
+<div class="math notranslate nohighlight">
+\[ ... \]</div>
+<div class="math notranslate nohighlight">
+\[w = (X^TX)^{-1}X^Ty\]</div>
+<p>This is known as solving the normal equations (see <a class="reference external" href="https://www.deeplearningbook.org/">Deep Learning</a> 5.1.4 for more details).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">solve_normal_eqn</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Function that solves the normal equations to produce the </span>
+<span class="sd">    value of w that minimizes MSE&quot;&quot;&quot;</span>
+    
+    <span class="c1"># our numpy arrays are 0-dimensional by default- for the</span>
+    <span class="c1"># transpose/dot product/inverse to work, we reshape them</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+    <span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">)),</span><span class="n">x</span><span class="o">.</span><span class="n">T</span><span class="p">),</span><span class="n">y</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">w</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">solve_normal_eqn</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1.20816968]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>And we’re done! We have just recovered <span class="math notranslate nohighlight">\(w\)</span> from the noisy data by analytically computing the solution to finding the minimum of the cost function!</p>
+<p>However this only works for very few select functions, such as linear functions…</p>
+<p><strong>Thus: we need a more general way…</strong></p>
+</div>
+<div class="section" id="model-fitting-2-mle">
+<h3><span class="section-number">9.1.9. </span>Model fitting 2 - MLE<a class="headerlink" href="#model-fitting-2-mle" title="Permalink to this headline">¶</a></h3>
+<p>The likelihood of the data given the model can be used directly to estimate <span class="math notranslate nohighlight">\(\theta\)</span> through maximum likelihood estimation (MLE):
+$<span class="math notranslate nohighlight">\(\hat{\theta_{MLE}}=\underset{\theta}{\operatorname{argmax}} P(D| \theta)\)</span>$</p>
+<p>So practically, how do we do this?</p>
+</div>
+<div class="section" id="id5">
+<h3><span class="section-number">9.1.10. </span>Model fitting 2 - MLE<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>The likelihood of the model given the data is <span class="math notranslate nohighlight">\(\mathcal{L}(\theta|D) = P(D|\theta)\)</span></p>
+<ul class="simple">
+<li><p>Think of probability relating to possible results</p></li>
+<li><p>Think of likelihood relating to hypotheses</p></li>
+</ul>
+<p>Here we assume Gaussian noise; the loglikelihood is thus given by:</p>
+<div class="math notranslate nohighlight">
+\[\mathcal{L}(\mu, \sigma | X) = \prod_{i=1}^m\frac{1}{\sqrt{2\pi\sigma^2}}\exp(-\frac{(x_i-\mu)^2}{2\sigma^2})$$$$\textrm{log}\mathcal{L}(\mu, \sigma | x) = \sum_{i=1}^m\textrm{log}\frac{1}{\sqrt{2\pi\sigma^2}}\exp(-\frac{(x_i-\mu)^2}{2\sigma^2})\]</div>
+<p>We now want to minimize the negative loglikelihood…</p>
+</div>
+<div class="section" id="id6">
+<h3><span class="section-number">9.1.11. </span>Model fitting 2 - MLE<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>What is a likelihood?</p>
+<p>Let’s say we have a single lonely data point <span class="math notranslate nohighlight">\(x\)</span> sampled from one of two candidate normal distributions <span class="math notranslate nohighlight">\(f_1=\mathcal{N}(\theta_1)\)</span> and <span class="math notranslate nohighlight">\(f_2=\mathcal{N}(\theta_2)\)</span> where <span class="math notranslate nohighlight">\(\theta_1 = \{\mu_1,\sigma_1\}\)</span> and <span class="math notranslate nohighlight">\(\theta = \{\mu_2, \sigma_2\}\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.5</span>
+<span class="n">mu1</span><span class="p">,</span> <span class="n">sig1</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span>
+<span class="n">mu2</span><span class="p">,</span> <span class="n">sig2</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span>
+<span class="n">x_axis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">f1</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x_axis</span><span class="p">,</span> <span class="n">mu1</span><span class="p">,</span> <span class="n">sig1</span><span class="p">)</span>
+<span class="n">f2</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x_axis</span><span class="p">,</span> <span class="n">mu2</span><span class="p">,</span> <span class="n">sig2</span><span class="p">)</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_axis</span><span class="p">,</span> <span class="n">f1</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_axis</span><span class="p">,</span> <span class="n">f2</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Probability density&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_ModelFitting_24_0.png" src="_images/NSCI801_ModelFitting_24_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prob1</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mu1</span><span class="p">,</span> <span class="n">sig1</span><span class="p">)</span>
+<span class="n">prob2</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mu2</span><span class="p">,</span> <span class="n">sig2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;L(theta1|x) = </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">prob1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;L(theta2|x) = </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">prob2</span><span class="p">)</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_axis</span><span class="p">,</span> <span class="n">f1</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_axis</span><span class="p">,</span> <span class="n">f2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">);</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">prob1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">prob2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Probability density&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>L(theta1|x) = 0.352065
+L(theta2|x) = 0.091325
+</pre></div>
+</div>
+<img alt="_images/NSCI801_ModelFitting_25_1.png" src="_images/NSCI801_ModelFitting_25_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="id7">
+<h3><span class="section-number">9.1.12. </span>Model fitting 2 - MLE<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>What if we now add a data point?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_axis</span><span class="p">,</span> <span class="n">f1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_axis</span><span class="p">,</span> <span class="n">f2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Probability density&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_ModelFitting_27_0.png" src="_images/NSCI801_ModelFitting_27_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prob1</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mu1</span><span class="p">,</span> <span class="n">sig1</span><span class="p">)</span><span class="o">*</span><span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">mu1</span><span class="p">,</span> <span class="n">sig1</span><span class="p">)</span>
+<span class="n">prob2</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mu2</span><span class="p">,</span> <span class="n">sig2</span><span class="p">)</span><span class="o">*</span><span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">mu2</span><span class="p">,</span> <span class="n">sig2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;L(theta1|x) = </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">prob1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;L(theta2|x) = </span><span class="si">%f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">prob2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>L(theta1|x) = 0.001560
+L(theta2|x) = 0.018217
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3><span class="section-number">9.1.13. </span>Model fitting 2 - MLE<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>Now back to our fitting problem…</p>
+<p>We need to define our loglikelihood function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># generate some noisy data</span>
+<span class="n">n_samples</span> <span class="o">=</span> <span class="mi">150</span>
+<span class="n">w_true</span> <span class="o">=</span> <span class="mf">1.2</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">n_samples</span><span class="p">)</span><span class="o">*</span><span class="mi">10</span>
+<span class="n">noise</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1"># the original code used uniform noise</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">w_true</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">noise</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+
+<span class="c1"># linear regression model (just for show)</span>
+<span class="n">x_axis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">w</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># our guess for the value of w</span>
+<span class="n">y_hat</span> <span class="o">=</span> <span class="n">w</span><span class="o">*</span><span class="n">x_axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_axis</span><span class="p">,</span> <span class="n">y_hat</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/NSCI801_ModelFitting_30_0.png" src="_images/NSCI801_ModelFitting_30_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compute_y_hat</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;function that computes y_hat (aka y=w0*1 + w1*x)&quot;&quot;&quot;</span>
+    <span class="n">y_hat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">w</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">y_hat</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pad x so that matrix operation X*w gives w0 + x*w1</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">x</span><span class="p">]</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we assume the data is normally distributed around the function defined in y_hat...</span>
+<span class="k">def</span> <span class="nf">compute_nll</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;function that computes the negative log likelihood of a gaussian&quot;&quot;&quot;</span>
+    <span class="n">y_hat</span> <span class="o">=</span> <span class="n">compute_y_hat</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+    <span class="n">sig</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">y_hat</span><span class="p">)</span>
+    <span class="n">ll</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">norm</span><span class="o">.</span><span class="n">logpdf</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_hat</span><span class="p">,</span> <span class="n">sig</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">ll</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’re now ready to minimize the loglikelihood function through adapting model parameters…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">minimize</span>
+
+<span class="c1"># initial guess of w</span>
+<span class="n">w0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="c1"># define a new version of our -log-likelihood that is only a function of w:</span>
+<span class="n">fun</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">w</span><span class="p">:</span> <span class="n">compute_nll</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+
+<span class="c1"># pass these arguments to minimize</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">w0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="c1"># plot results</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+
+<span class="c1"># linear regression model (just for show)</span>
+<span class="n">x_axis</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">w</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># our guess for the value of w</span>
+<span class="n">y_hat</span> <span class="o">=</span> <span class="n">w</span><span class="o">*</span><span class="n">x_axis</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_axis</span><span class="p">,</span> <span class="n">y_hat</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      fun: 203.6943986857902
+ hess_inv: array([[ 0.02791486, -0.00426672],
+       [-0.00426672,  0.00082749]])
+      jac: array([1.90734863e-06, 3.81469727e-06])
+  message: &#39;Optimization terminated successfully.&#39;
+     nfev: 30
+      nit: 6
+     njev: 10
+   status: 0
+  success: True
+        x: array([0.34100692, 1.15404339])
+</pre></div>
+</div>
+<img alt="_images/NSCI801_ModelFitting_35_1.png" src="_images/NSCI801_ModelFitting_35_1.png" />
+</div>
+</div>
+<p><strong>All done!</strong></p>
+</div>
+<div class="section" id="id9">
+<h3><span class="section-number">9.1.14. </span>Model fitting 2 - MLE<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>In practice, we don’t want to test our model on the same data we trained it with! To avoid that we typically divide data into <em>training set</em> and <em>test set</em>. This allows for what’s called <strong>cross-validation</strong>. General procedure:</p>
+<ul class="simple">
+<li><p>draw a random subset of your data = <em>training data</em>. Remaining data = <em>test set</em></p></li>
+<li><p>perform fitting procedure on <em>training set</em> to identify model parameters</p></li>
+<li><p>test model performance on <em>test set</em>, e.g. compute loglikelihood of <em>test set</em> given the identified model parameters</p></li>
+<li><p>do this many times…</p></li>
+</ul>
+<p>If your training set is all but 1 data point, this is called <strong>leave-one-out</strong> cross-validation.</p>
+</div>
+<div class="section" id="model-fitting-bootstrap">
+<h3><span class="section-number">9.1.15. </span>Model fitting - bootstrap<a class="headerlink" href="#model-fitting-bootstrap" title="Permalink to this headline">¶</a></h3>
+<p>Bootstrapping is similar cross-validation, but the boostrap sample is chosen in a specific way to obtain meaningful statistics on the estimated parameters.</p>
+<p>Bootstrapping is a test/metric that relies on <strong>random sampling with replacement</strong>. As a result, we can estimate properties of estimators (e.g. fit parameters).</p>
+<p><strong>Assumption</strong>: the limited data available is representative of the population data.</p>
+<p><strong>Advantage</strong>: no prior knowledge or assumption about the data sampling process!</p>
+</div>
+<div class="section" id="id10">
+<h3><span class="section-number">9.1.16. </span>Model fitting - bootstrap<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<img style="float: center; width:800px;" src="stuff/bootstrap.png">
+<p><a class="reference external" href="https://towardsdatascience.com/an-introduction-to-the-bootstrap-method-58bcb51b4d60">Toward Data Science: Intro to bootstrap</a></p>
+</div>
+<div class="section" id="id11">
+<h3><span class="section-number">9.1.17. </span>Model fitting - bootstrap<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>Bootstrap comes in handy when there is no analytical form or normal theory to help estimate the distribution of the statistics of interest, since bootstrap methods can apply to most random quantities. Here is how it works:</p>
+<ul class="simple">
+<li><p>randomly resample your data with replacement</p></li>
+<li><p>perform estimation on resampled data, e.g. compute mean, perform model fit, etc</p></li>
+<li><p>repeat many times, e.g. <span class="math notranslate nohighlight">\(N=1000\)</span></p></li>
+<li><p>compute bootstrap distribution</p></li>
+</ul>
+<p>Result: empirical percentiles (<span class="math notranslate nohighlight">\(\alpha\)</span>/2) of bootstrap distribution form confidence interval over parameters with confidence level <span class="math notranslate nohighlight">\(\alpha\)</span>, i.e. <span class="math notranslate nohighlight">\((\theta^*_{\alpha/2}, \theta^*_{1-\alpha/2})\)</span></p>
+<p>Let’s do it!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># generate some noisy data</span>
+<span class="n">n_samples</span> <span class="o">=</span> <span class="mi">150</span>
+<span class="n">w_true</span> <span class="o">=</span> <span class="mf">1.2</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">n_samples</span><span class="p">)</span><span class="o">*</span><span class="mi">10</span>
+<span class="n">noise</span> <span class="o">=</span> <span class="n">norm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="c1"># the original code used uniform noise</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">w_true</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="o">*</span><span class="n">noise</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">boot_est</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">):</span>
+    <span class="c1"># chose a random sample of our data with replacement</span>
+    <span class="n">bootind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n_samples</span><span class="o">-</span><span class="mi">1</span><span class="p">)),</span><span class="n">size</span><span class="o">=</span><span class="n">n_samples</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">xb</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">bootind</span><span class="p">]</span>
+    <span class="n">yb</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">bootind</span><span class="p">]</span>
+    
+    <span class="c1"># append 1s</span>
+    <span class="n">Xb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">xb</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">xb</span><span class="p">]</span>
+    
+    <span class="c1"># fit model</span>
+    <span class="n">w0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">fun</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">w</span><span class="p">:</span> <span class="n">compute_nll</span><span class="p">(</span><span class="n">Xb</span><span class="p">,</span> <span class="n">yb</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">w0</span><span class="p">)</span>
+    
+    <span class="c1"># save results</span>
+    <span class="n">boot_est</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot bootstrap distribution</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">boot_est</span><span class="p">)</span>
+
+<span class="c1"># confidence level</span>
+<span class="n">alp</span> <span class="o">=</span> <span class="mf">0.05</span>
+
+<span class="c1"># compute percentiles</span>
+<span class="n">est_low</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">boot_est</span><span class="p">,</span> <span class="mi">100</span><span class="o">*</span><span class="n">alp</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">est_high</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">boot_est</span><span class="p">,</span> <span class="mi">100</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">alp</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">est_median</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">boot_est</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">est_mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">boot_est</span><span class="p">)</span>
+<span class="n">est_std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">boot_est</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">est_low</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">est_high</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">est_median</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">([</span><span class="n">est_low</span><span class="p">,</span> <span class="n">est_median</span><span class="p">,</span> <span class="n">est_high</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">est_mean</span><span class="p">,</span> <span class="n">est_std</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1.1376369217837263, 1.1958713507549792, 1.2546932636792674]
+[1.1955797053496076, 0.029987463824238652]
+</pre></div>
+</div>
+<img alt="_images/NSCI801_ModelFitting_44_1.png" src="_images/NSCI801_ModelFitting_44_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="model-comparison-how-to-chose-the-best-model">
+<h3><span class="section-number">9.1.18. </span>Model comparison: how to chose the best model?<a class="headerlink" href="#model-comparison-how-to-chose-the-best-model" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>use Bayes Factor (see last lecture)</p></li>
+<li><p>compare MSE after k-fold cross-validation</p></li>
+<li><p>use Akaike’s Information Criterion (AIC)</p></li>
+</ul>
+<p>Always split your dataset into <em>training data</em> and <em>test data</em>!</p>
+</div>
+<div class="section" id="k-fold-cross-validation">
+<h3><span class="section-number">9.1.19. </span>k-fold cross-validation<a class="headerlink" href="#k-fold-cross-validation" title="Permalink to this headline">¶</a></h3>
+<img style="float: center; width:800px;" src="stuff/grid_search_cross_validation.png">
+<p><a class="reference external" href="https://scikit-learn.org/stable/modules/cross_validation.html">from scikit-learn tutorial</a></p>
+<p>if you want to do that, check out the <a class="reference external" href="https://scikit-learn.org/stable/modules/cross_validation.html">from scikit-learn tutorial</a> or the <a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/blob/master/tutorials/README.md#w1d3---model-fitting">Neuromatch Academy tutorial on model fitting (especially tutorial 6)</a></p>
+</div>
+<div class="section" id="akaike-information-criterion-aic">
+<h3><span class="section-number">9.1.20. </span>Akaike Information Criterion (AIC)<a class="headerlink" href="#akaike-information-criterion-aic" title="Permalink to this headline">¶</a></h3>
+<p>Estimates how much information would be lost if the model predictions were used instead of the true data.</p>
+<p>AIC strives for a good tradeoff between overfitting and underfitting by taking into account the complexity of the model and the information lost. AIC is calculated as:</p>
+<div class="math notranslate nohighlight">
+\[AIC = 2K - 2\log(L)\]</div>
+<p>with:</p>
+<ul class="simple">
+<li><p>K: number parameters in the model</p></li>
+<li><p><span class="math notranslate nohighlight">\(\log(L)\)</span>: loglikelihood of data given your best model paremeters</p></li>
+</ul>
+<p>Note: smallest AIC values are best! (<a class="reference external" href="https://en.wikipedia.org/wiki/Akaike_information_criterion">see Wikipedia page for more info</a>)</p>
+<p>We can now do model comparison by computing the following relative probability that <em>i</em>th model minimizes the (estimated) information loss:</p>
+<div class="math notranslate nohighlight">
+\[e^{(AIC_{min}-AIC_i)/2}\]</div>
+</div>
+<div class="section" id="further-readings">
+<h3><span class="section-number">9.1.21. </span>Further readings<a class="headerlink" href="#further-readings" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/blob/master/tutorials/README.md#w1d3---model-fitting">Neuromatch Academy W1D3 - model fitting</a></p></li>
+<li><p><a class="reference external" href="https://github.com/lacerbi/bads">Bayesian Adaptive Directed Search (BADS)</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="NSCI801_Bayesian-stats.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">8. </span>Bayesian statistics and hypothesis testing</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="NSCI801_DataNeuroscience.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>Data Neuroscience Overview</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Gunnar Blohm, Joe Nashed<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

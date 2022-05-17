@@ -1,0 +1,689 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12. Reproducibility, reliability, validity &#8212; NSCI 801 - Quantitative Neuroscience book</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="11. Correlation vs. Causality" href="NSCI801_CorrelationVsCausality.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">NSCI 801 - Quantitative Neuroscience book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="README.html">
+   NSCI 801 - Quantitative Neuroscience Syllabus
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Intro.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_intro_python.html">
+   2. Google COLAB and Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_advanced_python.html">
+   3. Advanced Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_acquisition_filters.html">
+   4. Data Collection and Signal Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Descriptive_Stats-NEW.html">
+   5. Descriptive Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Advanced_stats.html">
+   6. Advanced Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Image_Processing_Proper_v2.html">
+   7. Image Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Bayesian-stats.html">
+   8. Bayesian statistics and hypothesis testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_ModelFitting.html">
+   9. Models in Neuroscience
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_DataNeuroscience.html">
+   10. Data Neuroscience Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_CorrelationVsCausality.html">
+   11. Correlation vs. Causality
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   12. Reproducibility, reliability, validity
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/NSCI801_Reproducibility.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FNSCI801_Reproducibility.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/NSCI801_Reproducibility.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nsci-801-quantitative-neuroscience">
+   12.1. NSCI 801 - Quantitative Neuroscience
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#outline">
+     12.1.1. Outline
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiple-comparisons">
+     12.1.2. Multiple comparisons
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#probability-false-positive-f-number-comparisons">
+     12.1.3. Probability(false positive) = f(number comparisons)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exploratory-analyses-vs-hypothesis-testing">
+     12.1.4. Exploratory analyses vs hypothesis testing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quick-excursion-survivorship-bias">
+     12.1.5. Quick excursion: survivorship bias
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#open-science-transparency">
+     12.1.6. Open science - transparency
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pre-registration-registered-reports">
+     12.1.7. Pre-registration / registered reports
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#open-science-vs-patents">
+     12.1.8. Open science vs. patents
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#thank-you">
+     12.1.9. THANK YOU!!!
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Reproducibility, reliability, validity</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nsci-801-quantitative-neuroscience">
+   12.1. NSCI 801 - Quantitative Neuroscience
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#outline">
+     12.1.1. Outline
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multiple-comparisons">
+     12.1.2. Multiple comparisons
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#probability-false-positive-f-number-comparisons">
+     12.1.3. Probability(false positive) = f(number comparisons)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exploratory-analyses-vs-hypothesis-testing">
+     12.1.4. Exploratory analyses vs hypothesis testing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quick-excursion-survivorship-bias">
+     12.1.5. Quick excursion: survivorship bias
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#open-science-transparency">
+     12.1.6. Open science - transparency
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pre-registration-registered-reports">
+     12.1.7. Pre-registration / registered reports
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#open-science-vs-patents">
+     12.1.8. Open science vs. patents
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#thank-you">
+     12.1.9. THANK YOU!!!
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="reproducibility-reliability-validity">
+<h1><span class="section-number">12. </span>Reproducibility, reliability, validity<a class="headerlink" href="#reproducibility-reliability-validity" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="nsci-801-quantitative-neuroscience">
+<h2><span class="section-number">12.1. </span>NSCI 801 - Quantitative Neuroscience<a class="headerlink" href="#nsci-801-quantitative-neuroscience" title="Permalink to this headline">¶</a></h2>
+<p>Gunnar Blohm</p>
+<div class="section" id="outline">
+<h3><span class="section-number">12.1.1. </span>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>statistical considerations</p>
+<ul>
+<li><p>multiple comparisons</p></li>
+<li><p>exploratory analyses vs hypothesis testing</p></li>
+</ul>
+</li>
+<li><p>Open Science</p>
+<ul>
+<li><p>general steps toward transparency</p></li>
+<li><p>pre-registration / registered report</p></li>
+</ul>
+</li>
+<li><p>Open science vs. patents</p></li>
+</ul>
+</div>
+<div class="section" id="multiple-comparisons">
+<h3><span class="section-number">12.1.2. </span>Multiple comparisons<a class="headerlink" href="#multiple-comparisons" title="Permalink to this headline">¶</a></h3>
+<p>In <a class="reference external" href="https://teenspecies.github.io/pdfs/NeuralCorrelates.pdf">2009, Bennett et al.</a> studies the brain of a salmon using fMRI and found significant activation despite the salmon being dead… (IgNobel Prize 2012)</p>
+<p>Why did they find this?</p>
+<p>They imaged 140 volumes (samples) of the brain and ran a standard preprocessing pipeline, including spatial realignment, co-registration of functional and anatomical volumes, and 8mm full-width at half maximum (FWHM) Gaussian smoothing.</p>
+<p>They computed voxel-wise statistics.</p>
+<img style="float: center; width:750px;" src="stuff/salmon.png"><p>This is a prime example of what’s known as the <strong>multiple comparison problem</strong>!</p>
+<p>“the problem that occurs when one considers a set of statistical inferences simultaneously or infers a subset of parameters selected based on the observed values” (Wikipedia)</p>
+<ul class="simple">
+<li><p>problem that arises when implementing a large number of statistical tests in the same experiment</p></li>
+<li><p>the more tests we do, the higher probability of obtaining, at least, one test with statistical significance</p></li>
+</ul>
+</div>
+<div class="section" id="probability-false-positive-f-number-comparisons">
+<h3><span class="section-number">12.1.3. </span>Probability(false positive) = f(number comparisons)<a class="headerlink" href="#probability-false-positive-f-number-comparisons" title="Permalink to this headline">¶</a></h3>
+<p>If you repeat a statistical test over and over again, the false positive (<span class="math notranslate nohighlight">\(FP\)</span>) rate (<span class="math notranslate nohighlight">\(P\)</span>) evolves as follows:
+$<span class="math notranslate nohighlight">\(P(FP)=1-(1-\alpha)^N\)</span>$</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\alpha\)</span> is the confidence level for each individual test (e.g. 0.05)</p></li>
+<li><p><span class="math notranslate nohighlight">\(N\)</span> is the number of comparisons</p></li>
+</ul>
+<p>Let’s see how this works…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;dark_background&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;numpy&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s create some random data…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rvs</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">140</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">rvs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x226c352bb50&gt;
+</pre></div>
+</div>
+<img alt="_images/NSCI801_Reproducibility_8_1.png" src="_images/NSCI801_Reproducibility_8_1.png" />
+</div>
+</div>
+<p>Now let’s run a t-test to see if it’s different from 0</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">statistic</span><span class="p">,</span> <span class="n">pvalue</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">ttest_1samp</span><span class="p">(</span><span class="n">rvs</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pvalue</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.28343500438551184
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now let’s do this many times for different samples, e.g. different voxels of our salmon…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">t_test_function</span><span class="p">(</span><span class="n">alp</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;computes t-test statistics on N random samples and returns number of significant tests&quot;&quot;&quot;</span>
+    
+    <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="n">rvs</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">norm</span><span class="o">.</span><span class="n">rvs</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+        <span class="n">statistic</span><span class="p">,</span> <span class="n">pvalue</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">ttest_1samp</span><span class="p">(</span><span class="n">rvs</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">pvalue</span> <span class="o">&lt;=</span> <span class="n">alp</span><span class="p">:</span>
+            <span class="n">counter</span> <span class="o">=</span> <span class="n">counter</span> <span class="o">+</span> <span class="mi">1</span>
+        
+    <span class="nb">print</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">counter</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">counter</span> <span class="o">=</span> <span class="n">t_test_function</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The false positve rate was&quot;</span><span class="p">,</span> <span class="n">counter</span><span class="o">/</span><span class="n">N</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>53
+The false positve rate was 5.3 %
+</pre></div>
+</div>
+</div>
+</div>
+<p>Well, we wanted a <span class="math notranslate nohighlight">\(\alpha=0.05\)</span>, so what’s the problem?</p>
+<p>The problem is that we have hugely increased the likelihood of finding something significant by chance! (<strong>p-hacking</strong>)</p>
+<p>Take the above example:</p>
+<ul class="simple">
+<li><p>running 100 independent tests with <span class="math notranslate nohighlight">\(\alpha=0.05\)</span> resulted in a few positives</p></li>
+<li><p>well, that’s good right? Now we can see if there is a story here we can publish…</p>
+<ul>
+<li><p>dead salmon!</p></li>
+</ul>
+</li>
+<li><p>remember, our data was just noise!!! There was NO signal!</p></li>
+</ul>
+<p>This is why we have corrections for multiple comparisons that adjust the p-value so that the <strong>overall chance</strong> to find a false positive stays at <span class="math notranslate nohighlight">\(\alpha\)</span>!</p>
+<p>Why does this matter?</p>
+</div>
+<div class="section" id="exploratory-analyses-vs-hypothesis-testing">
+<h3><span class="section-number">12.1.4. </span>Exploratory analyses vs hypothesis testing<a class="headerlink" href="#exploratory-analyses-vs-hypothesis-testing" title="Permalink to this headline">¶</a></h3>
+<p>Why do we distinguish between them?</p>
+<img style="float: center; width:750px;" src="stuff/ExploreConfirm.png"><p>But in science, confirmatory analyses that are hypothesis-driven are often much more valued.</p>
+<p>There is a temptation to frame <em>exploratory</em> analyses and <em>confirmatory</em>…</p>
+<p><strong>This leads to disaster!!!</strong></p>
+<ul class="simple">
+<li><p>science is not solid</p></li>
+<li><p>replication crisis (psychology, social science, medicine, marketing, economics, sports science, etc, etc…)</p></li>
+<li><p>shaken trust in science</p></li>
+</ul>
+<img style="float: center; width:750px;" src="stuff/crisis.jpeg">
+<p>(<a class="reference external" href="https://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970">Baker 2016</a>)</p>
+</div>
+<div class="section" id="quick-excursion-survivorship-bias">
+<h3><span class="section-number">12.1.5. </span>Quick excursion: survivorship bias<a class="headerlink" href="#quick-excursion-survivorship-bias" title="Permalink to this headline">¶</a></h3>
+<p>“Survivorship bias or survival bias is the logical error of concentrating on the people or things that made it past some selection process and overlooking those that did not, typically because of their lack of visibility.” (Wikipedia)</p>
+<img style="float: center; width:750px;" src="stuff/SurvivorshipBias.png"><p><strong>How does survivorship bias affect neuroscience?</strong></p>
+<p>Think about it…</p>
+<p>E.g.</p>
+<ul class="simple">
+<li><p>people select neurons to analyze</p></li>
+<li><p>profs say it’s absolutely achievable to become a prof</p></li>
+</ul>
+<p>Just keep it in mind…</p>
+</div>
+<div class="section" id="open-science-transparency">
+<h3><span class="section-number">12.1.6. </span>Open science - transparency<a class="headerlink" href="#open-science-transparency" title="Permalink to this headline">¶</a></h3>
+<p>Open science can hugely help increasing transparency in many different ways so that findings and data can be evaluated for what they are:</p>
+<ul class="simple">
+<li><p>publish data acquisition protocol and code: increases data reproducibility &amp; credibility</p></li>
+<li><p>publish data: data get second, third, etc… lives</p></li>
+<li><p>publish data processing / analyses: increases reproducibility of results</p></li>
+<li><p>publish figures code and stats: increases reproducibility and credibility of conclusions</p></li>
+<li><p>pre-register hypotheses and analyses: ensures <em>confirmatory</em> analyses are not <em>exploratory</em> (HARKing)</p></li>
+</ul>
+<p>For more info, see NSCI800 lectures about Open Science: <a class="reference external" href="http://www.compneurosci.com/NSCI800/OpenScienceI.pdf">OS1</a>, <a class="reference external" href="http://www.compneurosci.com/NSCI800/OpenScienceII.pdf">OS2</a></p>
+</div>
+<div class="section" id="pre-registration-registered-reports">
+<h3><span class="section-number">12.1.7. </span>Pre-registration / registered reports<a class="headerlink" href="#pre-registration-registered-reports" title="Permalink to this headline">¶</a></h3>
+<img style="float:right; width:500px;" src="stuff/RR.png">
+<ul class="simple">
+<li><p>IPA guarantees publication</p>
+<ul>
+<li><p>If original methods are followed</p></li>
+<li><p>Main conclusions need to come from originally proposed analyses</p></li>
+</ul>
+</li>
+<li><p>Does not prevent exploratory analyses</p>
+<ul>
+<li><p>Need to be labeled as such</p></li>
+</ul>
+</li>
+</ul>
+<p><a class="reference external" href="https://Cos.io/rr">https://Cos.io/rr</a></p>
+<p>Please follow <strong>Stage 1</strong> instructions of <a class="reference external" href="https://www.eneuro.org/sites/default/files/additional_assets/pdf/eNeuro%20Registered%20Reports%20Author%20Guidelines.pdf">the registered report intrustions from eNeuro</a> for the course evaluation…</p>
+<p>Questions???</p>
+</div>
+<div class="section" id="open-science-vs-patents">
+<h3><span class="section-number">12.1.8. </span>Open science vs. patents<a class="headerlink" href="#open-science-vs-patents" title="Permalink to this headline">¶</a></h3>
+<p>The goal of Open Science is to share all aspects of research with the public!</p>
+<ul class="simple">
+<li><p>because knowledge should be freely available</p></li>
+<li><p>because the public paid for the science to happen in the first place</p></li>
+</ul>
+<p>However, this prevents from patenting scientific results!</p>
+<ul class="simple">
+<li><p>this is good for science, because patents obstruct research</p></li>
+<li><p>prevents full privitazation of research: companies driving research is biased by private interest</p></li>
+</ul>
+<p>Turns out open science is good for business!</p>
+<ul class="simple">
+<li><p>more people contribute</p></li>
+<li><p>wider adoption</p>
+<ul>
+<li><p>e.g. Github = Microsoft, Android = Google, etc</p></li>
+</ul>
+</li>
+<li><p>better for society</p>
+<ul>
+<li><p>e.g.  nonprofit pharma</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Why are patents still a thing?</strong></p>
+<p>Well, some people think it’s an outdated and morally corrupt concept.</p>
+<ul class="simple">
+<li><p>goal: maximum profit</p></li>
+<li><p>enabler: capitalism</p></li>
+<li><p>victims: general public</p></li>
+</ul>
+<p>Think about it and decide for yourself what to do with your research!!!</p>
+</div>
+<div class="section" id="thank-you">
+<h3><span class="section-number">12.1.9. </span>THANK YOU!!!<a class="headerlink" href="#thank-you" title="Permalink to this headline">¶</a></h3>
+<img style="float:center; width:750px;" src="stuff/empower.jpg"></div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="NSCI801_CorrelationVsCausality.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">11. </span>Correlation vs. Causality</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Gunnar Blohm, Joe Nashed<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

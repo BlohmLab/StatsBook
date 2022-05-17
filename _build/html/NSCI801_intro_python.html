@@ -1,0 +1,919 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. Google COLAB and Python &#8212; NSCI 801 - Quantitative Neuroscience book</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3. Advanced Python" href="NSCI801_advanced_python.html" />
+    <link rel="prev" title="1. Introduction" href="NSCI801_Intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">NSCI 801 - Quantitative Neuroscience book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="README.html">
+   NSCI 801 - Quantitative Neuroscience Syllabus
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Intro.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Google COLAB and Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_advanced_python.html">
+   3. Advanced Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_acquisition_filters.html">
+   4. Data Collection and Signal Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Descriptive_Stats-NEW.html">
+   5. Descriptive Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Advanced_stats.html">
+   6. Advanced Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Image_Processing_Proper_v2.html">
+   7. Image Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Bayesian-stats.html">
+   8. Bayesian statistics and hypothesis testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_ModelFitting.html">
+   9. Models in Neuroscience
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_DataNeuroscience.html">
+   10. Data Neuroscience Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_CorrelationVsCausality.html">
+   11. Correlation vs. Causality
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Reproducibility.html">
+   12. Reproducibility, reliability, validity
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/NSCI801_intro_python.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FNSCI801_intro_python.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/NSCI801_intro_python.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables-and-expressions">
+   2.1. Variables and Expressions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lists">
+   2.2. Lists
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#array">
+   2.3. Array
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataframe">
+   2.4. Dataframe
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Google COLAB and Python</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variables-and-expressions">
+   2.1. Variables and Expressions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lists">
+   2.2. Lists
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#array">
+   2.3. Array
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataframe">
+   2.4. Dataframe
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="google-colab-and-python">
+<h1><span class="section-number">2. </span>Google COLAB and Python<a class="headerlink" href="#google-colab-and-python" title="Permalink to this headline">¶</a></h1>
+<p>A. Why Pyhton?</p>
+<p>Some Common Uses for Python in Research</p>
+<p>B. Understanding the python environment:</p>
+<p>Navigating the Python</p>
+<p>Understanding Toolbox Components</p>
+<p>Executing Commands</p>
+<p>Help and Documentation</p>
+<p>C. Using Python</p>
+<p>Lists, arrays, dataframes - and their apporpriate packages</p>
+<p>Why and What Python?</p>
+<p>Python is an open source programming language that was made to be easy-to-read and powerful. A Dutch programmer named Guido van Rossum made Python in 1991. He named it after the television show Monty Python’s Flying Circus. Many Python examples and tutorials include jokes from the show</p>
+<p>The Python programming language in particular has seen a surge in popularity across the sciences, for reasons which include its readability, modularity, and large standard library. The use of Python as a scientific programming language began to increase with the development of numerical libraries for optimized operations on large arrays in the late 1990s, in which an important development was the merging of the competing Numeric and Numarray packages in 2006 to form NumPy (Oliphant, 2007). As Python and NumPy have gained traction in a given scientific domain, we have seen the emergence of domain-specific ecosystems of open-source Python software developed by scientists. It became clear to us in 2007 that we were on the cusp of an emerging Python in neuroscience ecosystem, particularly in computational neuroscience and neuroimaging, but also in electrophysiological data analysis and in psychophysics.</p>
+<p>Currently has grown into an interactive system and high level programming language for general
+scientific and technical computation</p>
+<p>Common Uses for Python in Research
+• Data Acquisition
+• Multi-platform, Multi Format data importing
+• Analysis Tools (Existing,Custom)/Statistics
+• Graphing</p>
+<p>Data Acuisition:</p>
+<p>A framework for bringing live, measured data into computers via aquisition hardware</p>
+<p><img alt="data-acquisition-system.png" src="https://github.com/BlohmLab/NSCI801-QuantNeuro/blob/master/Figures/data-acquisition-system.png?raw=1" /></p>
+<p>Multi-platform, Multi Format data importing</p>
+<p>• Data can be loaded into Python from almost any format and platform (numpy, pandas etc.)
+• Binary data files (eg. REX, PLEXON etc.)
+• Ascii Text (eg. Eyelink I, II)
+• Analog/Digital Data files</p>
+<p><img alt="importing_data.png" src="https://github.com/BlohmLab/NSCI801-QuantNeuro/blob/master/Figures/importing_data2.png?raw=1" /></p>
+<p>Analysis Tools (Existing,Custom)/Statistics</p>
+<p>• A considerable library of analysis tools exist for data analysis (sklearn etc.)
+• Provides a framework for the design, creation, and implementation of any custom analysis tool
+imaginable</p>
+<p>A considerable variety of statistical tests available including: Parametric and non-parametric, and various others (Scipy, sklearn etc)</p>
+<p>Graphing</p>
+<p>• A Comprehensive array of plotting options available from 2 to 4 dimensions (matplotlib)
+• Full control of formatting, axes, and other visual representational elements</p>
+<p><img alt="Mpl_screenshot_figures_and_code.png" src="https://github.com/BlohmLab/NSCI801-QuantNeuro/blob/master/Figures/Mpl_screenshot_figures_and_code.png?raw=1" /></p>
+<p>Machine Learning is the hottest trend in modern neuroscience (and science in general). Machine learning patents grew at a 34% rate between 2013 and 2017 and this is only set to increase in the future. And Python is the primary programming language used for much of the research and development in Machine Learning. So much so that Python is the top programming language for Machine Learning according to Github. However, while it is clear that Python is the most popular, this article focuses on the all-important question of “Why is Python the Best-Suited Programming Language for Machine Learning?”</p>
+<p>Since most of the students are new to Python, they could run into the following practical problems easily.</p>
+<ol class="simple">
+<li><p>Do not know how to install and set up the Python running environment;</p></li>
+<li><p>Do not know how to find the solutions effectively when facing the problems;</p></li>
+<li><p>Do not know how to collaborate with others when trying to finish the group tasks；</p></li>
+<li><p>Do not know how to handle version control, which may lead the code to chaotic.</p></li>
+</ol>
+<p>The problems mentioned above are the main pain points for Python beginners.</p>
+<p>Your own machine and Anaconda</p>
+<p><img alt="alt text" src="https://github.com/BlohmLab/NSCI801-QuantNeuro/blob/master/Figures/Screenshot_anaconda.png?raw=1" /></p>
+<p>Getting Started</p>
+<p>To start working with Colab you first need to log in to your google account, then go to this link <a class="reference external" href="https://colab.research.google.com">https://colab.research.google.com</a>.</p>
+<p>Opening Jupyter Notebook in Colab:
+On opening the website you will see a pop-up containing following tabs –</p>
+<p><img alt="Screenshot%202019-12-24%2013.54.17.png" src="https://github.com/BlohmLab/NSCI801-QuantNeuro/blob/master/Figures/Screenshot%202019-12-24%2013.54.17.png?raw=1" /></p>
+<p>EXAMPLES: Contain a number of Jupyter notebooks of various examples.
+RECENT: Jupyter notebook you have recently worked with.
+GOOGLE DRIVE: Jupyter notebook in your google drive.
+GITHUB: You can add Jupyter notebook from your GitHub but you first need to connect Colab with GitHub.
+UPLOAD: Upload from your local directory.</p>
+<p>On creating a new notebook, it will create a Jupyter notebook with Untitled.ipynb and save it to your google drive in a folder named Colab Notebooks. Now as it is essentially a Jupyter notebook, all commands of Jupyter notebooks will work here.</p>
+<p><img alt="notebook_figure.png" src="https://github.com/BlohmLab/NSCI801-QuantNeuro/blob/master/Figures/notebook_figure.png?raw=1" /></p>
+<p>You can change runtime environment by selecting the “Runtime” dropdown menu. Select “Change runtime type”.</p>
+<p><img alt="runtime_enviornment.png" src="https://github.com/BlohmLab/NSCI801-QuantNeuro/blob/master/Figures/runtime_enviornment.png?raw=1" /></p>
+<p>Click the “Runtime” dropdown menu. Select “Change runtime type”. Now select anything(GPU, CPU, None) you want in the “Hardware accelerator” dropdown menu.</p>
+<p><img alt="notebook_settings.png" src="https://github.com/BlohmLab/NSCI801-QuantNeuro/blob/master/Figures/notebook_settings.png?raw=1" /></p>
+<p>Install Python packages –
+Use can use pip to install any package. For example:</p>
+<p>“pip install pandas”</p>
+<p>Commonly Used Packages</p>
+<ol class="simple">
+<li><p>os</p></li>
+<li><p>numpy</p></li>
+<li><p>scipy</p></li>
+<li><p>pandas</p></li>
+</ol>
+<div class="section" id="variables-and-expressions">
+<h2><span class="section-number">2.1. </span>Variables and Expressions<a class="headerlink" href="#variables-and-expressions" title="Permalink to this headline">¶</a></h2>
+<p>Solving equations using variables</p>
+<p>Expression language</p>
+<p>Expressions typed by the user are interpreted and evaluated by the python</p>
+<p>Variables are names used to store values</p>
+<p>Variable names allow stored values to be retrieved for calculations or permanently saved</p>
+<p>Variable = Expression</p>
+<p>**Variable Names are Case Sensitive!</p>
+<p>HELP DOCUMENTATION!!!!</p>
+<p>numpy: <a class="reference external" href="https://numpy.org">https://numpy.org</a>
+scipy: <a class="reference external" href="https://www.scipy.org/scipylib/index.html">https://www.scipy.org/scipylib/index.html</a>
+pandas: <a class="reference external" href="https://pandas.pydata.org">https://pandas.pydata.org</a>
+scikit-learn: <a class="reference external" href="https://scikit-learn.org/stable/">https://scikit-learn.org/stable/</a></p>
+<p>THIS NEEDS TO BECOME YOUR BEST FRIEND!</p>
+</div>
+<div class="section" id="lists">
+<h2><span class="section-number">2.2. </span>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
+<p>Lists:</p>
+<p>In Python programming, a list is created by placing all the items (elements) inside a square bracket [ ], separated by commas.</p>
+<p>It can have any number of items and they may be of different types (integer, float, string etc.).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># empty list</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># list of integers</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="c1"># list with mixed datatypes</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Also, a list can even have another list as an item. This is called nested list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># nested list</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;mouse&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>How to access elements from a list?</p>
+<p>There are various ways in which we can access the elements of a list.</p>
+<p>List Index</p>
+<p>We can use the index operator [] to access an item in a list. Index starts from 0. So, a list having 5 elements will have index from 0 to 4.</p>
+<p>Trying to access an element other that this will raise an IndexError. The index must be an integer. We can’t use float or other types, this will result into TypeError.</p>
+<p>Nested list are accessed using nested indexing.</p>
+<p><img alt="python-list-index.png" src="attachment:python-list-index.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]</span>
+<span class="c1"># Output: p</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="c1"># Output: o</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="c1"># Output: e</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+<span class="c1"># Error! Only integer can be used for indexing</span>
+<span class="c1"># my_list[4.0]</span>
+<span class="c1"># Nested List</span>
+<span class="n">n_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Happy&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">]]</span>
+<span class="c1"># Nested indexing</span>
+<span class="c1"># Output: a</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n_list</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>    
+<span class="c1"># Output: 5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n_list</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>p
+o
+e
+a
+5
+</pre></div>
+</div>
+</div>
+</div>
+<p>Negative indexing
+Python allows negative indexing for its sequences. The index of -1 refers to the last item, -2 to the second last item and so on.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;p&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">,</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;e&#39;</span><span class="p">]</span>
+<span class="c1"># Output: e</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="c1"># Output: p</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>e
+p
+</pre></div>
+</div>
+</div>
+</div>
+<p>List are mutable, meaning, their elements can be changed unlike string or tuple.</p>
+<p>We can use assignment operator (=) to change an item or a range of items.</p>
+<p>Finally, we can even add to lists using append, and extend</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># mistake values</span>
+<span class="n">odd</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="c1"># change the 1st item    </span>
+<span class="n">odd</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>            
+<span class="c1"># Output: [1, 4, 6, 8]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">odd</span><span class="p">)</span>
+<span class="c1"># change 2nd to 4th items</span>
+<span class="n">odd</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>  
+<span class="c1"># Output: [1, 3, 5, 7]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">odd</span><span class="p">)</span>   
+
+<span class="n">odd</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">odd</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="c1"># Output: [1, 3, 5, 7]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">odd</span><span class="p">)</span>
+<span class="n">odd</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">])</span>
+<span class="c1"># Output: [1, 3, 5, 7, 9, 11, 13]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">odd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 4, 6, 8]
+[1, 3, 5, 7]
+[1, 3, 5, 7]
+[1, 3, 5, 7, 9, 11, 13]
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also use + operator to combine two lists. This is also called concatenation.</p>
+<p>The * operator repeats a list for the given number of times.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">odd</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="c1"># Output: [1, 3, 5, 9, 7, 5]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">odd</span> <span class="o">+</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="c1">#Output: [&quot;re&quot;, &quot;re&quot;, &quot;re&quot;]</span>
+<span class="nb">print</span><span class="p">([</span><span class="s2">&quot;re&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 3, 5, 9, 7, 5]
+[&#39;re&#39;, &#39;re&#39;, &#39;re&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Furthermore, we can insert one item at a desired location by using the method insert() or insert multiple items by squeezing it into an empty slice of a list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">odd</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="n">odd</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="c1"># Output: [1, 3, 9] </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">odd</span><span class="p">)</span>
+<span class="n">odd</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="c1"># Output: [1, 3, 5, 7, 9]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">odd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 3, 9]
+[1, 3, 5, 7, 9]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Python List Methods:</p>
+<p>append() - Add an element to the end of the list
+extend() - Add all elements of a list to the another list
+insert() - Insert an item at the defined index
+remove() - Removes an item from the list
+pop() - Removes and returns an element at the given index
+clear() - Removes all items from the list
+index() - Returns the index of the first matched item
+count() - Returns the count of number of items passed as an argument
+sort() - Sort items in a list in ascending order
+reverse() - Reverse the order of items in the list
+copy() - Returns a shallow copy of the list</p>
+</div>
+<div class="section" id="array">
+<h2><span class="section-number">2.3. </span>Array<a class="headerlink" href="#array" title="Permalink to this headline">¶</a></h2>
+<p>If you create arrays using the array module, all elements of the array must be of the same numeric type.</p>
+<p>Create a NumPy Array</p>
+<p>Simplest way to create an array in Numpy is to use Python List</p>
+<p>To convert python list to a numpy array by using the object np.array.</p>
+<p>but before we do we need to import the package</p>
+<p>import numpy as np</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">myPythonList</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="n">numpy_array_from_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">myPythonList</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">numpy_array_from_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [8],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">myPythonList</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">numpy_array_from_list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">myPythonList</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;numpy&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Mathematical Operations on an Array
+You could perform mathematical operations like additions, subtraction, division and multiplication on an array. The syntax is the array name followed by the operation (+.-,*,/) followed by the operand</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numpy_array_from_list</span> <span class="o">+</span> <span class="mi">10</span>
+
+<span class="c1">#This operation adds 10 to each element of the numpy array.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([11, 19, 18, 13])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Shape of Array
+You can check the shape of the array with the object shape preceded by the name of the array. In the same way, you can check the type with dtypes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3,)
+int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>2 Dimension Array and 3 Dimension Array</p>
+<p>You can add a dimension with a “,”coma</p>
+<p>Note that it has to be within the bracket []</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### 3 dimension</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]],[[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">],[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2, 2, 3)
+</pre></div>
+</div>
+</div>
+</div>
+<p>What is np.zeros and np.ones?</p>
+<p>You can create a matrix full of zeroes or ones using np.zeros and np.one commands respectively.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#ones</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="c1">#zeros</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Reshape Data</p>
+<p>In some occasions, you need to reshape the data from wide to long. You can use the reshape function for this. The syntax is</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">e</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">)])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="n">e</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 2 3]
+ [4 5 6]]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 2],
+       [3, 4],
+       [5, 6]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>EXTRACTING INFORMATION FROM ARRAYS IS BASICALLY IDENTICAL TO LISTS!!!!</p>
+<p>The key difference between an array and a list is, arrays are designed to handle vectorized operations while a python list is not.</p>
+<p>That means, if you apply a function it is performed on every item in the array, rather than on the whole array object.</p>
+<p>Let’s suppose you want to add the number 2 to every item in the list. The intuitive way to do it is something like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#e is an array defined above</span>
+<span class="n">D</span> <span class="o">=</span> <span class="n">e</span><span class="o">+</span><span class="mi">15</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;the array is &quot;</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span>
+<span class="c1">#odd is a list from above</span>
+<span class="c1">#odd +15</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>the array is  [[16 17 18]
+ [19 20 21]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can always convert an array back to a python list using</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">odd</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">odd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Array Operations like Mean, min, max, etc….</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mean value is: &quot;</span><span class="p">,</span> <span class="n">D</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span> <span class="c1"># alternatively could be np.mean(D)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Max value is: &quot;</span><span class="p">,</span> <span class="n">D</span><span class="o">.</span><span class="n">max</span><span class="p">())</span> <span class="c1"># alternatively could be np.max(D)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Min value is: &quot;</span><span class="p">,</span> <span class="n">D</span><span class="o">.</span><span class="n">min</span><span class="p">())</span> <span class="c1"># alternatively could be np.min(D)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mean value is:  18.5
+Max value is:  21
+Min value is:  16
+</pre></div>
+</div>
+</div>
+</div>
+<p>Reshaping and Flattening Multidimensional arrays
+Reshaping is changing the arrangement of items so that shape of the array changes while maintaining the same number of dimensions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">D</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([16, 17, 18, 19, 20, 21])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dataframe">
+<h2><span class="section-number">2.4. </span>Dataframe<a class="headerlink" href="#dataframe" title="Permalink to this headline">¶</a></h2>
+<p>What Are Pandas Data Frames?</p>
+<p>Before you start, let’s have a brief recap of what DataFrames are.
+Those who are familiar with R know the data frame as a way to store data in rectangular grids that can easily be overviewed. Each row of these grids corresponds to measurements or values of an instance, while each column is a vector containing data for a specific variable. This means that a data frame’s rows do not need to contain, but can contain, the same type of values: they can be numeric, character, logical, etc.</p>
+<p>Creating DataFrames</p>
+<p>Obviously, making your DataFrames is your first step in almost anything that you want to do when it comes to data munging in Python. Sometimes, you will want to start from scratch, but you can also convert other data structures, such as lists or NumPy arrays, to Pandas DataFrames. In this section, you’ll only cover the latter.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]])</span>
+<span class="n">col</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Col1&#39;</span><span class="p">,</span><span class="s1">&#39;Col2&#39;</span><span class="p">]</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="n">col</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   Col1  Col2
+0     1     2
+1     3     4
+</pre></div>
+</div>
+</div>
+</div>
+<p>Fundamental DataFrame Operations</p>
+<p>Now that you have put your data in a more convenient Pandas DataFrame structure, it’s time to get to the real work!
+This first section will guide you through the first steps of working with DataFrames in Python. It will cover the basic operations that you can do on your newly created DataFrame: adding, selecting, deleting, renaming, … You name it!</p>
+<p>Selecting an Index or Column</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using `iloc[]`</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;using iloc &#39;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="c1">#can&#39;t use boolean</span>
+
+<span class="c1"># Using `loc[]`</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;using loc &#39;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;Col2&#39;</span><span class="p">])</span> <span class="c1">#CAN use boolean</span>
+
+<span class="c1"># Using `at[]`</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;using at &#39;</span><span class="p">,</span><span class="n">df</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;Col2&#39;</span><span class="p">])</span>
+
+<span class="c1"># Using `iat[]`</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;using iat &#39;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">iat</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>using iloc  1
+using loc  1
+using at  2
+using iat  1
+</pre></div>
+</div>
+</div>
+</div>
+<p>How do we select just the data, columns or Index</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#get values</span>
+<span class="n">vals</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">values</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;these are the values &quot;</span><span class="p">,</span> <span class="n">vals</span><span class="p">)</span>
+
+<span class="c1">#get columns</span>
+<span class="bp">cls</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;these are the values &quot;</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span>
+
+<span class="c1">#get columns</span>
+<span class="n">idx</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;these are the values &quot;</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>these are the values  [[1 2]
+ [3 4]]
+these are the values  [&#39;Col1&#39; &#39;Col2&#39;]
+these are the values  [0 1]
+</pre></div>
+</div>
+</div>
+</div>
+<p>From here all the same operations done on lists and arrays are possible!!!</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="NSCI801_Intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Introduction</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="NSCI801_advanced_python.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Advanced Python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Gunnar Blohm, Joe Nashed<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1321 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6. Advanced Statistics &#8212; NSCI 801 - Quantitative Neuroscience book</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="7. Image Processing" href="NSCI801_Image_Processing_Proper_v2.html" />
+    <link rel="prev" title="5. Descriptive Statistics" href="NSCI801_Descriptive_Stats-NEW.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">NSCI 801 - Quantitative Neuroscience book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="README.html">
+   NSCI 801 - Quantitative Neuroscience Syllabus
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Intro.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_intro_python.html">
+   2. Google COLAB and Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_advanced_python.html">
+   3. Advanced Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_acquisition_filters.html">
+   4. Data Collection and Signal Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Descriptive_Stats-NEW.html">
+   5. Descriptive Statistics
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   6. Advanced Statistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Image_Processing_Proper_v2.html">
+   7. Image Processing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Bayesian-stats.html">
+   8. Bayesian statistics and hypothesis testing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_ModelFitting.html">
+   9. Models in Neuroscience
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_DataNeuroscience.html">
+   10. Data Neuroscience Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_CorrelationVsCausality.html">
+   11. Correlation vs. Causality
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NSCI801_Reproducibility.html">
+   12. Reproducibility, reliability, validity
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/NSCI801_Advanced_stats.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FNSCI801_Advanced_stats.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/NSCI801_Advanced_stats.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review">
+   6.1. Review
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#anova">
+   6.2. ANOVA
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assumptions">
+   6.3. Assumptions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lets-try-an-example">
+   6.4. Lets Try an Example
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question">
+     6.4.1. Question:
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#which-drug-dosage-improve-sleep-the-best">
+       6.4.1.1. Which Drug dosage improve sleep the best?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sum-of-squares">
+     6.4.2. Sum of Squares
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sum-of-squares-residual">
+   6.5. Sum of Squares Residual
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sum-of-squares-explained">
+   6.6. Sum of Squares Explained
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#degrees-of-freedom">
+   6.7. Degrees of freedom
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mean-squares">
+   6.8. Mean Squares
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#f-statistic">
+   6.9. F Statistic
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#so-we-know-that-there-is-a-difference-here-but-where">
+   6.10. So we know that there is a difference here but where??
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#so-the-question-is-which-one-do-we-pick">
+     6.10.1. So the question is: Which one do we pick???
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#post-hoc-testing">
+   6.11. Post-Hoc Testing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculating-model-effect-size">
+   6.12. CALCULATING MODEL EFFECT SIZE
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#other-types-of-anovas">
+   6.13. Other Types of ANOVAs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#factorial-design-anova">
+   6.14. Factorial Design ANOVA
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#an-example">
+     6.14.1. An Example:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multiple-regression">
+   6.15. Multiple Regression
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#non-parametric-tests">
+   6.16. Non-Parametric Tests
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mann-whitney-test">
+   6.17. Mann-Whitney Test
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wilcoxon-signed-rank-test">
+   6.18. Wilcoxon Signed-Rank Test
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kruskal-wallis-h-test">
+   6.19. Kruskal-Wallis H Test
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#friedman-test">
+   6.20. Friedman Test
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Advanced Statistics</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review">
+   6.1. Review
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#anova">
+   6.2. ANOVA
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assumptions">
+   6.3. Assumptions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lets-try-an-example">
+   6.4. Lets Try an Example
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question">
+     6.4.1. Question:
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#which-drug-dosage-improve-sleep-the-best">
+       6.4.1.1. Which Drug dosage improve sleep the best?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sum-of-squares">
+     6.4.2. Sum of Squares
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sum-of-squares-residual">
+   6.5. Sum of Squares Residual
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sum-of-squares-explained">
+   6.6. Sum of Squares Explained
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#degrees-of-freedom">
+   6.7. Degrees of freedom
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mean-squares">
+   6.8. Mean Squares
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#f-statistic">
+   6.9. F Statistic
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#so-we-know-that-there-is-a-difference-here-but-where">
+   6.10. So we know that there is a difference here but where??
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#so-the-question-is-which-one-do-we-pick">
+     6.10.1. So the question is: Which one do we pick???
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#post-hoc-testing">
+   6.11. Post-Hoc Testing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculating-model-effect-size">
+   6.12. CALCULATING MODEL EFFECT SIZE
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#other-types-of-anovas">
+   6.13. Other Types of ANOVAs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#factorial-design-anova">
+   6.14. Factorial Design ANOVA
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#an-example">
+     6.14.1. An Example:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multiple-regression">
+   6.15. Multiple Regression
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#non-parametric-tests">
+   6.16. Non-Parametric Tests
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mann-whitney-test">
+   6.17. Mann-Whitney Test
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wilcoxon-signed-rank-test">
+   6.18. Wilcoxon Signed-Rank Test
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kruskal-wallis-h-test">
+   6.19. Kruskal-Wallis H Test
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#friedman-test">
+   6.20. Friedman Test
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="advanced-statistics">
+<h1><span class="section-number">6. </span>Advanced Statistics<a class="headerlink" href="#advanced-statistics" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="review">
+<h2><span class="section-number">6.1. </span>Review<a class="headerlink" href="#review" title="Permalink to this headline">¶</a></h2>
+<p>I know this stuff is dry and you probably feel like tired and a bit confused - but you are all doing great!!!</p>
+</div>
+<div class="section" id="anova">
+<h2><span class="section-number">6.2. </span>ANOVA<a class="headerlink" href="#anova" title="Permalink to this headline">¶</a></h2>
+<p>The analysis of variance (ANOVA) can be thought of as an extension to the t-test. The independent t-test is used to compare the means of a condition between 2 groups. ANOVA is used when one wants to compare the means of a condition between 2+ groups. ANOVA tests the data as a whole. Another way to say that is this, ANOVA tests if there is a difference in the mean somewhere in the model (testing if there was an overall effect), but it does not tell one where the difference is if the there is one. To find out where the difference is between the groups, one has to conduct post-hoc tests.</p>
+</div>
+<div class="section" id="assumptions">
+<h2><span class="section-number">6.3. </span>Assumptions<a class="headerlink" href="#assumptions" title="Permalink to this headline">¶</a></h2>
+<p>There are 3 assumptions that need to be met for the results of an ANOVA test to be considered accurate and trust worthy. It’s important to note the the assumptions apply to the residuals and not the variables themselves. The ANOVA assumptions are the same as for linear regression and are:</p>
+<p>1 - Normality -
+Caveat to this is, if group sizes are equal, the F-statistic is robust to violations of normality</p>
+<p>2 - Homogeneity of variance -
+Same caveat as above, if group sizes are equal, the F-statistic is robust to this violation</p>
+<p>3 - Independent observations</p>
+</div>
+<div class="section" id="lets-try-an-example">
+<h2><span class="section-number">6.4. </span>Lets Try an Example<a class="headerlink" href="#lets-try-an-example" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="question">
+<h3><span class="section-number">6.4.1. </span>Question:<a class="headerlink" href="#question" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="which-drug-dosage-improve-sleep-the-best">
+<h4><span class="section-number">6.4.1.1. </span>Which Drug dosage improve sleep the best?<a class="headerlink" href="#which-drug-dosage-improve-sleep-the-best" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># our groups: </span>
+<span class="n">High_dose</span> <span class="o">=</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">36</span><span class="p">,</span><span class="mi">29</span><span class="p">]</span>
+<span class="n">Medium_dose</span> <span class="o">=</span> <span class="p">[</span><span class="mi">45</span><span class="p">,</span><span class="mi">55</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="mi">40</span><span class="p">]</span>
+<span class="n">Low_dose</span> <span class="o">=</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span><span class="mi">29</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">37</span><span class="p">,</span><span class="mi">27</span><span class="p">]</span>
+<span class="n">Placebo</span> <span class="o">=</span> <span class="p">[</span><span class="mi">54</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">51</span><span class="p">,</span><span class="mi">62</span><span class="p">,</span><span class="mi">73</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">data1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">High_dose</span><span class="p">,</span><span class="n">Medium_dose</span><span class="p">,</span><span class="n">Low_dose</span><span class="p">,</span><span class="n">Placebo</span><span class="p">])</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data1</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;High_dose&#39;</span><span class="p">,</span><span class="s1">&#39;Medium_dose&#39;</span><span class="p">,</span><span class="s1">&#39;Low_dose&#39;</span><span class="p">,</span><span class="s1">&#39;Placebo&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [2],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">column</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;High_dose&#39;</span><span class="p">,</span><span class="s1">&#39;Medium_dose&#39;</span><span class="p">,</span><span class="s1">&#39;Low_dose&#39;</span><span class="p">,</span><span class="s1">&#39;Placebo&#39;</span><span class="p">],</span> <span class="n">grid</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   High_dose  Medium_dose  Low_dose  Placebo
+0         25           45        30       54
+1         30           55        29       60
+2         28           29        33       51
+3         36           56        37       62
+4         29           40        27       73
+</pre></div>
+</div>
+<img alt="_images/NSCI801_Advanced_stats_12_1.png" src="_images/NSCI801_Advanced_stats_12_1.png" />
+</div>
+</div>
+<p>Looking at our sample, we could say that sleep times range from ~20 minutes to ~75 minutes. If we ignore the information about the type, the best estimation we could give for a sleeptime for the drug would be between ~20 and ~75 minutes. Let’s for now call this total variation.</p>
+<p>The next step is to split this total variation in two: Between-Group Variation and Within-Group Variation</p>
+<p>Between-Group Variation is Explained by our drug type:</p>
+<p>If we add the variable company in the graph, we see that if we know which drug is taken, we can give a more precise range of sleep times.</p>
+<p>If Drug A is taken, it takes between ~20 and ~35 minutes.</p>
+<p>If Drug B is taken, it takes between ~30 and ~55 minutes.</p>
+<p>If Drug C is taken, it takes between ~25 and ~35 minutes.</p>
+<p>If Placebo is taken, it takes between ~50 and ~75 minutes.</p>
+<p>This phenomenon is due to the Between-Group variation: a quantification of the variation explained by our variable.</p>
+<p>Within-Group Variation is not Explained by our drug type:</p>
+<p>However, there is also some part of variation that cannot be explained by our variable ‘Drug’: It refers to variations caused by differences within individual groups (or levels). In other words, not all the values within each group (e.g. means) are the same.</p>
+<p>Since we do not have those new variables, the variation remains unexplained and is called the within-group variation.</p>
+</div>
+</div>
+<div class="section" id="sum-of-squares">
+<h3><span class="section-number">6.4.2. </span>Sum of Squares<a class="headerlink" href="#sum-of-squares" title="Permalink to this headline">¶</a></h3>
+<p>Sum of Squares Total
+Let’s get to the action! What I described before as variation is mathematically measured by the Sum of Squares,</p>
+<p><img alt="hmm" src="https://github.com/BlohmLab/NSCI801-QuantNeuro/blob/master/Figures/1*0HXQYsl-1VOC_YjxL9JU9Q.png?raw=1" /></p>
+</div>
+</div>
+<div class="section" id="sum-of-squares-residual">
+<h2><span class="section-number">6.5. </span>Sum of Squares Residual<a class="headerlink" href="#sum-of-squares-residual" title="Permalink to this headline">¶</a></h2>
+<p>The computation for residual Sum of Squares is slightly different because it takes not the overall average, but the four group averages.</p>
+</div>
+<div class="section" id="sum-of-squares-explained">
+<h2><span class="section-number">6.6. </span>Sum of Squares Explained<a class="headerlink" href="#sum-of-squares-explained" title="Permalink to this headline">¶</a></h2>
+<p>Having computed the total sum of squares and the residual sum of squares, we can now compute the Explained Sum of Squares using:</p>
+<p><img alt="1*gM0yge15fq_UnNFNY7r0Uw.png" src="https://github.com/BlohmLab/NSCI801-QuantNeuro/blob/master/Figures/1*gM0yge15fq_UnNFNY7r0Uw.png?raw=1" /></p>
+</div>
+<div class="section" id="degrees-of-freedom">
+<h2><span class="section-number">6.7. </span>Degrees of freedom<a class="headerlink" href="#degrees-of-freedom" title="Permalink to this headline">¶</a></h2>
+<p>We need them in further computation:</p>
+<p>df1 = df of the explained part = number of groups — 1
+df2 = df of the residual = number of observations — number of groups</p>
+<p>In our example, df1 = 3 and df2 = 21.</p>
+</div>
+<div class="section" id="mean-squares">
+<h2><span class="section-number">6.8. </span>Mean Squares<a class="headerlink" href="#mean-squares" title="Permalink to this headline">¶</a></h2>
+<p>The statistical test that is central in ANOVA is the F-test. The null hypothesis states that the mean of all groups is equal, which implies that our model has no explanatory value and that we don’t have proof for choosing one drug over another.</p>
+<p>The alternative hypothesis states that at least one of the means is different, which would be a reason to go more in-depth and find out which drug works better?</p>
+<p>We compute the Mean Squares as follows:</p>
+<p><img alt="1*0LXxDWgMYiz4EXft5j_Ixw.png" src="https://github.com/BlohmLab/NSCI801-QuantNeuro/blob/master/Figures/1*0LXxDWgMYiz4EXft5j_Ixw.png?raw=1" /></p>
+</div>
+<div class="section" id="f-statistic">
+<h2><span class="section-number">6.9. </span>F Statistic<a class="headerlink" href="#f-statistic" title="Permalink to this headline">¶</a></h2>
+<p>We use the Mean Squares to compute the F statistic as the ratio between explained vs unexplained variation:</p>
+<p><img alt="1*IOV_eIIQHXZq4taC0lLn2A.png" src="https://github.com/BlohmLab/NSCI801-QuantNeuro/blob/master/Figures/1*IOV_eIIQHXZq4taC0lLn2A.png?raw=1" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### lets calculate the means and see what we get here...</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The group means are: Drug A &quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data1</span><span class="p">,</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span><span class="s2">&quot; Drug B: &quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data1</span><span class="p">,</span><span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&quot;, Drug C: &quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data1</span><span class="p">,</span><span class="mi">1</span><span class="p">)[</span><span class="mi">2</span><span class="p">],</span> <span class="s2">&quot;, Placebo: &quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data1</span><span class="p">,</span><span class="mi">1</span><span class="p">)[</span><span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[25 30 28 36 29]
+ [45 55 29 56 40]
+ [30 29 33 37 27]
+ [54 60 51 62 73]]
+The group means are: Drug A  29.6  Drug B:  45.0 , Drug C:  31.2 , Placebo:  60.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+<span class="n">fvalue</span><span class="p">,</span> <span class="n">pvalue</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">f_oneway</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;High_dose&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Medium_dose&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Low_dose&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Placebo&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The f-Value is: &quot;</span><span class="p">,</span> <span class="n">fvalue</span><span class="p">,</span> <span class="s2">&quot; The p-value is: &quot;</span><span class="p">,</span> <span class="n">pvalue</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The f-Value is:  17.492810457516338  The p-value is:  2.639241146210922e-05
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">from</span> <span class="nn">statsmodels.formula.api</span> <span class="kn">import</span> <span class="n">ols</span>
+<span class="n">data_vals</span> <span class="o">=</span> <span class="p">(</span><span class="n">data1</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)[:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="c1"># print(data_vals)</span>
+<span class="n">data_heads</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Drug A&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">5</span><span class="o">+</span><span class="p">[</span><span class="s1">&#39;Drug B&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">5</span><span class="o">+</span><span class="p">[</span><span class="s1">&#39;Drug C&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">5</span><span class="o">+</span><span class="p">[</span><span class="s1">&#39;Placebo&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">5</span>
+<span class="n">data_tot</span> <span class="o">=</span> <span class="p">[[</span><span class="n">data_heads</span><span class="p">[</span><span class="n">num</span><span class="p">]</span> <span class="p">,</span> <span class="n">i</span> <span class="p">]</span><span class="k">for</span> <span class="n">num</span><span class="p">,</span><span class="n">i</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">data_vals</span><span class="p">)]</span>
+
+<span class="n">df_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data_tot</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Drug&#39;</span><span class="p">,</span><span class="s1">&#39;SleepTime&#39;</span><span class="p">])</span>
+
+<span class="n">lm</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;SleepTime ~ Drug&#39;</span><span class="p">,</span><span class="n">data</span><span class="o">=</span><span class="n">df_data</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">anova_lm</span><span class="p">(</span><span class="n">lm</span><span class="p">)</span> <span class="c1"># Type 2 ANOVA DataFrame</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            df   sum_sq   mean_sq         F    PR(&gt;F)
+Drug       3.0  3010.95  1003.650  17.49281  0.000026
+Residual  16.0   918.00    57.375       NaN       NaN
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="so-we-know-that-there-is-a-difference-here-but-where">
+<h2><span class="section-number">6.10. </span>So we know that there is a difference here but where??<a class="headerlink" href="#so-we-know-that-there-is-a-difference-here-but-where" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="so-the-question-is-which-one-do-we-pick">
+<h3><span class="section-number">6.10.1. </span>So the question is: Which one do we pick???<a class="headerlink" href="#so-the-question-is-which-one-do-we-pick" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="post-hoc-testing">
+<h2><span class="section-number">6.11. </span>Post-Hoc Testing<a class="headerlink" href="#post-hoc-testing" title="Permalink to this headline">¶</a></h2>
+<p>This is where post-hoc testing comes in:</p>
+<p>And there are a variety of post-hoc tests, Tukeys, Fisher’s Least Significant Difference Test</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.stats.multicomp</span> <span class="kn">import</span> <span class="n">pairwise_tukeyhsd</span>
+<span class="kn">from</span> <span class="nn">statsmodels.stats.multicomp</span> <span class="kn">import</span> <span class="n">MultiComparison</span>
+
+<span class="n">mc</span> <span class="o">=</span> <span class="n">pairwise_tukeyhsd</span><span class="p">(</span><span class="n">df_data</span><span class="p">[</span><span class="s1">&#39;SleepTime&#39;</span><span class="p">],</span><span class="n">df_data</span><span class="p">[</span><span class="s1">&#39;Drug&#39;</span><span class="p">])</span>
+<span class="n">mc_results</span> <span class="o">=</span> <span class="n">mc</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mc_results</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Multiple Comparison of Means - Tukey HSD, FWER=0.05  
+======================================================
+group1  group2 meandiff p-adj   lower    upper  reject
+------------------------------------------------------
+Drug A  Drug B     15.4 0.0251   1.6929 29.1071   True
+Drug A  Drug C      1.6    0.9 -12.1071 15.3071  False
+Drug A Placebo     30.4  0.001  16.6929 44.1071   True
+Drug B  Drug C    -13.8 0.0482 -27.5071 -0.0929   True
+Drug B Placebo     15.0 0.0296   1.2929 28.7071   True
+Drug C Placebo     28.8  0.001  15.0929 42.5071   True
+------------------------------------------------------
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="calculating-model-effect-size">
+<h2><span class="section-number">6.12. </span>CALCULATING MODEL EFFECT SIZE<a class="headerlink" href="#calculating-model-effect-size" title="Permalink to this headline">¶</a></h2>
+<p>Something that is useful is the effect size. The effect size tells us how much of an impact the experiment will have in the real world. There are a few different effect sizes one can use: eta squared, and omega squared. Omega squared is considered a better measure of effect size than eta squared because it is unbiased in it’s calculation.</p>
+<p>The effect size does not replace the results of a statistical hypothesis test. Instead, the effect size complements the test. Ideally, the results of both the hypothesis test and the effect size calculation would be presented side-by-side.</p>
+<p>Hypothesis Test: Quantify the likelihood of observing the data given an assumption (null hypothesis).
+Effect Size: Quantify the size of the effect assuming that the effect is present</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">anova_table</span><span class="p">(</span><span class="n">aov</span><span class="p">):</span>
+    <span class="n">aov</span><span class="p">[</span><span class="s1">&#39;mean_sq&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">aov</span><span class="p">[:][</span><span class="s1">&#39;sum_sq&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">aov</span><span class="p">[:][</span><span class="s1">&#39;df&#39;</span><span class="p">]</span>
+    
+    <span class="n">aov</span><span class="p">[</span><span class="s1">&#39;eta_sq&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">aov</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;sum_sq&#39;</span><span class="p">]</span><span class="o">/</span><span class="nb">sum</span><span class="p">(</span><span class="n">aov</span><span class="p">[</span><span class="s1">&#39;sum_sq&#39;</span><span class="p">])</span>
+    
+    <span class="n">aov</span><span class="p">[</span><span class="s1">&#39;omega_sq&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">aov</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;sum_sq&#39;</span><span class="p">]</span><span class="o">-</span><span class="p">(</span><span class="n">aov</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="s1">&#39;df&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">aov</span><span class="p">[</span><span class="s1">&#39;mean_sq&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span><span class="o">/</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">aov</span><span class="p">[</span><span class="s1">&#39;sum_sq&#39;</span><span class="p">])</span><span class="o">+</span><span class="n">aov</span><span class="p">[</span><span class="s1">&#39;mean_sq&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+    
+    <span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sum_sq&#39;</span><span class="p">,</span> <span class="s1">&#39;df&#39;</span><span class="p">,</span> <span class="s1">&#39;mean_sq&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;PR(&gt;F)&#39;</span><span class="p">,</span> <span class="s1">&#39;eta_sq&#39;</span><span class="p">,</span> <span class="s1">&#39;omega_sq&#39;</span><span class="p">]</span>
+    <span class="n">aov</span> <span class="o">=</span> <span class="n">aov</span><span class="p">[</span><span class="n">cols</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">aov</span>
+
+<span class="n">anova_table</span><span class="p">(</span><span class="n">table</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sum_sq</th>
+      <th>df</th>
+      <th>mean_sq</th>
+      <th>F</th>
+      <th>PR(&gt;F)</th>
+      <th>eta_sq</th>
+      <th>omega_sq</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Drug</td>
+      <td>3010.95</td>
+      <td>3.0</td>
+      <td>1003.650</td>
+      <td>17.49281</td>
+      <td>0.000026</td>
+      <td>0.76635</td>
+      <td>0.712141</td>
+    </tr>
+    <tr>
+      <td>Residual</td>
+      <td>918.00</td>
+      <td>16.0</td>
+      <td>57.375</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>That means the current model accounts for 70-76% of the variance in contributing to drug. Like just mentioned, within the ANOVA framework, R2 is also called eta squared, and can be interpreted as the amount of explained variance, as well as an effect size measure.</p>
+</div>
+<div class="section" id="other-types-of-anovas">
+<h2><span class="section-number">6.13. </span>Other Types of ANOVAs<a class="headerlink" href="#other-types-of-anovas" title="Permalink to this headline">¶</a></h2>
+<p>Repeated Measures ANOVA and 1 and 2 ways:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">statsmodels.stats.anova</span> <span class="kn">import</span> <span class="n">AnovaRM</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/BlohmLab/NSCI801-QuantNeuro/master/Figures/rmAOV1way.csv&#39;</span><span class="p">)</span>
+
+<span class="n">aovrm</span> <span class="o">=</span> <span class="n">AnovaRM</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="s1">&#39;rt&#39;</span><span class="p">,</span> <span class="s1">&#39;Sub_id&#39;</span><span class="p">,</span> <span class="n">within</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;cond&#39;</span><span class="p">])</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">aovrm</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>               Anova
+===================================
+     F Value  Num DF  Den DF Pr &gt; F
+-----------------------------------
+cond 499.1549 1.0000 59.0000 0.0000
+===================================
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2way</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/BlohmLab/NSCI801-QuantNeuro/master/Figures/rmAOV2way.csv&#39;</span><span class="p">)</span>
+<span class="n">aovrm2way</span> <span class="o">=</span> <span class="n">AnovaRM</span><span class="p">(</span><span class="n">df2way</span><span class="p">,</span> <span class="s1">&#39;rt&#39;</span><span class="p">,</span> <span class="s1">&#39;Sub_id&#39;</span><span class="p">,</span> <span class="n">within</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;iv1&#39;</span><span class="p">,</span> <span class="s1">&#39;iv2&#39;</span><span class="p">])</span>
+<span class="n">res2way</span> <span class="o">=</span> <span class="n">aovrm2way</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">res2way</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                 Anova
+========================================
+         F Value  Num DF  Den DF  Pr &gt; F
+----------------------------------------
+iv1     2207.0162 1.0000  59.0000 0.0000
+iv2      275.4144 2.0000 118.0000 0.0000
+iv1:iv2    1.8651 2.0000 118.0000 0.1594
+========================================
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="factorial-design-anova">
+<h2><span class="section-number">6.14. </span>Factorial Design ANOVA<a class="headerlink" href="#factorial-design-anova" title="Permalink to this headline">¶</a></h2>
+<p>Factor A x Factor B interactions:</p>
+<p>H0 : there is not interaction
+Ha : there is an interaction</p>
+<p>Main effect of factor A:</p>
+<p>H0 : ?1 = ?2
+Ha : Not all of the means (?) are equal</p>
+<p>Main effect of factor B:</p>
+<p>H0 : ?1 = ?2
+Ha : Not all of the means (?) are equal</p>
+<p>I know what you are thinking about this stuff: This is confusing….but we will walk through it!</p>
+<p>This data is fictional; a study was conducted to test the effect of 2 new fertilizers, and the amount of water on the mean crop yield.</p>
+<div class="section" id="an-example">
+<h3><span class="section-number">6.14.1. </span>An Example:<a class="headerlink" href="#an-example" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
+<span class="kn">import</span> <span class="nn">researchpy</span> <span class="k">as</span> <span class="nn">rp</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">from</span> <span class="nn">statsmodels.formula.api</span> <span class="kn">import</span> <span class="n">ols</span>
+<span class="kn">import</span> <span class="nn">statsmodels.stats.multicomp</span>
+
+
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/Opensourcefordatascience/Data-sets/master/crop_yield.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rp</span><span class="o">.</span><span class="n">summary_cont</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Yield&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rp</span><span class="o">.</span><span class="n">summary_cont</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Fert&#39;</span><span class="p">]))[</span><span class="s1">&#39;Yield&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rp</span><span class="o">.</span><span class="n">summary_cont</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Fert&#39;</span><span class="p">,</span> <span class="s1">&#39;Water&#39;</span><span class="p">]))[</span><span class="s1">&#39;Yield&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>    <span class="c1"># Fits the model with the interaction term</span>
+    <span class="c1"># This will also automatically include the main effects for each factor</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;Yield ~ C(Fert)*C(Water)&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+    <span class="c1"># Seeing if the overall model is significant</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Overall model F(</span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">df_model</span><span class="si">:</span><span class="s2"> .0f</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">df_resid</span><span class="si">:</span><span class="s2"> .0f</span><span class="si">}</span><span class="s2">) = </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">fvalue</span><span class="si">:</span><span class="s2"> .3f</span><span class="si">}</span><span class="s2">, p = </span><span class="si">{</span><span class="n">model</span><span class="o">.</span><span class="n">f_pvalue</span><span class="si">:</span><span class="s2"> .4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creates the ANOVA table</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">anova_lm</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">typ</span><span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">res</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The interaction term is not significant. This indicates that there is no interaction effect between the type of fertilizer and the amount of water on the mean crop yield. Since this is not significant, the interaction term is to be removed from the model and it needs to be re-ran so we can look at the main effects of each factor independently.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fits the model</span>
+<span class="n">model2</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;Yield ~ C(Fert)+ C(Water)&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Overall model F(</span><span class="si">{</span><span class="n">model2</span><span class="o">.</span><span class="n">df_model</span><span class="si">:</span><span class="s2"> .0f</span><span class="si">}</span><span class="s2">,</span><span class="si">{</span><span class="n">model2</span><span class="o">.</span><span class="n">df_resid</span><span class="si">:</span><span class="s2"> .0f</span><span class="si">}</span><span class="s2">) = </span><span class="si">{</span><span class="n">model2</span><span class="o">.</span><span class="n">fvalue</span><span class="si">:</span><span class="s2"> .3f</span><span class="si">}</span><span class="s2">, p = </span><span class="si">{</span><span class="n">model2</span><span class="o">.</span><span class="n">f_pvalue</span><span class="si">:</span><span class="s2"> .4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model2</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="multiple-regression">
+<h2><span class="section-number">6.15. </span>Multiple Regression<a class="headerlink" href="#multiple-regression" title="Permalink to this headline">¶</a></h2>
+<p>Multiple Linear Regression attempts to model the Relationship between two or more features and a response by fitting a linear equation to observed data. The steps to perform multiple linear Regression are almost similar to that of simple linear Regression. The Difference Lies in the Evalution. We can use it to find out which factor has the highest impact on the predicted output and now different variable relate to each other.</p>
+<p>Here : Y= b0 + b1<em>x1 + b2</em>x2 + b3<em>x3 +…… bn</em>xn</p>
+<p>Y = Dependent variable and x1, x2, x3, …… xn = multiple independent variables</p>
+<p>Assumption of Regression Model :</p>
+<p>Linearity: The relationship between dependent and independent variables should be linear.</p>
+<p>Homoscedasticity: Constant variance of the errors should be maintained.</p>
+<p>Multivariate normality: Multiple Regression assumes that the residuals are normally distributed.</p>
+<p>Lack of Multicollinearity: It is assumed that there is little or no multicollinearity in the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Read the csv file.</span>
+<span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/BlohmLab/NSCI801-QuantNeuro/master/Figures/multiple-linear-regression-dataset.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># Print the first 5 rows of the data set.</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>deneyim</th>
+      <th>maas</th>
+      <th>yas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.5</td>
+      <td>2500</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.0</td>
+      <td>2250</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1.0</td>
+      <td>2750</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5.0</td>
+      <td>8000</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>8.0</td>
+      <td>9000</td>
+      <td>28</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+
+<span class="c1"># Create linear regression object.</span>
+<span class="n">mlr</span><span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+
+<span class="c1"># Fit linear regression.</span>
+<span class="n">mlr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;deneyim&#39;</span><span class="p">,</span><span class="s1">&#39;maas&#39;</span><span class="p">]],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;yas&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">mlr</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">mlr</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Multiple linear regression uses a linear function to predict the value of a dependent variable containing the function n independent variables.</p>
+</div>
+<div class="section" id="non-parametric-tests">
+<h2><span class="section-number">6.16. </span>Non-Parametric Tests<a class="headerlink" href="#non-parametric-tests" title="Permalink to this headline">¶</a></h2>
+<p>Not all Data is normally disritbuted, or even conforms to the simple assumptions we’ve made!</p>
+<p>So how do we overcome this - we need statistical tests to help us test things EVEN if those assumptions aren’t met</p>
+<p>Althought there are MANY non-parametric tests: the three main ones I will go over include:</p>
+<p>The Mann-Whitney U test for comparing independent data samples: the nonparametric version of the Student t-test.</p>
+<p>The Wilcoxon signed-rank test for comparing paired data samples: the nonparametric version of the paired Student t-test.</p>
+<p>The Kruskal-Wallis H and Friedman tests for comparing more than two data samples: the nonparametric version of the ANOVA and repeated measures ANOVA tests.</p>
+<p>Often, they refer to statistical methods that do not assume a Gaussian distribution. They were developed for use with ordinal or interval data, but in practice can also be used with a ranking of real-valued observations in a data sample rather than on the observation values themselves.</p>
+<p>A common question about two or more datasets is whether they are different. Specifically, whether the difference between their central tendency (e.g. mean or median) is statistically significant.</p>
+<p>p &lt;= alpha: reject H0, different distribution.</p>
+<p>p &gt; alpha: fail to reject H0, same distribution.</p>
+</div>
+<div class="section" id="mann-whitney-test">
+<h2><span class="section-number">6.17. </span>Mann-Whitney Test<a class="headerlink" href="#mann-whitney-test" title="Permalink to this headline">¶</a></h2>
+<p>The Mann-Whitney U test is a nonparametric statistical significance test for determining whether two independent samples were drawn from a population with the same distribution.</p>
+<p>The test was named for Henry Mann and Donald Whitney, although it is sometimes called the Wilcoxon-Mann-Whitney test, also named for Frank Wilcoxon, who also developed a variation of the test.</p>
+<p>The two samples are combined and rank ordered together. The strategy is to determine if the values from the two samples are randomly mixed in the rank ordering or if they are clustered at opposite ends when combined. A random rank order would mean that the two samples are not different, while a cluster of one sample values would indicate a difference between them</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># generate gaussian data samples</span>
+<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">seed</span>
+<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">randn</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">mean</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">std</span>
+<span class="c1"># seed the random number generator</span>
+<span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># generate two sets of univariate observations</span>
+<span class="n">data1</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="mi">50</span>
+<span class="n">data2</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="mi">51</span>
+<span class="c1"># summarize</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;data1: mean=</span><span class="si">%.3f</span><span class="s1"> stdv=</span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">mean</span><span class="p">(</span><span class="n">data1</span><span class="p">),</span> <span class="n">std</span><span class="p">(</span><span class="n">data1</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;data2: mean=</span><span class="si">%.3f</span><span class="s1"> stdv=</span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">mean</span><span class="p">(</span><span class="n">data2</span><span class="p">),</span> <span class="n">std</span><span class="p">(</span><span class="n">data2</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="wilcoxon-signed-rank-test">
+<h2><span class="section-number">6.18. </span>Wilcoxon Signed-Rank Test<a class="headerlink" href="#wilcoxon-signed-rank-test" title="Permalink to this headline">¶</a></h2>
+<p>In some cases, the data samples may be paired.</p>
+<p>There are many reasons why this may be the case, for example, the samples are related or matched in some way or represent two measurements of the same technique. More specifically, each sample is independent, but comes from the same population.</p>
+<p>Examples of paired samples in machine learning might be the same algorithm evaluated on different datasets or different algorithms evaluated on exactly the same training and test data.</p>
+<p>The samples are not independent, therefore the Mann-Whitney U test cannot be used. Instead, the Wilcoxon signed-rank test is used, also called the Wilcoxon T test, named for Frank Wilcoxon. It is the equivalent of the paired Student T-test, but for ranked data instead of real valued data with a Gaussian distribution.</p>
+<p>The Wilcoxon signed ranks test is a nonparametric statistical procedure for comparing two samples that are paired, or related. The parametric equivalent to the Wilcoxon signed ranks test goes by names such as the Student’s t-test, t-test for matched pairs, t-test for paired samples, or t-test for dependent samples.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Wilcoxon signed-rank test</span>
+<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">seed</span>
+<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">randn</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">wilcoxon</span>
+<span class="c1"># seed the random number generator</span>
+<span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># generate two independent samples</span>
+<span class="n">data1</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="mi">50</span>
+<span class="n">data2</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="mi">51</span>
+<span class="c1"># compare samples</span>
+<span class="n">stat</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">wilcoxon</span><span class="p">(</span><span class="n">data1</span><span class="p">,</span> <span class="n">data2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Statistics=</span><span class="si">%.3f</span><span class="s1">, p=</span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">stat</span><span class="p">,</span> <span class="n">p</span><span class="p">))</span>
+<span class="c1"># interpret</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.05</span>
+<span class="k">if</span> <span class="n">p</span> <span class="o">&gt;</span> <span class="n">alpha</span><span class="p">:</span>
+	<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Same distribution (fail to reject H0)&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+	<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Different distribution (reject H0)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="kruskal-wallis-h-test">
+<h2><span class="section-number">6.19. </span>Kruskal-Wallis H Test<a class="headerlink" href="#kruskal-wallis-h-test" title="Permalink to this headline">¶</a></h2>
+<p>When working with significance tests, such as Mann-Whitney U and the Wilcoxon signed-rank tests, comparisons between data samples must be performed pair-wise.</p>
+<p>This can be inefficient if you have many data samples and you are only interested in whether two or more samples have a different distribution.</p>
+<p>The Kruskal-Wallis test is a nonparametric version of the one-way analysis of variance test or ANOVA for short. It is named for the developers of the method, William Kruskal and Wilson Wallis. This test can be used to determine whether more than two independent samples have a different distribution. It can be thought of as the generalization of the Mann-Whitney U test.</p>
+<p>The default assumption or the null hypothesis is that all data samples were drawn from the same distribution. Specifically, that the population medians of all groups are equal. A rejection of the null hypothesis indicates that there is enough evidence to suggest that one or more samples dominate another sample, but the test does not indicate which samples or by how much.</p>
+<p>When the Kruskal-Wallis H-test leads to significant results, then at least one of the samples is different from the other samples. However, the test does not identify where the difference(s) occur. Moreover, it does not identify how many differences occur. To identify the particular differences between sample pairs, a researcher might use sample contrasts, or post hoc tests, to analyze the specific sample pairs for significant difference(s). The Mann-Whitney U-test is a useful method for performing sample contrasts between individual sample sets.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># generate three independent samples</span>
+<span class="n">data1</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="mi">50</span>
+<span class="n">data2</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="mi">50</span>
+<span class="n">data3</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="mi">52</span>
+
+<span class="c1"># Kruskal-Wallis H-test</span>
+<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">seed</span>
+<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">randn</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">kruskal</span>
+<span class="c1"># seed the random number generator</span>
+<span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># generate three independent samples</span>
+<span class="n">data1</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="mi">50</span>
+<span class="n">data2</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="mi">50</span>
+<span class="n">data3</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="mi">52</span>
+<span class="c1"># compare samples</span>
+<span class="n">stat</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">kruskal</span><span class="p">(</span><span class="n">data1</span><span class="p">,</span> <span class="n">data2</span><span class="p">,</span> <span class="n">data3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Statistics=</span><span class="si">%.3f</span><span class="s1">, p=</span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">stat</span><span class="p">,</span> <span class="n">p</span><span class="p">))</span>
+<span class="c1"># interpret</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.05</span>
+<span class="k">if</span> <span class="n">p</span> <span class="o">&gt;</span> <span class="n">alpha</span><span class="p">:</span>
+	<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Same distributions (fail to reject H0)&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+	<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Different distributions (reject H0)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="friedman-test">
+<h2><span class="section-number">6.20. </span>Friedman Test<a class="headerlink" href="#friedman-test" title="Permalink to this headline">¶</a></h2>
+<p>As in the previous example, we may have more than two different samples and an interest in whether all samples have the same distribution or not.</p>
+<p>If the samples are paired in some way, such as repeated measures, then the Kruskal-Wallis H test would not be appropriate. Instead, the Friedman test can be used, named for Milton Friedman.</p>
+<p>The Friedman test is the nonparametric version of the repeated measures analysis of variance test, or repeated measures ANOVA. The test can be thought of as a generalization of the Kruskal-Wallis H Test to more than two samples.</p>
+<p>The default assumption, or null hypothesis, is that the multiple paired samples have the same distribution. A rejection of the null hypothesis indicates that one or more of the paired samples has a different distribution.</p>
+<p>Fail to Reject H0: Paired sample distributions are equal.
+Reject H0: Paired sample distributions are not equal.
+The test assumes two or more paired data samples with 10 or more samples per group.</p>
+<p>The Friedman test is a nonparametric statistical procedure for comparing more than two samples that are related. The parametric equivalent to this test is the repeated measures analysis of variance (ANOVA). When the Friedman test leads to significant results, at least one of the samples is different from the other samples.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Friedman test</span>
+<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">seed</span>
+<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">randn</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">friedmanchisquare</span>
+<span class="c1"># seed the random number generator</span>
+<span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># generate three independent samples</span>
+<span class="n">data1</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="mi">50</span>
+<span class="n">data2</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="mi">50</span>
+<span class="n">data3</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">randn</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="o">+</span> <span class="mi">52</span>
+<span class="c1"># compare samples</span>
+<span class="n">stat</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">friedmanchisquare</span><span class="p">(</span><span class="n">data1</span><span class="p">,</span> <span class="n">data2</span><span class="p">,</span> <span class="n">data3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Statistics=</span><span class="si">%.3f</span><span class="s1">, p=</span><span class="si">%.3f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">stat</span><span class="p">,</span> <span class="n">p</span><span class="p">))</span>
+<span class="c1"># interpret</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.05</span>
+<span class="k">if</span> <span class="n">p</span> <span class="o">&gt;</span> <span class="n">alpha</span><span class="p">:</span>
+	<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Same distributions (fail to reject H0)&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+	<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Different distributions (reject H0)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="NSCI801_Descriptive_Stats-NEW.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">5. </span>Descriptive Statistics</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="NSCI801_Image_Processing_Proper_v2.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Image Processing</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Gunnar Blohm, Joe Nashed<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

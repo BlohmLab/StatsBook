@@ -1,0 +1,20 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: README
+options:
+  numbered: true
+chapters:
+- file: NSCI801_Intro
+- file: NSCI801_intro_python
+- file: NSCI801_advanced_python
+- file: NSCI801_acquisition_filters
+- file: NSCI801_Descriptive_Stats-NEW
+- file: NSCI801_Advanced_stats
+- file: NSCI801_Image_Processing_Proper_v2
+- file: NSCI801_Bayesian-stats
+- file: NSCI801_ModelFitting
+- file: NSCI801_DataNeuroscience
+- file: NSCI801_CorrelationVsCausality
+- file: NSCI801_Reproducibility
