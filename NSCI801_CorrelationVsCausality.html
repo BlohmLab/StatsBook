@@ -615,8 +615,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="the-ladder-of-causality">
 <h3><span class="section-number">11.1.4. </span>The ladder of causality<a class="headerlink" href="#the-ladder-of-causality" title="Permalink to this headline">¶</a></h3>
-<img style="float: center; width:800px;" src="stuff/ladderofcausality.png">
-(from Pearl & Mackenzie, "The book of why")</div>
+<p><img alt="ladder of causality" src="_images/ladderofcausality.png" /></p>
+<p>(from Pearl &amp; Mackenzie, “The book of why”)</p>
+</div>
 <div class="section" id="how-to-achieve-causality-randomized-controlled-trials">
 <h3><span class="section-number">11.1.5. </span>How to achieve causality - randomized controlled trials<a class="headerlink" href="#how-to-achieve-causality-randomized-controlled-trials" title="Permalink to this headline">¶</a></h3>
 <p>(adapted from <a class="reference external" href="https://colab.research.google.com/github/NeuromatchAcademy/course-content/blob/master/tutorials/W3D3_NetworkCausality/student/W3D3_Tutorial1.ipynb#scrollTo=Gei4lKzwvoGi">Neuromatch Academy W3D3 Tutorial 1</a>)</p>
@@ -1859,7 +1860,8 @@ simulating trial 3 of 3
 <li><p><span class="math notranslate nohighlight">\(U_{\text{SES}}\)</span>: socioeconomic status (higher means weathier), a <strong>confounder</strong> if it is not observed</p></li>
 <li><p><span class="math notranslate nohighlight">\(Y_{\text{birthweight}}\)</span>: child birthweight in grams, our outcome of interest</p></li>
 </ul>
-<img style="float:center; width:800px;" src="stuff/IV.png"><p>Let’s suppose we have the following function for our system:</p>
+<p><img alt="IV" src="_images/IV.png" /></p>
+<p>Let’s suppose we have the following function for our system:</p>
 <p><span class="math notranslate nohighlight">\(Y_{\text{birthweight}} = 3000 + C_{\text{SES}} - 2T_{\text{smoking}},\)</span></p>
 <p>with the additional fact that <span class="math notranslate nohighlight">\(C_{\text{SES}}\)</span> is negatively correlated with <span class="math notranslate nohighlight">\(T_{\text{smoking}}\)</span>.</p>
 <p>The causal effect we wish to estimate is the coefficient <span class="math notranslate nohighlight">\(-2\)</span> for <span class="math notranslate nohighlight">\(T_{\text{smoking}}\)</span>, which means that if a mother smokes one additional cigarette per day while pregnant her baby will be 2 grams lighter at birth.</p>

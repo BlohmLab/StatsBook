@@ -593,7 +593,8 @@ const thebe_selector_output = ".output, .cell_output"
 <h3><span class="section-number">10.1.2. </span>Promises and limitations of Data Neuroscience<a class="headerlink" href="#promises-and-limitations-of-data-neuroscience" title="Permalink to this headline">¶</a></h3>
 <p>“[…] data are profoundly dumb. Data can tell you that the people who took a medicine recovered faster than people who did not take it, but they can’t tell you why.” (Pearl, in “the book of why”)</p>
 <p><strong>Data alone does not give you the answer!</strong> But data is important when you have the right question and hypothesis (= model)…</p>
-<img style="float: center; width:800px;" src="stuff/Pearl-flow.png"></div>
+<p><img alt="Pearl" src="_images/Pearl-flow.png" /></p>
+</div>
 <div class="section" id="so-what-can-data-neuroscience-do-for-us">
 <h3><span class="section-number">10.1.3. </span>So what can data neuroscience do for us?<a class="headerlink" href="#so-what-can-data-neuroscience-do-for-us" title="Permalink to this headline">¶</a></h3>
 <p>Here are some examples…</p>
@@ -1046,7 +1047,8 @@ $<span class="math notranslate nohighlight">\(\color{grey}{-\log\mathcal{L}'(\th
 <p>(adapted from <a class="reference external" href="https://colab.research.google.com/github/NeuromatchAcademy/course-content/blob/master/tutorials/W1D5_DimensionalityReduction/student/W1D5_Tutorial3.ipynb">Neuromatch Academy W1D5 Tutorial 3</a>)</p>
 <p>There are many forms of dimensionality reduction. The idea is that data is NOT uniformly distributed and thus there are some meaningful dimensions of data variability. Dimensionality reduction techniques focus on capturing the dominant dimensions of data variability.</p>
 <p>We’ll specifically be learning about <strong><a class="reference external" href="https://en.wikipedia.org/wiki/Principal_component_analysis">Principal Component Analysis (PCA)</a></strong>, a linear method producing orthogonal axes.</p>
-<img style="float: center; width:750px;" src="stuff/PCA3d.png"></div>
+<p><img alt="PCA" src="_images/PCA3d.png" /></p>
+</div>
 <div class="section" id="let-s-perform-of-pca-on-mnist">
 <h3><span class="section-number">10.1.14. </span>Let’s perform of PCA on MNIST<a class="headerlink" href="#let-s-perform-of-pca-on-mnist" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/MNIST_database">MNIST</a> is a dataset of 70,000 images of handwritten digits.</p>
@@ -1310,10 +1312,10 @@ $<span class="math notranslate nohighlight">\(\color{grey}{-\log\mathcal{L}'(\th
 <img alt="_images/NSCI801_DataNeuroscience_38_0.png" src="_images/NSCI801_DataNeuroscience_38_0.png" />
 </div>
 </div>
-<img style="float: right; width:250px;" src="stuff/scree.jpg">
-So the MNIST dataset has an extrinsic dimensionality of 784. To make sense of this data, we'll use dimensionality reduction. But first, we need to determine the intrinsic dimensionality K of the data. One way to do this is to look for an "elbow" in the scree plot, to determine which eigenvalues are signficant.
+<p>So the MNIST dataset has an extrinsic dimensionality of 784. To make sense of this data, we’ll use dimensionality reduction. But first, we need to determine the intrinsic dimensionality K of the data. One way to do this is to look for an “elbow” in the scree plot, to determine which eigenvalues are signficant.</p>
 <p>(“Scree”: collection of broken rock fragments at the base of mountain cliffs)</p>
 <p>A scree plot is a line plot of the eigenvalues (= amplitude of variability) of factors or principal components in an analysis.</p>
+<p><img alt="scree" src="_images/scree.jpg" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pca</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
@@ -1776,7 +1778,7 @@ $<span class="math notranslate nohighlight">\(\color{grey}{\text{var explained} 
 <div class="section" id="deep-feed-forward-networks-in-pytorch">
 <h4><span class="section-number">10.1.15.1. </span>Deep feed-forward networks in pytorch<a class="headerlink" href="#deep-feed-forward-networks-in-pytorch" title="Permalink to this headline">¶</a></h4>
 <p>We will build a very simple 3-layer network, aka a universal function approximator.</p>
-<img style="float: center; width:500px;" src="stuff/one-layer-network.png">
+<p><img alt="perceptron" src="_images/one-layer-network.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">DeepNet</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
@@ -1855,7 +1857,8 @@ true orientation: 139.00 degrees
 <li><p>sigmoid</p></li>
 <li><p>ReLU (Rectivied Linear Units) - we’ll be using this here</p></li>
 </ul>
-<img style="float: center; width:500px;" src="stuff/ReLU.png"><div class="cell docutils container">
+<p><img alt="ReLu" src="_images/ReLU.png" /></p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">DeepNetReLU</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
 
@@ -1937,8 +1940,8 @@ Let’s evaluate the loss for our (untrained network)…</p>
 </div>
 </div>
 </div>
-<p>We can now do gradient descent.
-<img style="float: center; width:500px;" src="stuff/ball.png"></p>
+<p>We can now do gradient descent.</p>
+<p><img alt="GD" src="_images/ball.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">train</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">loss_fn</span><span class="p">,</span> <span class="n">train_data</span><span class="p">,</span> <span class="n">train_labels</span><span class="p">,</span> <span class="n">n_iter</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">learning_rate</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">):</span>
