@@ -19,7 +19,7 @@
 # 
 # Pragmatically, sometimes it makes sense to use frequentist approach, sometimes it makes sense to use Bayesian approach, sometimes it's best to provide both!
 
-# <img style="float: center; width:500px;" src="stuff/FB5w13tVcAQrxOm.jpg">
+# ![bias](stuff/FB5w13tVcAQrxOm.jpg)
 
 # ### Motivation and pitfalls of classic methods
 # So what do Bayesian stats buy you?
@@ -31,7 +31,7 @@
 # * includes an estimate of uncertainty associated with the estimated quantity
 # 
 
-# <img style="float: center; width:500px;" src="stuff/base_rate.png">
+# ![base rate](stuff/base_rate.png)
 
 # ### Conditional probabilities and Bayes rule
 # $$ P(a,b) = P(a|b) P(b) = P(b|a) P(a)$$
@@ -41,7 +41,7 @@
 # $$ P(b) = \sum_{j} P(b|a_j)P(a_j) $$
 
 # ### Bayes rule example
-# <img style="float: center; width:500px;" src="stuff/Cancer_cond_prob.png">
+# ![Bayes rule](stuff/Cancer_cond_prob.png)
 
 # $$P(cancer | test+) = \frac{P(test+ | cancer) P(cancer)}{P(test+)}$$
 
@@ -49,7 +49,8 @@
 
 # ### Bayesian integration with uncertainty
 # $$ P(a|b) = \frac{P(b|a)P(a)}{P(b)}$$
-# <img style="float: center; width:600px;" src="stuff/Bayes-distributions.png">
+# 
+# ![Bayes distribution](stuff/Bayes-distributions.png)
 
 # ### Bayes Factor
 # **A general method for hypothesis testing!**
@@ -119,7 +120,7 @@ print("Bayesian p-value = ", gunnar/(joe+gunnar))
 # ### Bayes Factor
 # **Interpretation**
 # 
-# <img style="float: center; width:500px;" src="stuff/BF-interpr.png">
+# ![BF](stuff/BF-interpr.png)
 
 # ### Bayes Factor
 # Unfortunately, in real life things are usually more complicated...

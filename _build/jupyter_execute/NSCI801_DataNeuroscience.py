@@ -21,7 +21,7 @@
 # 
 # **Data alone does not give you the answer!** But data is important when you have the right question and hypothesis (= model)...
 # 
-# <img style="float: center; width:800px;" src="stuff/Pearl-flow.png">
+# ![Pearl](stuff/Pearl-flow.png)
 
 # ### So what can data neuroscience do for us?
 # Here are some examples...
@@ -411,7 +411,7 @@ plot_model_selection(C_values, accuracies)
 # 
 # We'll specifically be learning about **[Principal Component Analysis (PCA)](https://en.wikipedia.org/wiki/Principal_component_analysis)**, a linear method producing orthogonal axes.
 # 
-# <img style="float: center; width:750px;" src="stuff/PCA3d.png">
+# ![PCA](stuff/PCA3d.png)
 
 # ###  Let's perform of PCA on MNIST
 # [MNIST](https://en.wikipedia.org/wiki/MNIST_database) is a dataset of 70,000 images of handwritten digits. 
@@ -673,12 +673,13 @@ X = mnist.data
 plot_MNIST_sample(X)
 
 
-# <img style="float: right; width:250px;" src="stuff/scree.jpg">
 # So the MNIST dataset has an extrinsic dimensionality of 784. To make sense of this data, we'll use dimensionality reduction. But first, we need to determine the intrinsic dimensionality K of the data. One way to do this is to look for an "elbow" in the scree plot, to determine which eigenvalues are signficant.
 # 
 # ("Scree": collection of broken rock fragments at the base of mountain cliffs)
 # 
 # A scree plot is a line plot of the eigenvalues (= amplitude of variability) of factors or principal components in an analysis.
+# 
+# ![scree](stuff/scree.jpg)
 
 # In[64]:
 
@@ -1108,7 +1109,7 @@ resp_train = resp_all[itrain]
 # #### Deep feed-forward networks in pytorch
 # We will build a very simple 3-layer network, aka a universal function approximator.
 # 
-# <img style="float: center; width:500px;" src="stuff/one-layer-network.png">
+# ![perceptron](stuff/one-layer-network.png)
 # 
 
 # In[43]:
@@ -1180,7 +1181,7 @@ print('true orientation: %.2f degrees' % ori)
 # * sigmoid
 # * ReLU (Rectivied Linear Units) - we'll be using this here
 # 
-# <img style="float: center; width:500px;" src="stuff/ReLU.png">
+# ![ReLu](stuff/ReLU.png)
 
 # In[87]:
 
@@ -1252,7 +1253,8 @@ print('mean squared error: %.2f' % loss)
 
 
 # We can now do gradient descent. 
-# <img style="float: center; width:500px;" src="stuff/ball.png">
+# 
+# ![GD](stuff/ball.png)
 
 # In[89]:
 

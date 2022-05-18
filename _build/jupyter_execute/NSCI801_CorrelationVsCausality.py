@@ -39,7 +39,9 @@
 # **We cannot learn causality from passive observation! We must intervene...**
 
 # ### The ladder of causality
-# <img style="float: center; width:800px;" src="stuff/ladderofcausality.png">
+# 
+# ![ladder of causality](stuff/ladderofcausality.png)
+# 
 # (from Pearl & Mackenzie, "The book of why")
 
 # ### How to achieve causality - randomized controlled trials
@@ -1180,7 +1182,7 @@ plt.title("Performance of regression as a function of the number of neurons obse
 # - $U_{\text{SES}}$: socioeconomic status (higher means weathier), a **confounder** if it is not observed
 # - $Y_{\text{birthweight}}$: child birthweight in grams, our outcome of interest
 # 
-# <img style="float:center; width:800px;" src="stuff/IV.png">
+# ![IV](stuff/IV.png)
 
 # Let's suppose we have the following function for our system:
 # 

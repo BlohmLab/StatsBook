@@ -24,7 +24,7 @@
 # 
 # They computed voxel-wise statistics. 
 # 
-# <img style="float: center; width:750px;" src="stuff/salmon.png">
+# ![salmon](stuff/salmon.png)
 
 # This is a prime example of what's known as the **multiple comparison problem**!
 # 
@@ -110,7 +110,7 @@ print("The false positve rate was", counter/N*100, "%")
 # 
 # Why do we distinguish between them?
 
-# <img style="float: center; width:750px;" src="stuff/ExploreConfirm.png">
+# ![exploratory analysis](stuff/ExploreConfirm.png)
 
 # But in science, confirmatory analyses that are hypothesis-driven are often much more valued. 
 # 
@@ -121,14 +121,14 @@ print("The false positve rate was", counter/N*100, "%")
 # * replication crisis (psychology, social science, medicine, marketing, economics, sports science, etc, etc...)
 # * shaken trust in science
 # 
-# <img style="float: center; width:750px;" src="stuff/crisis.jpeg">
+# ![reproducibility crisis](stuff/crisis.jpeg)
 # 
 # ([Baker 2016](https://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970))
 
 # ### Quick excursion: survivorship bias
 # "Survivorship bias or survival bias is the logical error of concentrating on the people or things that made it past some selection process and overlooking those that did not, typically because of their lack of visibility." (Wikipedia)
 # 
-# <img style="float: center; width:750px;" src="stuff/SurvivorshipBias.png">
+# ![survivorship bias](stuff/SurvivorshipBias.png)
 
 # **How does survivorship bias affect neuroscience?**
 # 
@@ -151,13 +151,15 @@ print("The false positve rate was", counter/N*100, "%")
 # For more info, see NSCI800 lectures about Open Science: [OS1](http://www.compneurosci.com/NSCI800/OpenScienceI.pdf), [OS2](http://www.compneurosci.com/NSCI800/OpenScienceII.pdf)
 
 # ### Pre-registration / registered reports
-# <img style="float:right; width:500px;" src="stuff/RR.png">
+# 
 # 
 # * IPA guarantees publication
 #     * If original methods are followed
 #     * Main conclusions need to come from originally proposed analyses
 # * Does not prevent exploratory analyses
 #     * Need to be labeled as such
+#     
+# ![pre-reg](stuff/RR.png)
 #     
 # [https://Cos.io/rr](https://Cos.io/rr)
 
@@ -191,4 +193,4 @@ print("The false positve rate was", counter/N*100, "%")
 # Think about it and decide for yourself what to do with your research!!!
 
 # ### THANK YOU!!!
-# <img style="float:center; width:750px;" src="stuff/empower.jpg">
+# ![power](stuff/empower.jpg)

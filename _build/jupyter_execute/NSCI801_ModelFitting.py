@@ -32,10 +32,10 @@
 
 # ### Models in scientific discovery
 # Judea Pearl (in "Book of WHY"): _"the model should depict, however qualitatively, the process that generates the data: in other words, the cause-effect forces that operate in the environment and shape the data generated."_
-# <img style="float: center; width:800px;" src="stuff/Pearl-flow.png">
+# 
+# ![Pearl](stuff/Pearl-flow.png)
 
 # ### Usefulness of models
-# <img style="float: right; width:500px;" src="stuff/models-in-science.png">
 # 
 # * Gain understanding
 # * Identify hypotheses, assumptions, unknowns
@@ -43,6 +43,8 @@
 # * Build brain model (stroke lesions etc)
 # * Inspire new technologies
 # * Design useful experiments (i.e. animal research)
+# 
+# ![models in science](stuff/models-in-science.png)
 
 # * [A How-to-Model Guide for Neuroscience](https://www.eneuro.org/content/7/1/ENEURO.0352-19.2019)
 # * [Neuromatch Academy W1D1 - model types](https://github.com/NeuromatchAcademy/course-content/blob/master/tutorials/README.md#w1d1---model-types)
@@ -376,7 +378,7 @@ ax.plot(x_axis, y_hat, color='red');
 # **Advantage**: no prior knowledge or assumption about the data sampling process!
 
 # ### Model fitting - bootstrap
-# <img style="float: center; width:800px;" src="stuff/bootstrap.png">
+# ![bootstrapping](stuff/bootstrap.png)
 # 
 # [Toward Data Science: Intro to bootstrap](https://towardsdatascience.com/an-introduction-to-the-bootstrap-method-58bcb51b4d60)
 
@@ -457,7 +459,7 @@ print([est_mean, est_std])
 # Always split your dataset into *training data* and *test data*!
 
 # ### k-fold cross-validation
-# <img style="float: center; width:800px;" src="stuff/grid_search_cross_validation.png">
+# ![x-val](stuff/grid_search_cross_validation.png)
 # 
 # [from scikit-learn tutorial](https://scikit-learn.org/stable/modules/cross_validation.html)
 
